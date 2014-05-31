@@ -15,13 +15,40 @@
 		B0C95A99193A4B0600A6F1FA /* SAWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95A98193A4B0600A6F1FA /* SAWAppDelegate.m */; };
 		B0C95A9C193A4B0600A6F1FA /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C95A9A193A4B0600A6F1FA /* Main_iPhone.storyboard */; };
 		B0C95A9F193A4B0600A6F1FA /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C95A9D193A4B0600A6F1FA /* Main_iPad.storyboard */; };
-		B0C95AA2193A4B0600A6F1FA /* SAWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AA1193A4B0600A6F1FA /* SAWViewController.m */; };
 		B0C95AA4193A4B0600A6F1FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C95AA3193A4B0600A6F1FA /* Images.xcassets */; };
 		B0C95AAB193A4B0600A6F1FA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C95AAA193A4B0600A6F1FA /* XCTest.framework */; };
 		B0C95AAC193A4B0600A6F1FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C95A88193A4B0600A6F1FA /* Foundation.framework */; };
 		B0C95AAD193A4B0600A6F1FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C95A8C193A4B0600A6F1FA /* UIKit.framework */; };
 		B0C95AB5193A4B0600A6F1FA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0C95AB3193A4B0600A6F1FA /* InfoPlist.strings */; };
 		B0C95AB7193A4B0600A6F1FA /* SAWaterLevelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AB6193A4B0600A6F1FA /* SAWaterLevelTests.m */; };
+		B0C95AD5193A4B3200A6F1FA /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AC3193A4B3200A6F1FA /* AFHTTPRequestOperation.m */; };
+		B0C95AD6193A4B3200A6F1FA /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AC5193A4B3200A6F1FA /* AFHTTPRequestOperationManager.m */; };
+		B0C95AD7193A4B3200A6F1FA /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AC7193A4B3200A6F1FA /* AFHTTPSessionManager.m */; };
+		B0C95AD8193A4B3200A6F1FA /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95ACA193A4B3200A6F1FA /* AFNetworkReachabilityManager.m */; };
+		B0C95AD9193A4B3200A6F1FA /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95ACC193A4B3200A6F1FA /* AFSecurityPolicy.m */; };
+		B0C95ADA193A4B3200A6F1FA /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95ACE193A4B3200A6F1FA /* AFURLConnectionOperation.m */; };
+		B0C95ADB193A4B3200A6F1FA /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AD0193A4B3200A6F1FA /* AFURLRequestSerialization.m */; };
+		B0C95ADC193A4B3200A6F1FA /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AD2193A4B3200A6F1FA /* AFURLResponseSerialization.m */; };
+		B0C95ADD193A4B3200A6F1FA /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AD4193A4B3200A6F1FA /* AFURLSessionManager.m */; };
+		B0C95AE1193A4B7B00A6F1FA /* SAWNetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AE0193A4B7B00A6F1FA /* SAWNetworkController.m */; };
+		B0C95AE5193A4BA100A6F1FA /* SAWWaterLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AE4193A4BA100A6F1FA /* SAWWaterLevel.m */; };
+		B0C95AE8193A4E2500A6F1FA /* SAWNetworkProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AE7193A4E2500A6F1FA /* SAWNetworkProtocol.m */; };
+		B0C95AEA193A506C00A6F1FA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0C95AE9193A506C00A6F1FA /* Localizable.strings */; };
+		B0C95AEE193A531F00A6F1FA /* SAWCurrentLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AED193A531F00A6F1FA /* SAWCurrentLevelViewController.m */; };
+		B0C95AF1193A5DFA00A6F1FA /* SAWLevelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AF0193A5DFA00A6F1FA /* SAWLevelModel.m */; };
+		B0C95AF5193A6AFD00A6F1FA /* SAWHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AF4193A6AFD00A6F1FA /* SAWHeaderView.m */; };
+		B0C95AF9193A721200A6F1FA /* SAWStageDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AF8193A721200A6F1FA /* SAWStageDetailsViewController.m */; };
+		B0C95AFD193A738A00A6F1FA /* SAWConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AFC193A738A00A6F1FA /* SAWConstants.m */; };
+		B0C95AFF193A750000A6F1FA /* Restrictions.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0C95AFE193A750000A6F1FA /* Restrictions.plist */; };
+		B0C95B02193A751500A6F1FA /* SAWRestrictionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95B01193A751500A6F1FA /* SAWRestrictionModel.m */; };
+		B0C95B04193A784900A6F1FA /* NoRestrictions.html in Resources */ = {isa = PBXBuildFile; fileRef = B0C95B03193A784900A6F1FA /* NoRestrictions.html */; };
+		B0C95B06193A7BD900A6F1FA /* Stage1.html in Resources */ = {isa = PBXBuildFile; fileRef = B0C95B05193A7BD900A6F1FA /* Stage1.html */; };
+		B0C95B08193A7F2900A6F1FA /* Stage2.html in Resources */ = {isa = PBXBuildFile; fileRef = B0C95B07193A7F2900A6F1FA /* Stage2.html */; };
+		B0C95B0A193A7F9700A6F1FA /* Stage3.html in Resources */ = {isa = PBXBuildFile; fileRef = B0C95B09193A7F9700A6F1FA /* Stage3.html */; };
+		B0C95B0C193A800900A6F1FA /* Stage4.html in Resources */ = {isa = PBXBuildFile; fileRef = B0C95B0B193A800900A6F1FA /* Stage4.html */; };
+		B0C95B0E193A807500A6F1FA /* Stage5.html in Resources */ = {isa = PBXBuildFile; fileRef = B0C95B0D193A807500A6F1FA /* Stage5.html */; };
+		B0C95B17193A815700A6F1FA /* TRModalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95B16193A815700A6F1FA /* TRModalTransition.m */; };
+		B0C95B1B193A853800A6F1FA /* SAWRemindersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95B1A193A853800A6F1FA /* SAWRemindersViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +74,61 @@
 		B0C95A98193A4B0600A6F1FA /* SAWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAWAppDelegate.m; sourceTree = "<group>"; };
 		B0C95A9B193A4B0600A6F1FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		B0C95A9E193A4B0600A6F1FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		B0C95AA0193A4B0600A6F1FA /* SAWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAWViewController.h; sourceTree = "<group>"; };
-		B0C95AA1193A4B0600A6F1FA /* SAWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAWViewController.m; sourceTree = "<group>"; };
 		B0C95AA3193A4B0600A6F1FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B0C95AA9193A4B0600A6F1FA /* SAWaterLevelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAWaterLevelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C95AAA193A4B0600A6F1FA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B0C95AB2193A4B0600A6F1FA /* SAWaterLevelTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SAWaterLevelTests-Info.plist"; sourceTree = "<group>"; };
 		B0C95AB4193A4B0600A6F1FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B0C95AB6193A4B0600A6F1FA /* SAWaterLevelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAWaterLevelTests.m; sourceTree = "<group>"; };
+		B0C95AC2193A4B3200A6F1FA /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		B0C95AC3193A4B3200A6F1FA /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		B0C95AC4193A4B3200A6F1FA /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		B0C95AC5193A4B3200A6F1FA /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		B0C95AC6193A4B3200A6F1FA /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		B0C95AC7193A4B3200A6F1FA /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		B0C95AC8193A4B3200A6F1FA /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		B0C95AC9193A4B3200A6F1FA /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		B0C95ACA193A4B3200A6F1FA /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		B0C95ACB193A4B3200A6F1FA /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		B0C95ACC193A4B3200A6F1FA /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		B0C95ACD193A4B3200A6F1FA /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		B0C95ACE193A4B3200A6F1FA /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		B0C95ACF193A4B3200A6F1FA /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		B0C95AD0193A4B3200A6F1FA /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		B0C95AD1193A4B3200A6F1FA /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		B0C95AD2193A4B3200A6F1FA /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		B0C95AD3193A4B3200A6F1FA /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		B0C95AD4193A4B3200A6F1FA /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		B0C95ADF193A4B7B00A6F1FA /* SAWNetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWNetworkController.h; sourceTree = "<group>"; };
+		B0C95AE0193A4B7B00A6F1FA /* SAWNetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWNetworkController.m; sourceTree = "<group>"; };
+		B0C95AE3193A4BA100A6F1FA /* SAWWaterLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWWaterLevel.h; sourceTree = "<group>"; };
+		B0C95AE4193A4BA100A6F1FA /* SAWWaterLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWWaterLevel.m; sourceTree = "<group>"; };
+		B0C95AE6193A4E2500A6F1FA /* SAWNetworkProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWNetworkProtocol.h; sourceTree = "<group>"; };
+		B0C95AE7193A4E2500A6F1FA /* SAWNetworkProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWNetworkProtocol.m; sourceTree = "<group>"; };
+		B0C95AE9193A506C00A6F1FA /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		B0C95AEC193A531F00A6F1FA /* SAWCurrentLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWCurrentLevelViewController.h; sourceTree = "<group>"; };
+		B0C95AED193A531F00A6F1FA /* SAWCurrentLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWCurrentLevelViewController.m; sourceTree = "<group>"; };
+		B0C95AEF193A5DFA00A6F1FA /* SAWLevelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWLevelModel.h; sourceTree = "<group>"; };
+		B0C95AF0193A5DFA00A6F1FA /* SAWLevelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWLevelModel.m; sourceTree = "<group>"; };
+		B0C95AF3193A6AFD00A6F1FA /* SAWHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWHeaderView.h; sourceTree = "<group>"; };
+		B0C95AF4193A6AFD00A6F1FA /* SAWHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWHeaderView.m; sourceTree = "<group>"; };
+		B0C95AF7193A721200A6F1FA /* SAWStageDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWStageDetailsViewController.h; sourceTree = "<group>"; };
+		B0C95AF8193A721200A6F1FA /* SAWStageDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWStageDetailsViewController.m; sourceTree = "<group>"; };
+		B0C95AFB193A738A00A6F1FA /* SAWConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWConstants.h; sourceTree = "<group>"; };
+		B0C95AFC193A738A00A6F1FA /* SAWConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWConstants.m; sourceTree = "<group>"; };
+		B0C95AFE193A750000A6F1FA /* Restrictions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Restrictions.plist; sourceTree = "<group>"; };
+		B0C95B00193A751500A6F1FA /* SAWRestrictionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWRestrictionModel.h; sourceTree = "<group>"; };
+		B0C95B01193A751500A6F1FA /* SAWRestrictionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWRestrictionModel.m; sourceTree = "<group>"; };
+		B0C95B03193A784900A6F1FA /* NoRestrictions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = NoRestrictions.html; sourceTree = "<group>"; };
+		B0C95B05193A7BD900A6F1FA /* Stage1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Stage1.html; sourceTree = "<group>"; };
+		B0C95B07193A7F2900A6F1FA /* Stage2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Stage2.html; sourceTree = "<group>"; };
+		B0C95B09193A7F9700A6F1FA /* Stage3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Stage3.html; sourceTree = "<group>"; };
+		B0C95B0B193A800900A6F1FA /* Stage4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Stage4.html; sourceTree = "<group>"; };
+		B0C95B0D193A807500A6F1FA /* Stage5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Stage5.html; sourceTree = "<group>"; };
+		B0C95B15193A815700A6F1FA /* TRModalTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRModalTransition.h; sourceTree = "<group>"; };
+		B0C95B16193A815700A6F1FA /* TRModalTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRModalTransition.m; sourceTree = "<group>"; };
+		B0C95B19193A853800A6F1FA /* SAWRemindersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWRemindersViewController.h; sourceTree = "<group>"; };
+		B0C95B1A193A853800A6F1FA /* SAWRemindersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWRemindersViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				B0C95A8E193A4B0600A6F1FA /* SAWaterLevel */,
+				B0C95AC0193A4B3200A6F1FA /* ThirdParty */,
 				B0C95AB0193A4B0600A6F1FA /* SAWaterLevelTests */,
 				B0C95A87193A4B0600A6F1FA /* Frameworks */,
 				B0C95A86193A4B0600A6F1FA /* Products */,
@@ -114,12 +189,14 @@
 		B0C95A8E193A4B0600A6F1FA /* SAWaterLevel */ = {
 			isa = PBXGroup;
 			children = (
+				B0C95AEB193A530400A6F1FA /* Current Level */,
+				B0C95AE2193A4B8D00A6F1FA /* Model */,
+				B0C95ADE193A4B6A00A6F1FA /* Network Controller */,
+				B0C95B13193A815700A6F1FA /* Transitions */,
 				B0C95A97193A4B0600A6F1FA /* SAWAppDelegate.h */,
 				B0C95A98193A4B0600A6F1FA /* SAWAppDelegate.m */,
 				B0C95A9A193A4B0600A6F1FA /* Main_iPhone.storyboard */,
 				B0C95A9D193A4B0600A6F1FA /* Main_iPad.storyboard */,
-				B0C95AA0193A4B0600A6F1FA /* SAWViewController.h */,
-				B0C95AA1193A4B0600A6F1FA /* SAWViewController.m */,
 				B0C95AA3193A4B0600A6F1FA /* Images.xcassets */,
 				B0C95A8F193A4B0600A6F1FA /* Supporting Files */,
 			);
@@ -133,6 +210,7 @@
 				B0C95A91193A4B0600A6F1FA /* InfoPlist.strings */,
 				B0C95A94193A4B0600A6F1FA /* main.m */,
 				B0C95A96193A4B0600A6F1FA /* SAWaterLevel-Prefix.pch */,
+				B0C95AE9193A506C00A6F1FA /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -153,6 +231,121 @@
 				B0C95AB3193A4B0600A6F1FA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0C95AC0193A4B3200A6F1FA /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				B0C95AC1193A4B3200A6F1FA /* AFNetworking */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		B0C95AC1193A4B3200A6F1FA /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				B0C95AC2193A4B3200A6F1FA /* AFHTTPRequestOperation.h */,
+				B0C95AC3193A4B3200A6F1FA /* AFHTTPRequestOperation.m */,
+				B0C95AC4193A4B3200A6F1FA /* AFHTTPRequestOperationManager.h */,
+				B0C95AC5193A4B3200A6F1FA /* AFHTTPRequestOperationManager.m */,
+				B0C95AC6193A4B3200A6F1FA /* AFHTTPSessionManager.h */,
+				B0C95AC7193A4B3200A6F1FA /* AFHTTPSessionManager.m */,
+				B0C95AC8193A4B3200A6F1FA /* AFNetworking.h */,
+				B0C95AC9193A4B3200A6F1FA /* AFNetworkReachabilityManager.h */,
+				B0C95ACA193A4B3200A6F1FA /* AFNetworkReachabilityManager.m */,
+				B0C95ACB193A4B3200A6F1FA /* AFSecurityPolicy.h */,
+				B0C95ACC193A4B3200A6F1FA /* AFSecurityPolicy.m */,
+				B0C95ACD193A4B3200A6F1FA /* AFURLConnectionOperation.h */,
+				B0C95ACE193A4B3200A6F1FA /* AFURLConnectionOperation.m */,
+				B0C95ACF193A4B3200A6F1FA /* AFURLRequestSerialization.h */,
+				B0C95AD0193A4B3200A6F1FA /* AFURLRequestSerialization.m */,
+				B0C95AD1193A4B3200A6F1FA /* AFURLResponseSerialization.h */,
+				B0C95AD2193A4B3200A6F1FA /* AFURLResponseSerialization.m */,
+				B0C95AD3193A4B3200A6F1FA /* AFURLSessionManager.h */,
+				B0C95AD4193A4B3200A6F1FA /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		B0C95ADE193A4B6A00A6F1FA /* Network Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B0C95ADF193A4B7B00A6F1FA /* SAWNetworkController.h */,
+				B0C95AE0193A4B7B00A6F1FA /* SAWNetworkController.m */,
+				B0C95AE6193A4E2500A6F1FA /* SAWNetworkProtocol.h */,
+				B0C95AE7193A4E2500A6F1FA /* SAWNetworkProtocol.m */,
+			);
+			path = "Network Controller";
+			sourceTree = "<group>";
+		};
+		B0C95AE2193A4B8D00A6F1FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B0C95AE3193A4BA100A6F1FA /* SAWWaterLevel.h */,
+				B0C95AE4193A4BA100A6F1FA /* SAWWaterLevel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B0C95AEB193A530400A6F1FA /* Current Level */ = {
+			isa = PBXGroup;
+			children = (
+				B0C95B18193A852200A6F1FA /* Reminders */,
+				B0C95AF6193A71FD00A6F1FA /* Stage Details */,
+				B0C95AEC193A531F00A6F1FA /* SAWCurrentLevelViewController.h */,
+				B0C95AED193A531F00A6F1FA /* SAWCurrentLevelViewController.m */,
+				B0C95AEF193A5DFA00A6F1FA /* SAWLevelModel.h */,
+				B0C95AF0193A5DFA00A6F1FA /* SAWLevelModel.m */,
+				B0C95AF3193A6AFD00A6F1FA /* SAWHeaderView.h */,
+				B0C95AF4193A6AFD00A6F1FA /* SAWHeaderView.m */,
+				B0C95AFB193A738A00A6F1FA /* SAWConstants.h */,
+				B0C95AFC193A738A00A6F1FA /* SAWConstants.m */,
+			);
+			path = "Current Level";
+			sourceTree = "<group>";
+		};
+		B0C95AF6193A71FD00A6F1FA /* Stage Details */ = {
+			isa = PBXGroup;
+			children = (
+				B0C95AFE193A750000A6F1FA /* Restrictions.plist */,
+				B0C95B00193A751500A6F1FA /* SAWRestrictionModel.h */,
+				B0C95B01193A751500A6F1FA /* SAWRestrictionModel.m */,
+				B0C95AF7193A721200A6F1FA /* SAWStageDetailsViewController.h */,
+				B0C95AF8193A721200A6F1FA /* SAWStageDetailsViewController.m */,
+				B0C95B03193A784900A6F1FA /* NoRestrictions.html */,
+				B0C95B05193A7BD900A6F1FA /* Stage1.html */,
+				B0C95B07193A7F2900A6F1FA /* Stage2.html */,
+				B0C95B09193A7F9700A6F1FA /* Stage3.html */,
+				B0C95B0B193A800900A6F1FA /* Stage4.html */,
+				B0C95B0D193A807500A6F1FA /* Stage5.html */,
+			);
+			path = "Stage Details";
+			sourceTree = "<group>";
+		};
+		B0C95B13193A815700A6F1FA /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				B0C95B14193A815700A6F1FA /* Modal */,
+			);
+			path = Transitions;
+			sourceTree = "<group>";
+		};
+		B0C95B14193A815700A6F1FA /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				B0C95B15193A815700A6F1FA /* TRModalTransition.h */,
+				B0C95B16193A815700A6F1FA /* TRModalTransition.m */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		B0C95B18193A852200A6F1FA /* Reminders */ = {
+			isa = PBXGroup;
+			children = (
+				B0C95B19193A853800A6F1FA /* SAWRemindersViewController.h */,
+				B0C95B1A193A853800A6F1FA /* SAWRemindersViewController.m */,
+			);
+			path = Reminders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +425,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0C95B08193A7F2900A6F1FA /* Stage2.html in Resources */,
+				B0C95AEA193A506C00A6F1FA /* Localizable.strings in Resources */,
+				B0C95AFF193A750000A6F1FA /* Restrictions.plist in Resources */,
+				B0C95B0E193A807500A6F1FA /* Stage5.html in Resources */,
+				B0C95B0A193A7F9700A6F1FA /* Stage3.html in Resources */,
 				B0C95A9F193A4B0600A6F1FA /* Main_iPad.storyboard in Resources */,
+				B0C95B0C193A800900A6F1FA /* Stage4.html in Resources */,
+				B0C95B06193A7BD900A6F1FA /* Stage1.html in Resources */,
 				B0C95AA4193A4B0600A6F1FA /* Images.xcassets in Resources */,
 				B0C95A9C193A4B0600A6F1FA /* Main_iPhone.storyboard in Resources */,
+				B0C95B04193A784900A6F1FA /* NoRestrictions.html in Resources */,
 				B0C95A93193A4B0600A6F1FA /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,9 +455,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0C95AD5193A4B3200A6F1FA /* AFHTTPRequestOperation.m in Sources */,
 				B0C95A99193A4B0600A6F1FA /* SAWAppDelegate.m in Sources */,
-				B0C95AA2193A4B0600A6F1FA /* SAWViewController.m in Sources */,
+				B0C95AD6193A4B3200A6F1FA /* AFHTTPRequestOperationManager.m in Sources */,
+				B0C95AD8193A4B3200A6F1FA /* AFNetworkReachabilityManager.m in Sources */,
+				B0C95B17193A815700A6F1FA /* TRModalTransition.m in Sources */,
+				B0C95ADC193A4B3200A6F1FA /* AFURLResponseSerialization.m in Sources */,
+				B0C95ADA193A4B3200A6F1FA /* AFURLConnectionOperation.m in Sources */,
+				B0C95AD9193A4B3200A6F1FA /* AFSecurityPolicy.m in Sources */,
+				B0C95AE8193A4E2500A6F1FA /* SAWNetworkProtocol.m in Sources */,
+				B0C95AD7193A4B3200A6F1FA /* AFHTTPSessionManager.m in Sources */,
+				B0C95AE5193A4BA100A6F1FA /* SAWWaterLevel.m in Sources */,
+				B0C95AF9193A721200A6F1FA /* SAWStageDetailsViewController.m in Sources */,
+				B0C95B1B193A853800A6F1FA /* SAWRemindersViewController.m in Sources */,
+				B0C95AE1193A4B7B00A6F1FA /* SAWNetworkController.m in Sources */,
+				B0C95ADB193A4B3200A6F1FA /* AFURLRequestSerialization.m in Sources */,
+				B0C95ADD193A4B3200A6F1FA /* AFURLSessionManager.m in Sources */,
 				B0C95A95193A4B0600A6F1FA /* main.m in Sources */,
+				B0C95AF1193A5DFA00A6F1FA /* SAWLevelModel.m in Sources */,
+				B0C95AFD193A738A00A6F1FA /* SAWConstants.m in Sources */,
+				B0C95AF5193A6AFD00A6F1FA /* SAWHeaderView.m in Sources */,
+				B0C95B02193A751500A6F1FA /* SAWRestrictionModel.m in Sources */,
+				B0C95AEE193A531F00A6F1FA /* SAWCurrentLevelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
