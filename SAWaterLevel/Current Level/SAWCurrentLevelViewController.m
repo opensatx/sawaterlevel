@@ -24,6 +24,8 @@
 @property (nonatomic, strong) SAWWaterLevel *currentWaterLevel;
 @property (nonatomic, strong) NSArray *dataLevels;
 @property (nonatomic, strong) NSIndexPath *currentIndexPath;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *refreshButton;
+@property (nonatomic, strong, readonly) IBOutlet UIBarButtonItem *activityButton;
 
 - (NSIndexPath *)indexPathForCurrentLevel:(CGFloat)waterLevel;
 
@@ -33,6 +35,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = NSLocalizedString(@"CURRENT_LEVEL_TITLE", nil);
+    self.tabBarItem.title = NSLocalizedString(@"TAB_BAR_ITEM_CURRENT_LEVEL", nil);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -43,23 +47,46 @@
     }
 }
 
+- (UIBarButtonItem *)activityButton {
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [spinner startAnimating];
+    
+    return [[UIBarButtonItem alloc] initWithCustomView:spinner];
+}
+
 - (void)fetchCurrentWaterLevel {
-    __weak typeof(self) weakSelf = self;
-    [[SAWNetworkController sharedNetworkController] fetchCurrentWaterLevelWithCompletion:^(SAWWaterLevel *waterLevel, NSError *error) {
-        if (error) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ALERT_CURRENT_LEVEL_FAIL_TITLE", nil)
-                                                            message:NSLocalizedString(@"ALERT_CURRENT_LEVEL_FAIL_MESSAGE", nil)
-                                                           delegate:nil
-                                                  cancelButtonTitle:NSLocalizedString(@"ALERT_CURRENT_LEVEL_FAIL_CANCEL_MESSAGE", nil)
-                                                  otherButtonTitles:nil];
-            [alert show];
-        } else {
-            weakSelf.currentWaterLevel = waterLevel;
-            weakSelf.currentIndexPath = [weakSelf indexPathForCurrentLevel:[waterLevel.level floatValue]];
-            [weakSelf.tableView reloadRowsAtIndexPaths:@[weakSelf.currentIndexPath] withRowAnimation:UITableViewRowAnimationNone];
-            [weakSelf.tableView scrollToRowAtIndexPath:weakSelf.currentIndexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
-        }
-    }];
+    SAWWaterLevel *level = [[SAWWaterLevel alloc] init];
+    level.level = @(643.5f);
+    level.average = @(643.5);
+    level.timestamp = [NSDate date];
+
+    self.currentWaterLevel = level;
+    self.currentIndexPath = [self indexPathForCurrentLevel:[level.level floatValue]];
+    [self.tableView reloadRowsAtIndexPaths:@[self.currentIndexPath] withRowAnimation:UITableViewRowAnimationNone];
+    [self.tableView scrollToRowAtIndexPath:self.currentIndexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+
+//    [self.navigationItem setRightBarButtonItem:self.activityButton animated:YES];
+//
+//    __weak typeof(self) weakSelf = self;
+//    [[SAWNetworkController sharedNetworkController] fetchCurrentWaterLevelWithCompletion:^(SAWWaterLevel *waterLevel, NSError *error) {
+//        
+//        
+//        if (error) {
+//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ALERT_CURRENT_LEVEL_FAIL_TITLE", nil)
+//                                                            message:NSLocalizedString(@"ALERT_CURRENT_LEVEL_FAIL_MESSAGE", nil)
+//                                                           delegate:nil
+//                                                  cancelButtonTitle:NSLocalizedString(@"ALERT_CURRENT_LEVEL_FAIL_CANCEL_TITLE", nil)
+//                                                  otherButtonTitles:nil];
+//            [alert show];
+//        } else {
+//            weakSelf.currentWaterLevel = waterLevel;
+//            weakSelf.currentIndexPath = [weakSelf indexPathForCurrentLevel:[waterLevel.level floatValue]];
+//            [weakSelf.tableView reloadRowsAtIndexPaths:@[weakSelf.currentIndexPath] withRowAnimation:UITableViewRowAnimationNone];
+//            [weakSelf.tableView scrollToRowAtIndexPath:weakSelf.currentIndexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+//        }
+//        
+//        [weakSelf.navigationItem setRightBarButtonItem:weakSelf.refreshButton animated:YES];
+//    }];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -80,19 +107,19 @@
         NSMutableArray *sections = [[NSMutableArray alloc] init];
         
         for (int i = 0; i < 6; i++) {
-            NSInteger rowCount = 20;
+            NSInteger rowCount = 21;
 
             NSMutableArray *rows = [[NSMutableArray alloc] init];
             if (i == SAWStageLevel4) {
-                rowCount = 10;
+                rowCount = 11;
             }
 
-            CGFloat sectionFootLevel = [self footStartingLevelForStageLevel:i];
+            CGFloat sectionFootLevel = [self footStartingLevelForStageLevel:i] + 0.5f;
             for (int j = 0; j < rowCount; j++) {
                 NSString *stringValue = @"";
-                CGFloat level = sectionFootLevel - (1.0 * j * 0.5);
+                CGFloat level = sectionFootLevel - (1.0f * j * 0.5f);
 
-                if (j % 2 == 0) {
+                if (j % 2 != 0) {
                     stringValue = [NSString stringWithFormat:@"%g", level];
                 }
 
@@ -129,7 +156,7 @@
 
     NSIndexPath *indexPath = nil;
 
-    CGFloat currentLevel = [self.currentWaterLevel.level floatValue];
+    CGFloat currentLevel = [self.currentWaterLevel.average floatValue];
 
     __block SAWLevelModel *model = nil;
 
@@ -138,7 +165,7 @@
         if (i + 1 < allRows.count) {
             SAWLevelModel *nextModel = allRows[i + 1];
 
-            if (currentLevel < currentModel.level && currentLevel > nextModel.level) {
+            if (currentLevel < currentModel.level && currentLevel >= nextModel.level) {
                 model = nextModel;
             }
         }
@@ -157,6 +184,10 @@
             }
         }
     }
+    
+    if (indexPath == nil) {
+        indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    }
 
     return indexPath;
 }
@@ -169,6 +200,9 @@
 
 - (IBAction)didSelectRemindersButton:(id)sender {
     [self performSegueWithIdentifier:SEGUE_REMINDERS sender:nil];
+}
+- (IBAction)didSelectRefresh:(id)sender {
+    [self fetchCurrentWaterLevel];
 }
 
 #pragma mark - UITableViewDataSource
@@ -193,17 +227,17 @@
 - (NSString *)sectionTitleForStageLevel:(SAWStageLevel)stageLevel {
     switch (stageLevel) {
         case SAWStageLevelNormal:
-            return @"No Restrictions";
+            return NSLocalizedString(@"STAGE_LEVEL_NO_RESTRICTION", nil);
         case SAWStageLevel1:
-            return @"Stage 1";
+            return NSLocalizedString(@"STAGE_LEVEL_1", nil);
         case SAWStageLevel2:
-            return @"Stage 2";
+            return NSLocalizedString(@"STAGE_LEVEL_2", nil);
         case SAWStageLevel3:
-            return @"Stage 3";
+            return NSLocalizedString(@"STAGE_LEVEL_3", nil);
         case SAWStageLevel4:
-            return @"Stage 4";
+            return NSLocalizedString(@"STAGE_LEVEL_4", nil);
         case SAWStageLevel5:
-            return @"Stage 5";
+            return NSLocalizedString(@"STAGE_LEVEL_5", nil);
     }
 }
 
@@ -226,7 +260,7 @@
         cell = [tableView dequeueReusableCellWithIdentifier:currentCellID forIndexPath:indexPath];
         cell.backgroundColor = [UIColor blackColor];
         cell.textLabel.textColor = [UIColor whiteColor];
-        cell.textLabel.text = [NSString stringWithFormat:@"Current Level: %.2f ft.", [self.currentWaterLevel.average floatValue]];
+        cell.textLabel.text = [NSString stringWithFormat:@"%.2f %@ ← %@", [self.currentWaterLevel.average floatValue], NSLocalizedString(@"CURRENT_LEVEL_FEET", nil), NSLocalizedString(@"CURRENT_WATER_LEVEL_CELL", nil)];
     } else {
         cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
         cell.backgroundColor = [SAWConstants colorForStageLevel:indexPath.section];
@@ -288,7 +322,7 @@
     if (self.currentIndexPath && [self.currentIndexPath isEqual:indexPath]) {
         return 44.0f;
     } else {
-        return 10.0f;
+        return 12.0f;
     }
 }
 

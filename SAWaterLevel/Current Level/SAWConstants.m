@@ -13,7 +13,7 @@
 + (UIColor *)colorForStageLevel:(SAWStageLevel)stageLevel {
     switch (stageLevel) {
         case SAWStageLevelNormal:
-            return [UIColor blueColor];
+            return [UIColor colorWithRed:113.0f/255.0f green:174.0f/255.0f blue:212.0f/255.0f alpha:1.0f];
         case SAWStageLevel1:
             return [UIColor colorWithRed:163.0f/255.0f green:212.0f/255.0f blue:113.0f/255.0f alpha:1.0f];
         case SAWStageLevel2:
@@ -31,7 +31,6 @@
 
 + (UIColor *)textColorForStageLevel:(SAWStageLevel)stageLevel {
     switch (stageLevel) {
-        case SAWStageLevelNormal:
         case SAWStageLevel5:
             return [UIColor whiteColor];
         default:

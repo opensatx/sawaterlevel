@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="n7t-Qj-3t9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="oGG-4S-7Wj">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Navigation Controller - Current Level-->
         <scene sceneID="Bgu-iB-rmz">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="n7t-Qj-3t9" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n7t-Qj-3t9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Current Level" id="d9H-77-JwN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gu6-PE-8Tj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -24,7 +25,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7F-eK-tBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="190" y="109"/>
+            <point key="canvasLocation" x="716" y="109"/>
         </scene>
         <!--Current Level View Controller - Current Level-->
         <scene sceneID="mvC-ma-LS6">
@@ -77,24 +78,22 @@
                             <outlet property="delegate" destination="s0k-xk-jkb" id="bkM-gg-ehN"/>
                         </connections>
                     </tableView>
-                    <toolbarItems>
-                        <barButtonItem title="Reminders" id="TYT-DV-DGI">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Current Level" id="oaw-3G-ia0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Ppl-MJ-OVL">
                             <connections>
-                                <action selector="didSelectRemindersButton:" destination="s0k-xk-jkb" id="WhB-zK-WgA"/>
+                                <action selector="didSelectRefresh:" destination="s0k-xk-jkb" id="x3D-vA-fAj"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Jhm-1q-b7C"/>
-                        <barButtonItem title="Historical Data" id="yF4-XO-Px7"/>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="Current Level" id="oaw-3G-ia0"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="refreshButton" destination="Ppl-MJ-OVL" id="b81-ev-dlW"/>
                         <segue destination="v5p-fd-0MD" kind="modal" identifier="SEGUE_STAGE_DETAILS" id="25r-kd-Kgz"/>
-                        <segue destination="jI1-1h-443" kind="modal" identifier="SEGUE_REMINDERS" id="L8O-Rh-hhZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOg-Tg-cbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="603" y="100"/>
+            <point key="canvasLocation" x="1129" y="100"/>
         </scene>
         <!--Reminders View Controller - Reminders-->
         <scene sceneID="Pqc-Wt-dxc">
@@ -152,7 +151,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWx-N5-xE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1749" y="557"/>
+            <point key="canvasLocation" x="1129" y="884"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2Z2-JV-WKQ">
@@ -170,7 +169,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQ3-Tl-4qI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1142" y="-478"/>
+            <point key="canvasLocation" x="1668" y="-478"/>
         </scene>
         <!--Stage Details View Controller-->
         <scene sceneID="xDW-kM-49a">
@@ -206,12 +205,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOG-3y-E5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1567" y="-478"/>
+            <point key="canvasLocation" x="2093" y="-478"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Controller - Reminders-->
         <scene sceneID="nLo-eO-PqC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jI1-1h-443" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Reminders" id="5Zw-vG-vcC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="l4b-AB-dyr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -224,7 +224,54 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfR-IC-Xrk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1142" y="538"/>
+            <point key="canvasLocation" x="716" y="884"/>
+        </scene>
+        <!--Navigation Controller - Conservation-->
+        <scene sceneID="7a7-e3-fJ0">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="seK-7q-Yic" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Conservation" id="XsP-d4-64X"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kog-ZR-i9n">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xPY-Ju-390" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="719" y="2437"/>
+        </scene>
+        <!--Navigation Controller - Historical Data-->
+        <scene sceneID="Otg-i4-9WS">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="MAw-bG-zv4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Historical Data" id="pA3-WK-DPY"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nd3-VB-CyQ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NeY-81-FHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="716" y="1712"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="T80-mF-L7l">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="oGG-4S-7Wj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Lpx-wj-yaY">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="n7t-Qj-3t9" kind="relationship" relationship="viewControllers" id="5n3-GT-JuO"/>
+                        <segue destination="jI1-1h-443" kind="relationship" relationship="viewControllers" id="4IK-fG-MDe"/>
+                        <segue destination="MAw-bG-zv4" kind="relationship" relationship="viewControllers" id="CMB-Q5-WnS"/>
+                        <segue destination="seK-7q-Yic" kind="relationship" relationship="viewControllers" id="gfX-mj-ccL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xcy-Sg-EcJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="1303"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
