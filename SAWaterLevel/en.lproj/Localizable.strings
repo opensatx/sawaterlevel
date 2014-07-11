@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  SAWaterLevel
+
+  Created by Wayne Hartman on 5/31/14.
+  Copyright (c) 2014 Wayne Hartman. All rights reserved.
+*/
+
+"ALERT_CURRENT_LEVEL_FAIL_TITLE"        = "Error";
+"ALERT_CURRENT_LEVEL_FAIL_MESSAGE"      = "Unable to get current levels.  Please try again later.";
+"ALERT_CURRENT_LEVEL_FAIL_CANCEL_TITLE" = "OK";
+
+"TAB_BAR_ITEM_CURRENT_LEVEL"    = "Current Level";
+"TAB_BAR_ITEM_REMINDERS"        = "Reminders";
+"TAB_BAR_ITEM_HISTORICAL_DATA"  = "Historical Data";
+"TAB_BAR_ITEM_CONSERVATION"     = "Conservation";
+
+"CURRENT_WATER_LEVEL_CELL"      = "Current Level";
+"CURRENT_LEVEL_TITLE"           = "Current Level";
+"CURRENT_LEVEL_TAB_BAR_ITEM"    = "Current Level";
+"CURRENT_LEVEL_FEET"            = "ft.";
+
+"STAGE_LEVEL_NO_RESTRICTION"    = "No Restrictions";
+"STAGE_LEVEL_1"                 = "Stage 1";
+"STAGE_LEVEL_2"                 = "Stage 2";
+"STAGE_LEVEL_3"                 = "Stage 3";
+"STAGE_LEVEL_4"                 = "Stage 4";
+"STAGE_LEVEL_5"                 = "Stage 5";
