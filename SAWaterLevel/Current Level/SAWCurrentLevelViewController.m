@@ -56,8 +56,8 @@
 
 - (void)fetchCurrentWaterLevel {
     SAWWaterLevel *level = [[SAWWaterLevel alloc] init];
-    level.level = @(643.5f);
-    level.average = @(643.5);
+    level.level = @(640.5f);
+    level.average = @(640.5);
     level.timestamp = [NSDate date];
 
     self.currentWaterLevel = level;
