@@ -10,4 +10,22 @@
 
 @implementation SAWWaterLevel
 
+#pragma mark - NSCoding
+
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    [encoder encodeObject:self.timestamp forKey:@"timestamp"];
+    [encoder encodeObject:self.level forKey:@"level"];
+    [encoder encodeObject:self.average forKey:@"average"];
+}
+
+- (id)initWithCoder:(NSCoder *)decoder {
+    if (self = [super init]) {
+        self.timestamp = [decoder decodeObjectForKey:@"timestamp"];
+        self.level = [decoder decodeObjectForKey:@"level"];
+        self.average = [decoder decodeObjectForKey:@"average"];
+    }
+
+    return self;
+}
+
 @end

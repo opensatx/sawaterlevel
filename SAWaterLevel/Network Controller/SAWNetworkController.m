@@ -8,12 +8,20 @@
 
 #import "SAWNetworkController.h"
 #import "AFNetworking.h"
+#import "SAWDataController.h"
+
+typedef NS_ENUM(NSInteger, SAWNetworkError) {
+    SAWNetworkErrorMissingData = -1100
+};
 
 @interface SAWNetworkController ()
 
 @end
 
-#define SERVICE_URL_CURRENT_WATER_LEVEL @"http://10.10.1.38:5000/level"
+#define SERVICE_HOST @"http://sawaterlevels-api.herokuapp.com"
+#define SERVICE_URL_CURRENT_WATER_LEVEL @"/level"
+
+#define SERVICE_ERROR_DOMAIN @"SAWaterLevelErrorDomain"
 
 @implementation SAWNetworkController
 
@@ -25,16 +33,18 @@ static NSDateFormatter *waterLevelDateFormatter;
     dispatch_once(&onceToken, ^{
         singleton = [[SAWNetworkController alloc] init];
         waterLevelDateFormatter = [[NSDateFormatter alloc] init];
-        [waterLevelDateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
+        [waterLevelDateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZ"];
     });
 
     return singleton;
 }
 
-
-
 - (void)fetchCurrentWaterLevelWithCompletion:(SAWCurrentWaterLevelCompletionHandler)completionHandler {
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:SERVICE_URL_CURRENT_WATER_LEVEL]];
+    NSString *requestPath = [NSString stringWithFormat:@"%@%@", SERVICE_HOST, SERVICE_URL_CURRENT_WATER_LEVEL];
+    NSURL *url = [NSURL URLWithString:requestPath];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+
+    __weak typeof(self) weakSelf = self;
 
     void (^failureHandler)(AFHTTPRequestOperation*,NSError*) = ^(AFHTTPRequestOperation *operation, NSError *error) {
         if (completionHandler) {
@@ -46,12 +56,20 @@ static NSDateFormatter *waterLevelDateFormatter;
         if (completionHandler) {
             NSDictionary *data = responseObject[@"level"];
 
-            SAWWaterLevel *level = [[SAWWaterLevel alloc] init];
-            level.timestamp = [waterLevelDateFormatter dateFromString:data[@"timestamp"]];
-            level.level = data[@"level"];
-            level.average = data[@"average"];
+            if (data == nil) {
+                NSError *error = [weakSelf errorWithCode:SAWNetworkErrorMissingData errorMessage:NSLocalizedString(@"SERVICE_ERROR_MISSING_DATA", nil)];
+                failureHandler(nil, error);
+            } else {
+                SAWWaterLevel *level = [[SAWWaterLevel alloc] init];
+                level.timestamp = [waterLevelDateFormatter dateFromString:data[@"timestamp"]];
+                level.level = data[@"level"];
+                level.average = data[@"average"];
 
-            completionHandler(level, nil);
+                SAWDataController *dataController = [[SAWDataController alloc] init];
+                [dataController cacheWaterLevel:level];
+
+                completionHandler(level, nil);
+            }
         }
     };
 
@@ -60,6 +78,11 @@ static NSDateFormatter *waterLevelDateFormatter;
     [requestOperation setCompletionBlockWithSuccess:successHandler
                                             failure:failureHandler];
     [requestOperation start];
+}
+
+- (NSError *)errorWithCode:(NSInteger)code errorMessage:(NSString *)message {
+    NSDictionary *userInfo = @{ NSLocalizedDescriptionKey : message };
+    return [NSError errorWithDomain:SERVICE_ERROR_DOMAIN code:code userInfo:userInfo];
 }
 
 @end

@@ -12,6 +12,7 @@
 #import "SAWHeaderView.h"
 #import "SAWConstants.h"
 #import "SAWStageDetailsViewController.h"
+#import "SAWDataController.h"
 #import "TRModalTransition.h"
 
 #define SEGUE_STAGE_DETAILS @"SCENE_STAGE_DETAILS"
@@ -37,14 +38,15 @@
     [super viewDidLoad];
     self.title = NSLocalizedString(@"CURRENT_LEVEL_TITLE", nil);
     self.tabBarItem.title = NSLocalizedString(@"TAB_BAR_ITEM_CURRENT_LEVEL", nil);
+
+    SAWDataController *dataController = [[SAWDataController alloc] init];
+
+    self.currentWaterLevel = [dataController fetchCachedWaterLevel];
+    [self fetchCurrentWaterLevel];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-
-    if (!self.currentWaterLevel) {
-        [self fetchCurrentWaterLevel];
-    }
 }
 
 - (UIBarButtonItem *)activityButton {
@@ -55,38 +57,28 @@
 }
 
 - (void)fetchCurrentWaterLevel {
-    SAWWaterLevel *level = [[SAWWaterLevel alloc] init];
-    level.level = @(640.5f);
-    level.average = @(640.5);
-    level.timestamp = [NSDate date];
+    [self.navigationItem setRightBarButtonItem:self.activityButton animated:YES];
 
-    self.currentWaterLevel = level;
-    self.currentIndexPath = [self indexPathForCurrentLevel:[level.level floatValue]];
-    [self.tableView reloadRowsAtIndexPaths:@[self.currentIndexPath] withRowAnimation:UITableViewRowAnimationNone];
-    [self.tableView scrollToRowAtIndexPath:self.currentIndexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
-
-//    [self.navigationItem setRightBarButtonItem:self.activityButton animated:YES];
-//
-//    __weak typeof(self) weakSelf = self;
-//    [[SAWNetworkController sharedNetworkController] fetchCurrentWaterLevelWithCompletion:^(SAWWaterLevel *waterLevel, NSError *error) {
-//        
-//        
-//        if (error) {
-//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ALERT_CURRENT_LEVEL_FAIL_TITLE", nil)
-//                                                            message:NSLocalizedString(@"ALERT_CURRENT_LEVEL_FAIL_MESSAGE", nil)
-//                                                           delegate:nil
-//                                                  cancelButtonTitle:NSLocalizedString(@"ALERT_CURRENT_LEVEL_FAIL_CANCEL_TITLE", nil)
-//                                                  otherButtonTitles:nil];
-//            [alert show];
-//        } else {
-//            weakSelf.currentWaterLevel = waterLevel;
-//            weakSelf.currentIndexPath = [weakSelf indexPathForCurrentLevel:[waterLevel.level floatValue]];
-//            [weakSelf.tableView reloadRowsAtIndexPaths:@[weakSelf.currentIndexPath] withRowAnimation:UITableViewRowAnimationNone];
-//            [weakSelf.tableView scrollToRowAtIndexPath:weakSelf.currentIndexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
-//        }
-//        
-//        [weakSelf.navigationItem setRightBarButtonItem:weakSelf.refreshButton animated:YES];
-//    }];
+    __weak typeof(self) weakSelf = self;
+    [[SAWNetworkController sharedNetworkController] fetchCurrentWaterLevelWithCompletion:^(SAWWaterLevel *waterLevel, NSError *error) {
+        
+        
+        if (error) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ALERT_CURRENT_LEVEL_FAIL_TITLE", nil)
+                                                            message:NSLocalizedString(@"ALERT_CURRENT_LEVEL_FAIL_MESSAGE", nil)
+                                                           delegate:nil
+                                                  cancelButtonTitle:NSLocalizedString(@"ALERT_CURRENT_LEVEL_FAIL_CANCEL_TITLE", nil)
+                                                  otherButtonTitles:nil];
+            [alert show];
+        } else {
+            weakSelf.currentWaterLevel = waterLevel;
+            weakSelf.currentIndexPath = [weakSelf indexPathForCurrentLevel:[waterLevel.level floatValue]];
+            [weakSelf.tableView reloadRowsAtIndexPaths:@[weakSelf.currentIndexPath] withRowAnimation:UITableViewRowAnimationNone];
+            [weakSelf.tableView scrollToRowAtIndexPath:weakSelf.currentIndexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+        }
+        
+        [weakSelf.navigationItem setRightBarButtonItem:weakSelf.refreshButton animated:YES];
+    }];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -260,7 +252,7 @@
         cell = [tableView dequeueReusableCellWithIdentifier:currentCellID forIndexPath:indexPath];
         cell.backgroundColor = [UIColor blackColor];
         cell.textLabel.textColor = [UIColor whiteColor];
-        cell.textLabel.text = [NSString stringWithFormat:@"%.2f %@ ← %@", [self.currentWaterLevel.average floatValue], NSLocalizedString(@"CURRENT_LEVEL_FEET", nil), NSLocalizedString(@"CURRENT_WATER_LEVEL_CELL", nil)];
+        cell.textLabel.text = [NSString stringWithFormat:@"%.2f %@ ← %@", [self.currentWaterLevel.average floatValue], NSLocalizedString(@"CURRENT_LEVEL_FEET", nil), NSLocalizedString(@"CURRENT_AVERAGE_WATER_LEVEL", nil)];
     } else {
         cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
         cell.backgroundColor = [SAWConstants colorForStageLevel:indexPath.section];

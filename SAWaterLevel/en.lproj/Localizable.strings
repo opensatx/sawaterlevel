@@ -16,6 +16,7 @@
 "TAB_BAR_ITEM_CONSERVATION"     = "Conservation";
 
 "CURRENT_WATER_LEVEL_CELL"      = "Current Level";
+"CURRENT_AVERAGE_WATER_LEVEL"   = "10-day Average";
 "CURRENT_LEVEL_TITLE"           = "Current Level";
 "CURRENT_LEVEL_TAB_BAR_ITEM"    = "Current Level";
 "CURRENT_LEVEL_FEET"            = "ft.";
@@ -26,3 +27,5 @@
 "STAGE_LEVEL_3"                 = "Stage 3";
 "STAGE_LEVEL_4"                 = "Stage 4";
 "STAGE_LEVEL_5"                 = "Stage 5";
+
+"SERVICE_ERROR_MISSING_DATA" = "The current level information is not current available";

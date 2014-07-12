@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SAWWaterLevel : NSObject
+@interface SAWWaterLevel : NSObject <NSCoding>
 
 @property (nonatomic, strong) NSDate *timestamp;
 @property (nonatomic, strong) NSNumber *level;
