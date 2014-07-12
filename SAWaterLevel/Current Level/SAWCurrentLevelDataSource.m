@@ -19,6 +19,7 @@
 @property (nonatomic, strong) NSArray *stageLevels;
 
 @property (nonatomic, strong) NSIndexPath *currentIndexPath;
+@property (nonatomic, strong) NSIndexPath *averageIndexPath;
 
 @end
 
@@ -30,10 +31,11 @@
     _waterLevel = waterLevel;
 
     if (waterLevel) {
-        self.currentIndexPath = [self indexPathForLevel:[waterLevel.average floatValue]];
-        [self.tableView reloadRowsAtIndexPaths:@[self.currentIndexPath]
-                              withRowAnimation:UITableViewRowAnimationNone];
-        [self.tableView scrollToRowAtIndexPath:self.currentIndexPath
+        self.currentIndexPath = [self indexPathForLevel:[waterLevel.level floatValue]];
+        self.averageIndexPath = [self indexPathForLevel:[waterLevel.average floatValue]];
+
+        [self.tableView reloadData];
+        [self.tableView scrollToRowAtIndexPath:self.averageIndexPath
                               atScrollPosition:UITableViewScrollPositionMiddle
                                       animated:YES];
     }
@@ -108,25 +110,19 @@
     }
     
     NSIndexPath *indexPath = nil;
-    
-    CGFloat currentLevel = [self.waterLevel.average floatValue];
-    
-    __block SAWLevelModel *model = nil;
-    
+
+    SAWLevelModel *model = nil;
+
     for (int i = 0; i < allRows.count; i++) {
         SAWLevelModel *currentModel = allRows[i];
         if (i + 1 < allRows.count) {
             SAWLevelModel *nextModel = allRows[i + 1];
             
-            if (currentLevel < currentModel.level && currentLevel >= nextModel.level) {
+            if ((waterLevel < currentModel.level && waterLevel >= nextModel.level)) {
                 model = nextModel;
             }
         }
     }
-    
-    [allRows enumerateObjectsUsingBlock:^(SAWLevelModel *model, NSUInteger idx, BOOL *stop) {
-        
-    }];
     
     for (int i = 0; i < self.dataLevels.count; i++) {
         NSArray *rows = self.dataLevels[i];
@@ -185,6 +181,11 @@
         cell = [tableView dequeueReusableCellWithIdentifier:currentCellID forIndexPath:indexPath];
         cell.backgroundColor = [UIColor blackColor];
         cell.textLabel.textColor = [UIColor whiteColor];
+        cell.textLabel.text = [NSString stringWithFormat:@"%.2f %@ ← %@", [self.waterLevel.level floatValue], NSLocalizedString(@"CURRENT_LEVEL_FEET", nil), NSLocalizedString(@"CURRENT_WATER_LEVEL_CELL", nil)];
+    } else if ([indexPath isEqual:self.averageIndexPath]) {
+        cell = [tableView dequeueReusableCellWithIdentifier:currentCellID forIndexPath:indexPath];
+        cell.backgroundColor = [UIColor blackColor];
+        cell.textLabel.textColor = [UIColor whiteColor];
         cell.textLabel.text = [NSString stringWithFormat:@"%.2f %@ ← %@", [self.waterLevel.average floatValue], NSLocalizedString(@"CURRENT_LEVEL_FEET", nil), NSLocalizedString(@"CURRENT_AVERAGE_WATER_LEVEL", nil)];
     } else {
         cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
@@ -234,6 +235,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.currentIndexPath && [self.currentIndexPath isEqual:indexPath]) {
+        return 44.0f;
+    } else if (self.averageIndexPath && [self.averageIndexPath isEqual:indexPath]){
         return 44.0f;
     } else {
         return 12.0f;

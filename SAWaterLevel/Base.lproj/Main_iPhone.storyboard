@@ -235,32 +235,6 @@
             </objects>
             <point key="canvasLocation" x="716" y="884"/>
         </scene>
-        <!--Navigation Controller - Conservation-->
-        <scene sceneID="7a7-e3-fJ0">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="seK-7q-Yic" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Conservation" id="XsP-d4-64X"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kog-ZR-i9n">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xPY-Ju-390" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="719" y="2437"/>
-        </scene>
-        <!--Navigation Controller - Historical Data-->
-        <scene sceneID="Otg-i4-9WS">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="MAw-bG-zv4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Historical Data" id="pA3-WK-DPY"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nd3-VB-CyQ">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NeY-81-FHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="716" y="1712"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="T80-mF-L7l">
             <objects>
