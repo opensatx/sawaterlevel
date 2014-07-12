@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SAWConstants.h"
+
+@class SAWStageLevel;
 
 @interface SAWStageDetailsViewController : UIViewController
 
-@property (nonatomic, assign) SAWStageLevel stageLevel;
+@property (nonatomic, strong) SAWStageLevel *stageLevel;
 
 @end

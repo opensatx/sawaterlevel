@@ -74,8 +74,8 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="s0k-xk-jkb" id="rXv-vc-vLb"/>
-                            <outlet property="delegate" destination="s0k-xk-jkb" id="bkM-gg-ehN"/>
+                            <outlet property="dataSource" destination="bEg-Rr-Nqs" id="oxe-hK-3w2"/>
+                            <outlet property="delegate" destination="bEg-Rr-Nqs" id="v0y-u7-uMP"/>
                         </connections>
                     </tableView>
                     <toolbarItems/>
@@ -87,11 +87,17 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="dataSource" destination="bEg-Rr-Nqs" id="NK6-Vu-gHr"/>
                         <outlet property="refreshButton" destination="Ppl-MJ-OVL" id="b81-ev-dlW"/>
                         <segue destination="v5p-fd-0MD" kind="modal" identifier="SEGUE_STAGE_DETAILS" id="25r-kd-Kgz"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOg-Tg-cbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="bEg-Rr-Nqs" customClass="SAWCurrentLevelDataSource">
+                    <connections>
+                        <outlet property="tableView" destination="26M-5y-F3j" id="Lu8-NP-6y8"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1129" y="100"/>
         </scene>
@@ -265,8 +271,6 @@
                     <connections>
                         <segue destination="n7t-Qj-3t9" kind="relationship" relationship="viewControllers" id="5n3-GT-JuO"/>
                         <segue destination="jI1-1h-443" kind="relationship" relationship="viewControllers" id="4IK-fG-MDe"/>
-                        <segue destination="MAw-bG-zv4" kind="relationship" relationship="viewControllers" id="CMB-Q5-WnS"/>
-                        <segue destination="seK-7q-Yic" kind="relationship" relationship="viewControllers" id="gfX-mj-ccL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xcy-Sg-EcJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,6 +8,8 @@
 
 #import "SAWStageDetailsViewController.h"
 #import "SAWRestrictionModel.h"
+#import "SAWStageLevel.h"
+#import "SAWStageLevel+UI.h"
 
 @interface SAWStageDetailsViewController ()
 
@@ -20,21 +22,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.navigationController.navigationBar.barTintColor = [SAWConstants colorForStageLevel:self.stageLevel];
+    self.navigationController.navigationBar.barTintColor = self.stageLevel.backgroundColor;
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.titleTextAttributes = @{
-                                                                    NSForegroundColorAttributeName : [SAWConstants textColorForStageLevel:self.stageLevel]
+                                                                    NSForegroundColorAttributeName : self.stageLevel.foregroundColor
                                                                     };
-    self.navigationController.navigationBar.tintColor = [SAWConstants textColorForStageLevel:self.stageLevel];
-
-    NSDictionary *contentDict = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Restrictions" ofType:@"plist"]];
-    NSString *fileName = contentDict[[NSString stringWithFormat:@"%li", (long)self.stageLevel]];
-
-    NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:@""];
-    NSURL *url = [NSURL fileURLWithPath:path];
-
+    self.navigationController.navigationBar.tintColor = self.stageLevel.foregroundColor;
     self.webView.tintColor = self.navigationController.navigationBar.barTintColor;
-    [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+    self.title = self.stageLevel.localizedTitle;
+
+    [self.webView loadRequest:[NSURLRequest requestWithURL:self.stageLevel.contentURL]];
 }
 
 @end
