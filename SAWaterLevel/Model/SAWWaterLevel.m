@@ -10,6 +10,19 @@
 
 @implementation SAWWaterLevel
 
+#pragma mark - Debug
+
+- (NSString *)debugDescription {
+    NSDictionary *values = @{
+                             @"timestamp" : self.timestamp ?: [NSNull null],
+                             @"level" : self.level ?: [NSNull null],
+                             @"average" : self.average ?: [NSNull null]
+                             };
+    NSString *description = [NSString stringWithFormat:@"%@ %@", [super debugDescription], [values debugDescription]];
+
+    return description;
+}
+
 #pragma mark - NSCoding
 
 - (void)encodeWithCoder:(NSCoder *)encoder {

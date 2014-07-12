@@ -7,7 +7,6 @@
 //
 
 #import "SAWStageDetailsViewController.h"
-#import "SAWRestrictionModel.h"
 #import "SAWStageLevel.h"
 #import "SAWStageLevel+UI.h"
 
@@ -31,7 +30,19 @@
     self.webView.tintColor = self.navigationController.navigationBar.barTintColor;
     self.title = self.stageLevel.localizedTitle;
 
-    [self.webView loadRequest:[NSURLRequest requestWithURL:self.stageLevel.contentURL]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:self.stageLevel.localizedContentURL]];
 }
 
+#pragma mark - UIWebViewDelegate
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    
+    if ([request.URL.scheme isEqualToString:@"http"]) {
+        [[UIApplication sharedApplication] openURL:request.URL];
+
+        return NO;
+    }
+    
+    return YES;
+}
 @end

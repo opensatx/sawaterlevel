@@ -10,4 +10,17 @@
 
 @implementation SAWLevelModel
 
+#pragma mark - Debug
+
+
+- (NSString *)debugDescription {
+    NSDictionary *values = @{
+                             @"displayLevel" : self.displayLevel ?: [NSNull null],
+                             @"level" : @(self.level)
+                             };
+    NSString *description = [NSString stringWithFormat:@"%@ %@", [super debugDescription], [values debugDescription]];
+
+    return description;
+}
+
 @end

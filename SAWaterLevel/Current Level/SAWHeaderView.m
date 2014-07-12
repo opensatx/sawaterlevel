@@ -26,8 +26,10 @@
     return self;
 }
 
-- (void)willMoveToSuperview:(UIView *)newSuperview {
-    if (newSuperview && self.infoButton.superview == nil) {
+- (void)layoutSubviews {
+    [super layoutSubviews];
+
+    if (self.infoButton.superview == nil) {
         self.infoButton.center = CGPointMake(self.frame.size.width - (self.infoButton.frame.size.width * 0.5f) - 10.0f,
                                              (self.frame.size.height * 0.5f));
         self.infoButton.tintColor = [UIColor whiteColor];

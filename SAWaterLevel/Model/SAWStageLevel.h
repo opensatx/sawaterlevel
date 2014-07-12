@@ -23,6 +23,6 @@ typedef NS_ENUM(NSInteger, SAWStageLevels) {
 
 @property (nonatomic, assign) SAWStageLevels level;
 @property (nonatomic, strong, readonly) NSString *localizedTitle;
-@property (nonatomic, strong, readonly) NSURL *contentURL;
+@property (nonatomic, strong, readonly) NSURL *localizedContentURL;
 
 @end

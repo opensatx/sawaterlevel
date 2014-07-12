@@ -16,7 +16,7 @@
 "TAB_BAR_ITEM_CONSERVATION"     = "Conservación";
 
 "CURRENT_WATER_LEVEL_CELL"      = "Nivel Actual";
-"CURRENT_AVERAGE_WATER_LEVEL"   = "Promedio de los 10 dias pasados";
+"CURRENT_AVERAGE_WATER_LEVEL"   = "Promedio de 10 días";
 "CURRENT_LEVEL_TITLE"           = "Nivel Actual";
 "CURRENT_LEVEL_TAB_BAR_ITEM"    = "Nivel Actual";
 "CURRENT_LEVEL_FEET"            = "pies";
