@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B09C39151970C180003F5BA8 /* SAWDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C39141970C180003F5BA8 /* SAWDataController.m */; };
+		B09C39171970C9B9003F5BA8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09C39161970C9B9003F5BA8 /* MapKit.framework */; };
 		B0C95A89193A4B0600A6F1FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C95A88193A4B0600A6F1FA /* Foundation.framework */; };
 		B0C95A8B193A4B0600A6F1FA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C95A8A193A4B0600A6F1FA /* CoreGraphics.framework */; };
 		B0C95A8D193A4B0600A6F1FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C95A8C193A4B0600A6F1FA /* UIKit.framework */; };
@@ -15,7 +16,6 @@
 		B0C95A95193A4B0600A6F1FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95A94193A4B0600A6F1FA /* main.m */; };
 		B0C95A99193A4B0600A6F1FA /* SAWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95A98193A4B0600A6F1FA /* SAWAppDelegate.m */; };
 		B0C95A9C193A4B0600A6F1FA /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C95A9A193A4B0600A6F1FA /* Main_iPhone.storyboard */; };
-		B0C95A9F193A4B0600A6F1FA /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C95A9D193A4B0600A6F1FA /* Main_iPad.storyboard */; };
 		B0C95AA4193A4B0600A6F1FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C95AA3193A4B0600A6F1FA /* Images.xcassets */; };
 		B0C95AAB193A4B0600A6F1FA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C95AAA193A4B0600A6F1FA /* XCTest.framework */; };
 		B0C95AAC193A4B0600A6F1FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C95A88193A4B0600A6F1FA /* Foundation.framework */; };
@@ -65,6 +65,7 @@
 /* Begin PBXFileReference section */
 		B09C39131970C180003F5BA8 /* SAWDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWDataController.h; sourceTree = "<group>"; };
 		B09C39141970C180003F5BA8 /* SAWDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWDataController.m; sourceTree = "<group>"; };
+		B09C39161970C9B9003F5BA8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B0C95A85193A4B0600A6F1FA /* SAWaterLevel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAWaterLevel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C95A88193A4B0600A6F1FA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B0C95A8A193A4B0600A6F1FA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -76,7 +77,6 @@
 		B0C95A97193A4B0600A6F1FA /* SAWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAWAppDelegate.h; sourceTree = "<group>"; };
 		B0C95A98193A4B0600A6F1FA /* SAWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAWAppDelegate.m; sourceTree = "<group>"; };
 		B0C95A9B193A4B0600A6F1FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		B0C95A9E193A4B0600A6F1FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		B0C95AA3193A4B0600A6F1FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B0C95AA9193A4B0600A6F1FA /* SAWaterLevelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAWaterLevelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C95AAA193A4B0600A6F1FA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -142,6 +142,7 @@
 			files = (
 				B0C95A8B193A4B0600A6F1FA /* CoreGraphics.framework in Frameworks */,
 				B0C95A8D193A4B0600A6F1FA /* UIKit.framework in Frameworks */,
+				B09C39171970C9B9003F5BA8 /* MapKit.framework in Frameworks */,
 				B0C95A89193A4B0600A6F1FA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +183,7 @@
 		B0C95A87193A4B0600A6F1FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B09C39161970C9B9003F5BA8 /* MapKit.framework */,
 				B0C95A88193A4B0600A6F1FA /* Foundation.framework */,
 				B0C95A8A193A4B0600A6F1FA /* CoreGraphics.framework */,
 				B0C95A8C193A4B0600A6F1FA /* UIKit.framework */,
@@ -200,7 +202,6 @@
 				B0C95A97193A4B0600A6F1FA /* SAWAppDelegate.h */,
 				B0C95A98193A4B0600A6F1FA /* SAWAppDelegate.m */,
 				B0C95A9A193A4B0600A6F1FA /* Main_iPhone.storyboard */,
-				B0C95A9D193A4B0600A6F1FA /* Main_iPad.storyboard */,
 				B0C95AA3193A4B0600A6F1FA /* Images.xcassets */,
 				B0C95A8F193A4B0600A6F1FA /* Supporting Files */,
 			);
@@ -402,6 +403,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Wayne Hartman";
 				TargetAttributes = {
+					B0C95A84193A4B0600A6F1FA = {
+						SystemCapabilities = {
+							com.apple.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					B0C95AA8193A4B0600A6F1FA = {
 						TestTargetID = B0C95A84193A4B0600A6F1FA;
 					};
@@ -437,7 +445,6 @@
 				B0C95AFF193A750000A6F1FA /* Restrictions.plist in Resources */,
 				B0C95B0E193A807500A6F1FA /* Stage5.html in Resources */,
 				B0C95B0A193A7F9700A6F1FA /* Stage3.html in Resources */,
-				B0C95A9F193A4B0600A6F1FA /* Main_iPad.storyboard in Resources */,
 				B0C95B0C193A800900A6F1FA /* Stage4.html in Resources */,
 				B0C95B06193A7BD900A6F1FA /* Stage1.html in Resources */,
 				B0C95AA4193A4B0600A6F1FA /* Images.xcassets in Resources */,
@@ -523,14 +530,6 @@
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
-		B0C95A9D193A4B0600A6F1FA /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B0C95A9E193A4B0600A6F1FA /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 		B0C95AB3193A4B0600A6F1FA /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -583,7 +582,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -616,7 +615,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -631,7 +630,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SAWaterLevel/SAWaterLevel-Prefix.pch";
 				INFOPLIST_FILE = "SAWaterLevel/SAWaterLevel-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -644,7 +645,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SAWaterLevel/SAWaterLevel-Prefix.pch";
 				INFOPLIST_FILE = "SAWaterLevel/SAWaterLevel-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
