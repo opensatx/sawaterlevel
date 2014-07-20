@@ -105,12 +105,13 @@
                                                   cancelButtonTitle:NSLocalizedString(@"ALERT_CURRENT_LEVEL_FAIL_CANCEL_TITLE", nil)
                                                   otherButtonTitles:nil];
             [alert show];
+            NSLog(@"error fetching level: %@", error);
         } else {
             weakSelf.dataSource.waterLevel = waterLevel;
+            [weakSelf updateStageLevelDisplay:waterLevel.stageLevel animated:YES];
         }
 
         [weakSelf.navigationItem setLeftBarButtonItem:weakSelf.refreshButton animated:YES];
-        [weakSelf updateStageLevelDisplay:waterLevel.stageLevel animated:YES];
     }];
 }
 

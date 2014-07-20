@@ -10,6 +10,7 @@
 #import "SAWDataController.h"
 #import "SAWLocalNotificationManager.h"
 #import "SAWWaterLevel.h"
+#import "SAWConstants.h"
 
 @interface SAWRemindersViewController () <UIAlertViewDelegate>
 
@@ -30,6 +31,10 @@ static NSDateFormatter *irrigationDateFormatter;
                                                  selector:@selector(applicationDidBecomeActiveNotification:)
                                                      name:UIApplicationDidBecomeActiveNotification
                                                    object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(waterLevelDidUpdate:)
+                                                     name:SAWWaterLevelDidUpdateNotification
+                                                   object:nil];
     }
     
     return self;
@@ -38,6 +43,11 @@ static NSDateFormatter *irrigationDateFormatter;
 - (void)viewDidLoad {
     [super viewDidLoad];
     SAWDataController *dataController = [[SAWDataController alloc] init];
+    SAWWaterLevel *waterLevel = [dataController fetchCachedWaterLevel];
+    
+    if (!waterLevel) {
+        self.wateringDaySwitch.enabled = NO;
+    }
 
     NSString *houseNumber = [dataController fetchCachedHouseNumber];
 
@@ -105,6 +115,10 @@ static NSDateFormatter *irrigationDateFormatter;
 
 - (void)applicationDidBecomeActiveNotification:(NSNotification *)notification {
     [self updateNextIrrigationDate];
+}
+
+- (void)waterLevelDidUpdate:(NSNotification *)notification {
+    self.wateringDaySwitch.enabled = YES;
 }
 
 #pragma mark - UIAlertViewDelegate

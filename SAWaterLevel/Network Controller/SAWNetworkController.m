@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "SAWDataController.h"
 #import "SAWStageLevel.h"
+#import "SAWConstants.h"
 
 typedef NS_ENUM(NSInteger, SAWNetworkError) {
     SAWNetworkErrorMissingData = -1100
@@ -71,6 +72,8 @@ static NSDateFormatter *waterLevelDateFormatter;
 
                 SAWDataController *dataController = [[SAWDataController alloc] init];
                 [dataController cacheWaterLevel:level];
+                
+                [[NSNotificationCenter defaultCenter] postNotificationName:SAWWaterLevelDidUpdateNotification object:nil];
 
                 completionHandler(level, nil);
             }

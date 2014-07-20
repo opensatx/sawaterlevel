@@ -109,12 +109,6 @@
 }
 
 - (NSDate *)determineNextFireDateForSchedule:(SAWIrrigationSchedule *)schedule timeRange:(NSRange)range {
-    BOOL shouldStartToday = NO;
-
-    if (schedule.frequency == SAWIrrigationScheduleFrequencyDaily) {
-        shouldStartToday = YES;
-    }
-
     NSDate* curDate = [NSDate date];
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *curComps = [calendar components:NSWeekdayCalendarUnit fromDate:curDate];

@@ -14,3 +14,9 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+
+#ifndef DEBUG
+#undef NSLog
+#define NSLog(args, ...)
+#endif

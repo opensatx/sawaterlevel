@@ -22,6 +22,7 @@
 		B09C39561972384D003F5BA8 /* SAWStageLevelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C39531972384D003F5BA8 /* SAWStageLevelTest.m */; };
 		B09C39571972384D003F5BA8 /* SAWLocalNotificationManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C39551972384D003F5BA8 /* SAWLocalNotificationManagerTest.m */; };
 		B0B87076197C722800F367FB /* SAWIrrigationSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C391919717A54003F5BA8 /* SAWIrrigationSchedule.m */; };
+		B0B87079197C757B00F367FB /* SAWConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B87078197C757B00F367FB /* SAWConstants.m */; };
 		B0C95A89193A4B0600A6F1FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C95A88193A4B0600A6F1FA /* Foundation.framework */; };
 		B0C95A8B193A4B0600A6F1FA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C95A8A193A4B0600A6F1FA /* CoreGraphics.framework */; };
 		B0C95A8D193A4B0600A6F1FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C95A8C193A4B0600A6F1FA /* UIKit.framework */; };
@@ -86,6 +87,8 @@
 		B09C39531972384D003F5BA8 /* SAWStageLevelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWStageLevelTest.m; sourceTree = "<group>"; };
 		B09C39551972384D003F5BA8 /* SAWLocalNotificationManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWLocalNotificationManagerTest.m; sourceTree = "<group>"; };
 		B09C395819735CF4003F5BA8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B0B87077197C757B00F367FB /* SAWConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWConstants.h; sourceTree = "<group>"; };
+		B0B87078197C757B00F367FB /* SAWConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWConstants.m; sourceTree = "<group>"; };
 		B0C95A85193A4B0600A6F1FA /* SAWaterLevel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAWaterLevel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C95A88193A4B0600A6F1FA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B0C95A8A193A4B0600A6F1FA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -347,6 +350,8 @@
 				B0C95AE4193A4BA100A6F1FA /* SAWWaterLevel.m */,
 				B09C391819717A54003F5BA8 /* SAWIrrigationSchedule.h */,
 				B09C391919717A54003F5BA8 /* SAWIrrigationSchedule.m */,
+				B0B87077197C757B00F367FB /* SAWConstants.h */,
+				B0B87078197C757B00F367FB /* SAWConstants.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -513,6 +518,7 @@
 				B0C95AD6193A4B3200A6F1FA /* AFHTTPRequestOperationManager.m in Sources */,
 				B0C95AD8193A4B3200A6F1FA /* AFNetworkReachabilityManager.m in Sources */,
 				B09C39481971C262003F5BA8 /* SAWLocalNotificationManager.m in Sources */,
+				B0B87079197C757B00F367FB /* SAWConstants.m in Sources */,
 				B0C95B17193A815700A6F1FA /* TRModalTransition.m in Sources */,
 				B0C95ADC193A4B3200A6F1FA /* AFURLResponseSerialization.m in Sources */,
 				B0C95ADA193A4B3200A6F1FA /* AFURLConnectionOperation.m in Sources */,
