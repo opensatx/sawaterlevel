@@ -11,7 +11,7 @@
 "ALERT_CURRENT_LEVEL_FAIL_CANCEL_TITLE" = "OK";
 
 "TAB_BAR_ITEM_CURRENT_LEVEL"    = "Nivel Actual";
-"TAB_BAR_ITEM_REMINDERS"        = "Recuerdos";
+"TAB_BAR_ITEM_REMINDERS"        = "Notificaciones";
 "TAB_BAR_ITEM_HISTORICAL_DATA"  = "Datos Históricos";
 "TAB_BAR_ITEM_CONSERVATION"     = "Conservación";
 
@@ -34,5 +34,12 @@
 
 "LOCAL_NOTIFICATION_ALERT"      = "";
 "LOCAL_NOTIFICATION_MESSAGE"    = "";
+
+// Reminders
+
+"REMINDER_ALERT_TITLE"          = "Notificación del Día de Riego";
+"REMINDER_ALERT_MESSAGE"        = "Número de dirección:";
+"REMINDER_ALERT_CANCEL_TITLE"   = "Cancelar";
+"REMINDER_ALERT_CONFIRM_TITLE"  = "OK";
 
 "MY_WATERING_DAY" = "Mi día de riego";

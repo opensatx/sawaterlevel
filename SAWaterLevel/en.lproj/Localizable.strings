@@ -35,4 +35,11 @@
 "LOCAL_NOTIFICATION_ALERT"      = "";
 "LOCAL_NOTIFICATION_MESSAGE"    = "";
 
+// Reminders
+
+"REMINDER_ALERT_TITLE"          = "Watering Day Reminder";
+"REMINDER_ALERT_MESSAGE"        = "Enter your house number";
+"REMINDER_ALERT_CANCEL_TITLE"   = "Cancel";
+"REMINDER_ALERT_CONFIRM_TITLE"  = "OK";
+
 "MY_WATERING_DAY" = "My watering day";

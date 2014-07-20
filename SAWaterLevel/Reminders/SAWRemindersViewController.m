@@ -36,8 +36,14 @@ static NSDateFormatter *irrigationDateFormatter;
                                                      name:SAWWaterLevelDidUpdateNotification
                                                    object:nil];
     }
-    
+
     return self;
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+
+    self.title = NSLocalizedString(@"TAB_BAR_ITEM_REMINDERS", nil);
 }
 
 - (void)viewDidLoad {
@@ -87,7 +93,11 @@ static NSDateFormatter *irrigationDateFormatter;
     SAWDataController *dataController = [[SAWDataController alloc] init];
 
     if (self.wateringDaySwitch.on) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Watering Day Reminder" message:@"Enter your house number" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"REMINDER_ALERT_TITLE", nil)
+                                                        message:NSLocalizedString(@"REMINDER_ALERT_MESSAGE", nil)
+                                                       delegate:self
+                                              cancelButtonTitle:NSLocalizedString(@"REMINDER_ALERT_CANCEL_TITLE", nil)
+                                              otherButtonTitles:NSLocalizedString(@"REMINDER_ALERT_CONFIRM_TITLE", nil), nil];
         alert.alertViewStyle = UIAlertViewStylePlainTextInput;
 
         UITextField *textField = [alert textFieldAtIndex:0];
