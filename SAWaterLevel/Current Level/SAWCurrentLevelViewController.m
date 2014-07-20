@@ -12,20 +12,25 @@
 #import "SAWHeaderView.h"
 #import "SAWStageDetailsViewController.h"
 #import "SAWDataController.h"
-#import "TRModalTransition.h"
+#import "SAWStageLevel+UI.h"
 #import "SAWCurrentLevelDataSource.h"
+
+#import "TRModalTransition.h"
 #import "UIStoryboardSegue+TargetDestination.h"
 
 #define SEGUE_STAGE_DETAILS @"SEGUE_STAGE_DETAILS"
 #define SEGUE_REMINDERS     @"SEGUE_REMINDERS"
 #define USER_DEFAULT_KEY    @"HOUSE_NUMBER"
 
-@interface SAWCurrentLevelViewController () <UITableViewDataSource, UITableViewDelegate, UIViewControllerTransitioningDelegate>
+@interface SAWCurrentLevelViewController () <UIViewControllerTransitioningDelegate>
 
-@property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) IBOutlet UIBarButtonItem *refreshButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *stageLevelInfoButton;
+
 @property (nonatomic, strong, readonly) IBOutlet UIBarButtonItem *activityButton;
 @property (nonatomic, strong) IBOutlet SAWCurrentLevelDataSource *dataSource;
+
+@property (strong, nonatomic) IBOutlet UIButton *currentStageButton;
 
 @end
 
@@ -35,6 +40,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     self.title = NSLocalizedString(@"CURRENT_LEVEL_TITLE", nil);
     self.tabBarItem.title = NSLocalizedString(@"TAB_BAR_ITEM_CURRENT_LEVEL", nil);
 
@@ -45,7 +51,16 @@
         [weakSelf performSegueWithIdentifier:SEGUE_STAGE_DETAILS sender:stageLevel];
     };
 
-    self.dataSource.waterLevel = dataController.fetchCachedWaterLevel;
+    SAWWaterLevel *waterLevel = [dataController fetchCachedWaterLevel];
+
+    if (waterLevel) {
+        self.navigationItem.prompt = NSLocalizedString(@"CURRENT_RESTRICTIONS_TITLE", nil);
+        self.dataSource.waterLevel = waterLevel;
+        [self updateStageLevelDisplay:waterLevel.stageLevel animated:NO];
+    } else {
+        self.navigationItem.rightBarButtonItem = nil;
+        self.currentStageButton.hidden = YES;
+    }
 
     [self fetchCurrentWaterLevel];
 }
@@ -56,6 +71,21 @@
 
 #pragma mark - Other instance methods
 
+- (void)updateStageLevelDisplay:(SAWStageLevel *)stageLevel animated:(BOOL)animated {
+    if (!self.navigationItem.rightBarButtonItem) {
+        [self.navigationItem setRightBarButtonItem:self.stageLevelInfoButton animated:YES];
+    }
+
+    self.currentStageButton.hidden = NO;
+
+    [self.currentStageButton setTitle:stageLevel.localizedTitle forState:UIControlStateNormal];
+    self.currentStageButton.tintColor = stageLevel.foregroundColor;
+    self.currentStageButton.backgroundColor = stageLevel.backgroundColor;
+    self.currentStageButton.layer.cornerRadius = 10.0f;
+    self.currentStageButton.layer.borderWidth = 0.5f;
+    self.currentStageButton.layer.borderColor = [UIColor colorWithWhite:0.0f alpha:0.5f].CGColor;
+}
+
 - (UIBarButtonItem *)activityButton {
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [spinner startAnimating];
@@ -64,7 +94,7 @@
 }
 
 - (void)fetchCurrentWaterLevel {
-    [self.navigationItem setRightBarButtonItem:self.activityButton animated:YES];
+    [self.navigationItem setLeftBarButtonItem:self.activityButton animated:YES];
 
     __weak typeof(self) weakSelf = self;
     [[SAWNetworkController sharedNetworkController] fetchCurrentWaterLevelWithCompletion:^(SAWWaterLevel *waterLevel, NSError *error) {
@@ -79,11 +109,15 @@
             weakSelf.dataSource.waterLevel = waterLevel;
         }
 
-        [weakSelf.navigationItem setRightBarButtonItem:weakSelf.refreshButton animated:YES];
+        [weakSelf.navigationItem setLeftBarButtonItem:weakSelf.refreshButton animated:YES];
+        [weakSelf updateStageLevelDisplay:waterLevel.stageLevel animated:YES];
     }];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UIViewController *destinationController = segue.destinationViewController;
+    destinationController.transitioningDelegate = self;
+
     if ([segue.destinationViewController isKindOfClass:[UINavigationController class]]) {
         UINavigationController *navController = segue.destinationViewController;
         UIViewController *topVC = navController.topViewController;
@@ -110,6 +144,10 @@
 }
 - (IBAction)didSelectRefresh:(id)sender {
     [self fetchCurrentWaterLevel];
+}
+
+- (IBAction)didSelectCurrentStageLevelInfoButton:(id)sender {
+    [self performSegueWithIdentifier:SEGUE_STAGE_DETAILS sender:self.dataSource.waterLevel.stageLevel];
 }
 
 #pragma - UIViewControllerTransitioningDelegate

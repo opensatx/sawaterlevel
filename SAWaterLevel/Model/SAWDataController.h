@@ -15,4 +15,7 @@
 - (void)cacheWaterLevel:(SAWWaterLevel *)waterLevel;
 - (SAWWaterLevel *)fetchCachedWaterLevel;
 
+- (void)cacheHouseNumber:(NSString *)houseNumber;
+- (NSString *)fetchCachedHouseNumber;
+
 @end

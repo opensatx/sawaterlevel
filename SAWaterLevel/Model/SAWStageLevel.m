@@ -7,15 +7,62 @@
 //
 
 #import "SAWStageLevel.h"
+#import "SAWWaterLevel.h"
 
 @implementation SAWStageLevel
 
-- (instancetype)initWithStageLevel:(SAWStageLevels)stageLevel {
+- (instancetype)initWithStageLevel:(SAWStageLevelType)stageLevel {
     if (self = [super init]) {
         _level = stageLevel;
     }
 
     return self;
+}
+
++ (SAWStageLevel *)stageLevelForWaterLevel:(SAWWaterLevel *)waterLevel {
+    if (waterLevel == nil) {
+        return nil;
+    }
+
+    SAWStageLevelType level = SAWStageLevelNormal;
+
+    float levelValue = [waterLevel.average floatValue];
+
+    if (levelValue < [self footStartingLevelForStageLevel:SAWStageLevel4]) {
+        level = SAWStageLevel5;
+    } else if (levelValue < [self footStartingLevelForStageLevel:SAWStageLevel3]) {
+        level = SAWStageLevel4;
+    } else if (levelValue < [self footStartingLevelForStageLevel:SAWStageLevel2]) {
+        level = SAWStageLevel3;
+    } else if (levelValue < [self footStartingLevelForStageLevel:SAWStageLevel1]) {
+        level = SAWStageLevel2;
+    } else if (levelValue < [self footStartingLevelForStageLevel:SAWStageLevelNormal]) {
+        level = SAWStageLevel1;
+    } else {
+        level = SAWStageLevelNormal;
+    }
+
+    SAWStageLevel *stageLevel = [[SAWStageLevel alloc] initWithStageLevel:level];
+    return stageLevel;
+}
+
+#pragma mark - Utility Methods
+
++ (CGFloat)footStartingLevelForStageLevel:(SAWStageLevelType)level {
+    switch (level) {
+        case SAWStageLevelNormal:
+            return 670.0f;
+        case SAWStageLevel1:
+            return 660.0f;
+        case SAWStageLevel2:
+            return 650.0f;
+        case SAWStageLevel3:
+            return 640.0f;
+        case SAWStageLevel4:
+            return 630.0f;
+        case SAWStageLevel5:
+            return 625.0f;
+    }
 }
 
 #pragma mark - Lazy Getters
@@ -90,6 +137,20 @@
         case SAWStageLevel5:
             return NSLocalizedString(@"STAGE_LEVEL_5", nil);
     }
+}
+
+#pragma mark - NSCoder
+
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    [encoder encodeInteger:self.level forKey:@"level"];
+}
+
+- (id)initWithCoder:(NSCoder *)decoder {
+    self = [super init];
+    if (self) {
+        [self setLevel:[decoder decodeIntegerForKey:@"level"]];
+    }
+    return self;
 }
 
 #pragma mark - Debug

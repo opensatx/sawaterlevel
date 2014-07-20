@@ -53,7 +53,7 @@
                 rowCount = 11;
             }
 
-            CGFloat sectionFootLevel = [self footStartingLevelForStageLevel:i] + 0.5f;
+            CGFloat sectionFootLevel = [SAWStageLevel footStartingLevelForStageLevel:i] + 0.5f;
             for (int j = 0; j < rowCount; j++) {
                 NSString *stringValue = @"";
                 CGFloat level = sectionFootLevel - (1.0f * j * 0.5f);
@@ -143,22 +143,7 @@
 
 #pragma mark - UITableViewDataSource
 
-- (CGFloat)footStartingLevelForStageLevel:(SAWStageLevels)level {
-    switch (level) {
-        case SAWStageLevelNormal:
-            return 669.0f;
-        case SAWStageLevel1:
-            return 659.0f;
-        case SAWStageLevel2:
-            return 649.0f;
-        case SAWStageLevel3:
-            return 639.0f;
-        case SAWStageLevel4:
-            return 629.0f;
-        case SAWStageLevel5:
-            return 624.0f;
-    }
-}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.dataLevels.count;

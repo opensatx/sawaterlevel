@@ -21,10 +21,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    UIColor *titleColor = self.stageLevel.foregroundColor ?: [UIColor whiteColor];
+
     self.navigationController.navigationBar.barTintColor = self.stageLevel.backgroundColor;
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.titleTextAttributes = @{
-                                                                    NSForegroundColorAttributeName : self.stageLevel.foregroundColor
+                                                                    NSForegroundColorAttributeName : titleColor
                                                                     };
     self.navigationController.navigationBar.tintColor = self.stageLevel.foregroundColor;
     self.webView.tintColor = self.navigationController.navigationBar.barTintColor;

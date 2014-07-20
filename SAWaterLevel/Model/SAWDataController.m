@@ -9,6 +9,7 @@
 #import "SAWDataController.h"
 
 #define USER_DEFAULT_KEY_CACHED_WATER @"SAWCachedWaterLevel"
+#define USER_DEFAULT_KEY_CACHED_HOUSE_NUMBER @"SAWCachedHouseNumber"
 
 @implementation SAWDataController
 
@@ -31,7 +32,7 @@
         if ([fm fileExistsAtPath:cacheURL.path]) {
             NSError *error = nil;
             BOOL success = [fm removeItemAtURL:cacheURL error:&error];
-            
+
             if (!success) {
                 NSLog(@"Unable to remove water level archive! %@", error.description);
             }
@@ -41,9 +42,9 @@
 
 - (SAWWaterLevel *)fetchCachedWaterLevel {
     NSURL *cacheURL = [self cachedWaterLevelURL];
-    
+
     NSFileManager *fm = [NSFileManager defaultManager];
-    
+
     if ([fm fileExistsAtPath:cacheURL.path]) {
         NSError *readError = nil;
         NSData *data = [NSData dataWithContentsOfURL:cacheURL 
@@ -61,6 +62,23 @@
     } else {
         return nil;
     }
+}
+
+- (void)cacheHouseNumber:(NSString *)houseNumber {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    if (houseNumber) {
+        [defaults setObject:houseNumber forKey:USER_DEFAULT_KEY_CACHED_HOUSE_NUMBER];
+    } else {
+        [defaults removeObjectForKey:USER_DEFAULT_KEY_CACHED_HOUSE_NUMBER];
+    }
+
+    [defaults synchronize];
+}
+
+- (NSString *)fetchCachedHouseNumber {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    return [defaults stringForKey:USER_DEFAULT_KEY_CACHED_HOUSE_NUMBER];
 }
 
 #pragma mark - Internal Methods

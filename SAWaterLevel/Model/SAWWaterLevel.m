@@ -7,6 +7,7 @@
 //
 
 #import "SAWWaterLevel.h"
+#import "SAWStageLevel.h"
 
 @implementation SAWWaterLevel
 
@@ -29,6 +30,8 @@
     [encoder encodeObject:self.timestamp forKey:@"timestamp"];
     [encoder encodeObject:self.level forKey:@"level"];
     [encoder encodeObject:self.average forKey:@"average"];
+    [encoder encodeObject:self.stageLevel forKey:@"stageLevel"];
+    [encoder encodeBool:self.isIrrigationAllowedThisWeek forKey:@"irrigationAllowedThisWeek"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
@@ -36,6 +39,8 @@
         self.timestamp = [decoder decodeObjectForKey:@"timestamp"];
         self.level = [decoder decodeObjectForKey:@"level"];
         self.average = [decoder decodeObjectForKey:@"average"];
+        self.stageLevel = [decoder decodeObjectForKey:@"stageLevel"];
+        self.irrigationAllowedThisWeek = [decoder decodeBoolForKey:@"irrigationAllowedThisWeek"];
     }
 
     return self;

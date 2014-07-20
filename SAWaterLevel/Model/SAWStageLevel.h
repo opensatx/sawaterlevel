@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, SAWStageLevels) {
+@class SAWWaterLevel;
+
+typedef NS_ENUM(NSInteger, SAWStageLevelType) {
     SAWStageLevelNormal = 0,
     SAWStageLevel1,
     SAWStageLevel2,
@@ -17,12 +19,15 @@ typedef NS_ENUM(NSInteger, SAWStageLevels) {
     SAWStageLevel5
 };
 
-@interface SAWStageLevel : NSObject
+@interface SAWStageLevel : NSObject <NSCoding>
 
-- (instancetype)initWithStageLevel:(SAWStageLevels)stageLevel;
-
-@property (nonatomic, assign) SAWStageLevels level;
+@property (nonatomic, assign) SAWStageLevelType level;
 @property (nonatomic, strong, readonly) NSString *localizedTitle;
 @property (nonatomic, strong, readonly) NSURL *localizedContentURL;
+
+- (instancetype)initWithStageLevel:(SAWStageLevelType)stageLevel;
+
++ (CGFloat)footStartingLevelForStageLevel:(SAWStageLevelType)level;
++ (SAWStageLevel *)stageLevelForWaterLevel:(SAWWaterLevel *)waterLevel;
 
 @end

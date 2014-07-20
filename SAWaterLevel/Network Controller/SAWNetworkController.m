@@ -9,6 +9,7 @@
 #import "SAWNetworkController.h"
 #import "AFNetworking.h"
 #import "SAWDataController.h"
+#import "SAWStageLevel.h"
 
 typedef NS_ENUM(NSInteger, SAWNetworkError) {
     SAWNetworkErrorMissingData = -1100
@@ -54,16 +55,19 @@ static NSDateFormatter *waterLevelDateFormatter;
 
     void (^successHandler)(AFHTTPRequestOperation*,id) = ^(AFHTTPRequestOperation *operation, id responseObject) {
         if (completionHandler) {
-            NSDictionary *data = responseObject[@"level"];
+            NSDictionary *levelData = responseObject[@"level"];
 
-            if (data == nil) {
+            if (levelData == nil) {
                 NSError *error = [weakSelf errorWithCode:SAWNetworkErrorMissingData errorMessage:NSLocalizedString(@"SERVICE_ERROR_MISSING_DATA", nil)];
                 failureHandler(nil, error);
             } else {
                 SAWWaterLevel *level = [[SAWWaterLevel alloc] init];
-                level.timestamp = [waterLevelDateFormatter dateFromString:data[@"timestamp"]];
-                level.level = data[@"level"];
-                level.average = data[@"average"];
+                level.timestamp = [waterLevelDateFormatter dateFromString:levelData[@"lastUpdated"]];
+                level.level = levelData[@"recent"];
+                level.average = levelData[@"average"];
+
+                SAWStageLevelType stageLevelType = [responseObject[@"stageLevel"] integerValue];
+                level.stageLevel = [[SAWStageLevel alloc] initWithStageLevel:stageLevelType];
 
                 SAWDataController *dataController = [[SAWDataController alloc] init];
                 [dataController cacheWaterLevel:level];
@@ -81,6 +85,10 @@ static NSDateFormatter *waterLevelDateFormatter;
 }
 
 - (NSError *)errorWithCode:(NSInteger)code errorMessage:(NSString *)message {
+    if (message == nil) {   // Sanity check
+        message = @"";
+    }
+
     NSDictionary *userInfo = @{ NSLocalizedDescriptionKey : message };
     return [NSError errorWithDomain:SERVICE_ERROR_DOMAIN code:code userInfo:userInfo];
 }

@@ -15,13 +15,15 @@
 "TAB_BAR_ITEM_HISTORICAL_DATA"  = "Datos Históricos";
 "TAB_BAR_ITEM_CONSERVATION"     = "Conservación";
 
+"CURRENT_RESTRICTIONS_TITLE"    = "Restricciónes Actuales";
+
 "CURRENT_WATER_LEVEL_CELL"      = "Nivel Actual";
 "CURRENT_AVERAGE_WATER_LEVEL"   = "Promedio de 10 días";
 "CURRENT_LEVEL_TITLE"           = "Nivel Actual";
 "CURRENT_LEVEL_TAB_BAR_ITEM"    = "Nivel Actual";
 "CURRENT_LEVEL_FEET"            = "pies";
 
-"STAGE_LEVEL_NO_RESTRICTION"    = "Sin Restricción";
+"STAGE_LEVEL_NO_RESTRICTION"    = "Todo el Año";
 "STAGE_LEVEL_1"                 = "Etapa 1";
 "STAGE_LEVEL_2"                 = "Etapa 2";
 "STAGE_LEVEL_3"                 = "Etapa 3";
@@ -29,3 +31,8 @@
 "STAGE_LEVEL_5"                 = "Etapa 5";
 
 "SERVICE_ERROR_MISSING_DATA" = "La información del nivel actual no está disponible.";
+
+"LOCAL_NOTIFICATION_ALERT"      = "";
+"LOCAL_NOTIFICATION_MESSAGE"    = "";
+
+"MY_WATERING_DAY" = "Mi día de riego";

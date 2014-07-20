@@ -7,13 +7,11 @@
 //
 
 #import "SAWAppDelegate.h"
-#import "SAWNetworkProtocol.h"
 
 @implementation SAWAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     return YES;
 }
-
 
 @end

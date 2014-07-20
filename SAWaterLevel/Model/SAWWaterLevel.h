@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class SAWStageLevel;
+
 @interface SAWWaterLevel : NSObject <NSCoding>
 
 @property (nonatomic, strong) NSDate *timestamp;
 @property (nonatomic, strong) NSNumber *level;
 @property (nonatomic, strong) NSNumber *average;
+@property (nonatomic, strong) SAWStageLevel *stageLevel;
+@property (nonatomic, assign, getter = isIrrigationAllowedThisWeek) BOOL irrigationAllowedThisWeek;
 
 @end

@@ -15,13 +15,15 @@
 "TAB_BAR_ITEM_HISTORICAL_DATA"  = "Historical Data";
 "TAB_BAR_ITEM_CONSERVATION"     = "Conservation";
 
+"CURRENT_RESTRICTIONS_TITLE"    = "Current Restrictions";
+
 "CURRENT_WATER_LEVEL_CELL"      = "Current Level";
 "CURRENT_AVERAGE_WATER_LEVEL"   = "10-day Average";
 "CURRENT_LEVEL_TITLE"           = "Current Level";
 "CURRENT_LEVEL_TAB_BAR_ITEM"    = "Current Level";
 "CURRENT_LEVEL_FEET"            = "ft.";
 
-"STAGE_LEVEL_NO_RESTRICTION"    = "No Restrictions";
+"STAGE_LEVEL_NO_RESTRICTION"    = "Year-Round";
 "STAGE_LEVEL_1"                 = "Stage 1";
 "STAGE_LEVEL_2"                 = "Stage 2";
 "STAGE_LEVEL_3"                 = "Stage 3";
@@ -29,3 +31,8 @@
 "STAGE_LEVEL_5"                 = "Stage 5";
 
 "SERVICE_ERROR_MISSING_DATA" = "The current level information is not current available";
+
+"LOCAL_NOTIFICATION_ALERT"      = "";
+"LOCAL_NOTIFICATION_MESSAGE"    = "";
+
+"MY_WATERING_DAY" = "My watering day";
