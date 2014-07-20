@@ -21,6 +21,7 @@
 		B09C394E197237EB003F5BA8 /* SAWLocalNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C39471971C262003F5BA8 /* SAWLocalNotificationManager.m */; };
 		B09C39561972384D003F5BA8 /* SAWStageLevelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C39531972384D003F5BA8 /* SAWStageLevelTest.m */; };
 		B09C39571972384D003F5BA8 /* SAWLocalNotificationManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C39551972384D003F5BA8 /* SAWLocalNotificationManagerTest.m */; };
+		B0B87076197C722800F367FB /* SAWIrrigationSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C391919717A54003F5BA8 /* SAWIrrigationSchedule.m */; };
 		B0C95A89193A4B0600A6F1FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C95A88193A4B0600A6F1FA /* Foundation.framework */; };
 		B0C95A8B193A4B0600A6F1FA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C95A8A193A4B0600A6F1FA /* CoreGraphics.framework */; };
 		B0C95A8D193A4B0600A6F1FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C95A8C193A4B0600A6F1FA /* UIKit.framework */; };
@@ -537,6 +538,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0B87076197C722800F367FB /* SAWIrrigationSchedule.m in Sources */,
 				B09C39571972384D003F5BA8 /* SAWLocalNotificationManagerTest.m in Sources */,
 				B09C394E197237EB003F5BA8 /* SAWLocalNotificationManager.m in Sources */,
 				B09C39561972384D003F5BA8 /* SAWStageLevelTest.m in Sources */,
