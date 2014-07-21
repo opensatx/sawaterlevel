@@ -14,6 +14,7 @@ typedef void(^SAWCurrentWaterLevelCompletionHandler)(SAWWaterLevel *waterLevel, 
 @interface SAWNetworkController : NSObject
 
 - (void)fetchCurrentWaterLevelWithCompletion:(SAWCurrentWaterLevelCompletionHandler)completionHandler;
+- (void)performBackgroundWaterLevelFetchWithCompletion:(SAWCurrentWaterLevelCompletionHandler)completionHandler;
 
 + (instancetype)sharedNetworkController;
 

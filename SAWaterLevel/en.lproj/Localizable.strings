@@ -43,3 +43,7 @@
 "REMINDER_ALERT_CONFIRM_TITLE"  = "OK";
 
 "MY_WATERING_DAY" = "My watering day";
+
+//  Stage Level Update
+
+"NOTIFICATION_STAGE_LEVEL_CHANGE_ALERT_BODY" = "The restriction stage level has changes from %@ to %@.";

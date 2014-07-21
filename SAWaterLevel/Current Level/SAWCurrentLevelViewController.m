@@ -14,6 +14,7 @@
 #import "SAWDataController.h"
 #import "SAWStageLevel+UI.h"
 #import "SAWCurrentLevelDataSource.h"
+#import "SAWConstants.h"
 
 #import "TRModalTransition.h"
 #import "UIStoryboardSegue+TargetDestination.h"
@@ -37,6 +38,17 @@
 @implementation SAWCurrentLevelViewController
 
 #pragma mark - View Lifecycle
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(waterLevelDidUpdateFromBackground:)
+                                                     name:SAWWaterLevelDidUpdateFromBackgroundNotification
+                                                   object:nil];
+    }
+
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -168,6 +180,24 @@
     animator.modalTransitionType = TRModalTransitionTypeDismissing;
     
     return animator;
+}
+
+#pragma mark - Notifications
+
+- (void)waterLevelDidUpdateFromBackground:(NSNotification *)notification {
+    NSDictionary *userInfo = notification.userInfo;
+    SAWWaterLevel *waterLevel = userInfo[SAWNotificationKeyWaterLevel];
+
+    if (waterLevel) {
+        self.dataSource.waterLevel = waterLevel;
+        [self updateStageLevelDisplay:waterLevel.stageLevel animated:YES];
+    }
+}
+
+#pragma mark - Memory
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

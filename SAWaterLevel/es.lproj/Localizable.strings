@@ -43,3 +43,7 @@
 "REMINDER_ALERT_CONFIRM_TITLE"  = "OK";
 
 "MY_WATERING_DAY" = "Mi día de riego";
+
+//  Stage Level Update
+
+"NOTIFICATION_STAGE_LEVEL_CHANGE_ALERT_BODY" = "Las restricciones de riego ha cambiado desde %@ a %@.";

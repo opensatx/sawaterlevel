@@ -9,6 +9,9 @@
 #import "SAWConstants.h"
 
 NSString *const SAWWaterLevelDidUpdateNotification = @"SAWWaterLevelDidUpdateNotification";
+NSString *const SAWWaterLevelDidUpdateFromBackgroundNotification = @"SAWWaterLevelDidUpdateFromBackgroundNotification";
+
+NSString *const SAWNotificationKeyWaterLevel = @"SAWNotificationKeyWaterLevel";
 
 @implementation SAWConstants
 

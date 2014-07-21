@@ -41,50 +41,104 @@ static NSDateFormatter *waterLevelDateFormatter;
     return singleton;
 }
 
-- (void)fetchCurrentWaterLevelWithCompletion:(SAWCurrentWaterLevelCompletionHandler)completionHandler {
-    NSString *requestPath = [NSString stringWithFormat:@"%@%@", SERVICE_HOST, SERVICE_URL_CURRENT_WATER_LEVEL];
-    NSURL *url = [NSURL URLWithString:requestPath];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+- (void)performBackgroundWaterLevelFetchWithCompletion:(SAWCurrentWaterLevelCompletionHandler)completionHandler {
+    SAWWaterLevel *currentLevel = [[[SAWDataController alloc] init] fetchCachedWaterLevel];
 
+    [self fetchCurrentWaterLevelWithCompletion:^(SAWWaterLevel *newWaterLevel, NSError *error) {
+        NSDictionary *userInfo = nil;
+
+        if (newWaterLevel) {
+            userInfo = @{ SAWNotificationKeyWaterLevel: newWaterLevel };
+            
+            if (currentLevel) {
+                SAWStageLevelType currentType = currentLevel.stageLevel.level;
+                SAWStageLevelType newType = currentLevel.stageLevel.level;
+                
+                if (currentType != newType) {   //  If they don't match, then alert the user to the change in stage level
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        NSString*(^stringFromStageLevel)(SAWStageLevelType) = ^(SAWStageLevelType stageLevelType) {
+                            switch (stageLevelType) {
+                                case SAWStageLevel1:
+                                    return NSLocalizedString(@"STAGE_LEVEL_1", nil);
+                                case SAWStageLevel2:
+                                    return NSLocalizedString(@"STAGE_LEVEL_2", nil);
+                                case SAWStageLevel3:
+                                    return NSLocalizedString(@"STAGE_LEVEL_3", nil);
+                                case SAWStageLevel4:
+                                    return NSLocalizedString(@"STAGE_LEVEL_4", nil);
+                                case SAWStageLevel5:
+                                    return NSLocalizedString(@"STAGE_LEVEL_5", nil);
+                                case SAWStageLevelNormal:
+                                    return NSLocalizedString(@"STAGE_LEVEL_NO_RESTRICTION", nil);
+                            }
+                        };
+
+                        NSString *localizedMessage = NSLocalizedString(@"NOTIFICATION_STAGE_LEVEL_CHANGE_ALERT_BODY", nil);
+                        NSString *fromStageLevel = stringFromStageLevel(currentType);
+                        NSString *toStageLevel = stringFromStageLevel(newType);
+                        NSString *message = [NSString stringWithFormat:localizedMessage, fromStageLevel, toStageLevel];
+
+                        UILocalNotification *notification = [[UILocalNotification alloc] init];
+                        notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
+                        notification.alertBody = message;
+
+                        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+                    });
+                }
+            }
+        }
+
+        [[NSNotificationCenter defaultCenter] postNotificationName:SAWWaterLevelDidUpdateFromBackgroundNotification
+                                                            object:nil
+                                                          userInfo:userInfo];
+
+        if (completionHandler) {
+            completionHandler(newWaterLevel, error);
+        }
+    }];
+}
+
+- (void)fetchCurrentWaterLevelWithCompletion:(SAWCurrentWaterLevelCompletionHandler)completionHandler {
     __weak typeof(self) weakSelf = self;
 
-    void (^failureHandler)(AFHTTPRequestOperation*,NSError*) = ^(AFHTTPRequestOperation *operation, NSError *error) {
+    void (^failureHandler)(NSURLSessionDataTask*, NSError*) = ^(NSURLSessionDataTask *task, NSError *error) {
         if (completionHandler) {
             completionHandler(nil, error);
         }
     };
 
-    void (^successHandler)(AFHTTPRequestOperation*,id) = ^(AFHTTPRequestOperation *operation, id responseObject) {
-        if (completionHandler) {
-            NSDictionary *levelData = responseObject[@"level"];
+    void (^successHandler)(NSURLSessionDataTask*, id) = ^(NSURLSessionDataTask *task, id responseObject) {
+        NSDictionary *levelData = responseObject[@"level"];
 
-            if (levelData == nil) {
-                NSError *error = [weakSelf errorWithCode:SAWNetworkErrorMissingData errorMessage:NSLocalizedString(@"SERVICE_ERROR_MISSING_DATA", nil)];
-                failureHandler(nil, error);
-            } else {
-                SAWWaterLevel *level = [[SAWWaterLevel alloc] init];
-                level.timestamp = [waterLevelDateFormatter dateFromString:levelData[@"lastUpdated"]];
-                level.level = levelData[@"recent"];
-                level.average = levelData[@"average"];
+        if (levelData == nil) {
+            NSError *error = [weakSelf errorWithCode:SAWNetworkErrorMissingData errorMessage:NSLocalizedString(@"SERVICE_ERROR_MISSING_DATA", nil)];
+            failureHandler(nil, error);
+        } else {
+            SAWWaterLevel *level = [[SAWWaterLevel alloc] init];
+            level.timestamp = [waterLevelDateFormatter dateFromString:levelData[@"lastUpdated"]];
+            level.level = levelData[@"recent"];
+            level.average = levelData[@"average"];
 
-                SAWStageLevelType stageLevelType = [responseObject[@"stageLevel"] integerValue];
-                level.stageLevel = [[SAWStageLevel alloc] initWithStageLevel:stageLevelType];
+            SAWStageLevelType stageLevelType = [responseObject[@"stageLevel"] integerValue];
+            level.stageLevel = [[SAWStageLevel alloc] initWithStageLevel:stageLevelType];
 
-                SAWDataController *dataController = [[SAWDataController alloc] init];
-                [dataController cacheWaterLevel:level];
-                
-                [[NSNotificationCenter defaultCenter] postNotificationName:SAWWaterLevelDidUpdateNotification object:nil];
+            SAWDataController *dataController = [[SAWDataController alloc] init];
+            [dataController cacheWaterLevel:level];
 
+            [[NSNotificationCenter defaultCenter] postNotificationName:SAWWaterLevelDidUpdateNotification object:nil];
+
+            if (completionHandler) {
                 completionHandler(level, nil);
             }
         }
     };
 
-    AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    requestOperation.responseSerializer = [AFJSONResponseSerializer serializer];
-    [requestOperation setCompletionBlockWithSuccess:successHandler
-                                            failure:failureHandler];
-    [requestOperation start];
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:SERVICE_HOST]];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [manager GET:SERVICE_URL_CURRENT_WATER_LEVEL
+      parameters:nil
+         success:successHandler
+         failure:failureHandler];
 }
 
 - (NSError *)errorWithCode:(NSInteger)code errorMessage:(NSString *)message {
