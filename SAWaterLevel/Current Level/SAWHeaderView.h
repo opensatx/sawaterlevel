@@ -10,6 +10,9 @@
 
 typedef void(^SAWHeaderViewInfoHandler)(NSIndexPath *indexPath);
 
+/*!
+ *  Used for the table view in the Current Level
+ */
 @interface SAWHeaderView : UITableViewHeaderFooterView
 
 @property (nonatomic, strong) NSIndexPath *indexPath;

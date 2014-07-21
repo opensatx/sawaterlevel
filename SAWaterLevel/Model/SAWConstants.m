@@ -13,6 +13,8 @@ NSString *const SAWWaterLevelDidUpdateFromBackgroundNotification = @"SAWWaterLev
 
 NSString *const SAWNotificationKeyWaterLevel = @"SAWNotificationKeyWaterLevel";
 
+NSString *const SAWUserInfoKeyHasBeenShownStageDescrepency = @"SAWUserInfoKeyHasBeenShownStageDescrepency";
+
 @implementation SAWConstants
 
 @end

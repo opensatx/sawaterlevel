@@ -10,8 +10,14 @@
 
 @class SAWStageLevel;
 
+/*!
+ *  Class for displaying details concerning a restriction stage level
+ */
 @interface SAWStageDetailsViewController : UIViewController
 
+/*!
+ *  The stage level for which content should be displayed
+ */
 @property (nonatomic, strong) SAWStageLevel *stageLevel;
 
 @end

@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/*!
+ *  Class for building the table view.
+ */
 @interface SAWLevelModel : NSObject
 
 @property (nonatomic, strong) NSString *displayLevel;

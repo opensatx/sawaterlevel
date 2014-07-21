@@ -36,12 +36,6 @@
     return schedule;
 }
 
-+ (instancetype)irrigationScheduleForWaterLevel:(SAWWaterLevel *)waterLevel streetNumber:(NSString *)streetNumber {
-    SAWStageLevel *stageLevel = [SAWStageLevel stageLevelForWaterLevel:waterLevel];
-
-    return [SAWIrrigationSchedule irrigationScheduleForStageLevel:stageLevel streetNumber:streetNumber];
-}
-
 + (NSArray *)timeRangesForStageLevel:(SAWStageLevelType)level streetNumber:(NSString *)streetNumber {
     NSMutableArray *ranges = [[NSMutableArray alloc] init];
 

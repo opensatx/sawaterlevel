@@ -143,8 +143,6 @@
 
 #pragma mark - UITableViewDataSource
 
-
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.dataLevels.count;
 }

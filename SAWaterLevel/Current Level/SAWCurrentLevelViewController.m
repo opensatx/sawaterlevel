@@ -15,6 +15,7 @@
 #import "SAWStageLevel+UI.h"
 #import "SAWCurrentLevelDataSource.h"
 #import "SAWConstants.h"
+#import "SAWStageLevelDescrepencyEducationView.h"
 
 #import "TRModalTransition.h"
 #import "UIStoryboardSegue+TargetDestination.h"
@@ -26,7 +27,7 @@
 @interface SAWCurrentLevelViewController () <UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, strong) IBOutlet UIBarButtonItem *refreshButton;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *stageLevelInfoButton;
+@property (strong, nonatomic) IBOutlet UIButton *stageLevelInfoButton;
 
 @property (nonatomic, strong, readonly) IBOutlet UIBarButtonItem *activityButton;
 @property (nonatomic, strong) IBOutlet SAWCurrentLevelDataSource *dataSource;
@@ -84,10 +85,6 @@
 #pragma mark - Other instance methods
 
 - (void)updateStageLevelDisplay:(SAWStageLevel *)stageLevel animated:(BOOL)animated {
-    if (!self.navigationItem.rightBarButtonItem) {
-        [self.navigationItem setRightBarButtonItem:self.stageLevelInfoButton animated:YES];
-    }
-
     self.currentStageButton.hidden = NO;
 
     [self.currentStageButton setTitle:stageLevel.localizedTitle forState:UIControlStateNormal];
@@ -121,6 +118,7 @@
         } else {
             weakSelf.dataSource.waterLevel = waterLevel;
             [weakSelf updateStageLevelDisplay:waterLevel.stageLevel animated:YES];
+            [weakSelf displayEducationView];
         }
 
         [weakSelf.navigationItem setLeftBarButtonItem:weakSelf.refreshButton animated:YES];
@@ -161,6 +159,52 @@
 
 - (IBAction)didSelectCurrentStageLevelInfoButton:(id)sender {
     [self performSegueWithIdentifier:SEGUE_STAGE_DETAILS sender:self.dataSource.waterLevel.stageLevel];
+}
+
+#pragma mark - Education
+
+- (void)displayEducationView {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    //  Check to see if they've been shown this before
+    if ([defaults boolForKey:SAWUserInfoKeyHasBeenShownStageDescrepency]) {
+        return;
+    }
+
+    UIView *titleView = self.stageLevelInfoButton;
+
+    if (titleView) {
+        static NSTimeInterval animationDuration = 0.33;
+
+        SAWStageLevelDescrepencyEducationView *educationView = [[SAWStageLevelDescrepencyEducationView alloc] initWithFrame:self.tabBarController.view.bounds currentStageRestrictionView:titleView];
+        educationView.autoresizingMask = ~UIViewAutoresizingNone;
+        educationView.translatesAutoresizingMaskIntoConstraints = YES;
+        educationView.alpha = 0.0f;
+        educationView.actualStageLevel = self.dataSource.waterLevel.stageLevel.level;
+        educationView.waterStageLevel = [SAWStageLevel stageLevelForWaterLevel:self.dataSource.waterLevel].level;
+
+        __weak typeof(educationView) weakEductionView = educationView;
+
+        educationView.completionHandler = ^{
+            [UIView animateWithDuration:animationDuration
+                             animations:^{
+                                 weakEductionView.alpha = 0.0f;
+                             }
+                             completion:^(BOOL finished) {
+                                 [weakEductionView removeFromSuperview];
+                             }];
+        };
+
+        [self.view.window addSubview:educationView];
+
+        [UIView animateWithDuration:animationDuration
+                         animations:^{
+                             weakEductionView.alpha = 1.0f;
+                         } completion:^(BOOL finished) {
+                             [defaults setBool:YES forKey:SAWUserInfoKeyHasBeenShownStageDescrepency];
+                             [defaults synchronize];
+                         }];
+    }
 }
 
 #pragma - UIViewControllerTransitioningDelegate

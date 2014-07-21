@@ -109,18 +109,20 @@ static NSDateFormatter *waterLevelDateFormatter;
 
     void (^successHandler)(NSURLSessionDataTask*, id) = ^(NSURLSessionDataTask *task, id responseObject) {
         NSDictionary *levelData = responseObject[@"level"];
+        NSNumber *irrigationAllowed = responseObject[@"irrigationAllowed"];
 
         if (levelData == nil) {
             NSError *error = [weakSelf errorWithCode:SAWNetworkErrorMissingData errorMessage:NSLocalizedString(@"SERVICE_ERROR_MISSING_DATA", nil)];
             failureHandler(nil, error);
         } else {
             SAWWaterLevel *level = [[SAWWaterLevel alloc] init];
-            level.timestamp = [waterLevelDateFormatter dateFromString:levelData[@"lastUpdated"]];
+            level.lastUpdated = [waterLevelDateFormatter dateFromString:levelData[@"lastUpdated"]];
             level.level = levelData[@"recent"];
             level.average = levelData[@"average"];
 
             SAWStageLevelType stageLevelType = [responseObject[@"stageLevel"] integerValue];
             level.stageLevel = [[SAWStageLevel alloc] initWithStageLevel:stageLevelType];
+            level.irrigationAllowed = irrigationAllowed != nil ? [irrigationAllowed boolValue] : YES; // Defaults to YES if there isn't a value; put in here because the API doesn't yet support this attribute in the response
 
             SAWDataController *dataController = [[SAWDataController alloc] init];
             [dataController cacheWaterLevel:level];

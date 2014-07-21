@@ -8,6 +8,9 @@
 
 #import "SAWStageLevel.h"
 
+/*!
+ *  Category for adding UI capabilities to SAWStageLevel class
+ */
 @interface SAWStageLevel (UI)
 
 - (UIColor *)backgroundColor;

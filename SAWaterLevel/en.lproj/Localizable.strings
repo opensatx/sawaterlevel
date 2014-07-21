@@ -35,12 +35,15 @@
 "LOCAL_NOTIFICATION_ALERT"      = "";
 "LOCAL_NOTIFICATION_MESSAGE"    = "";
 
+"EDUCATION_EXPLANATION_TEXT"        = "Sometimes the current restriction level (%@) may not match the 10-day average level (%@) because SAWS reduces its water pumping from the Edwards aquifer and suppliments water from other sources.";
+"EDUCATION_DISMISS_BUTTON_TITLE"    = "Done";
+
 // Reminders
 
 "REMINDER_ALERT_TITLE"          = "Watering Day Reminder";
 "REMINDER_ALERT_MESSAGE"        = "Enter your house number";
 "REMINDER_ALERT_CANCEL_TITLE"   = "Cancel";
-"REMINDER_ALERT_CONFIRM_TITLE"  = "OK";
+"REMINDER_ALERT_CONFIRM_TITLE"  = "Done";
 
 "MY_WATERING_DAY" = "My watering day";
 

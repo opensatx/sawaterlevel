@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/*!
+ *  View Controller for displaying the interaction UI for reminders
+ */
 @interface SAWRemindersViewController : UITableViewController
 
 @end

@@ -15,7 +15,7 @@
 "TAB_BAR_ITEM_HISTORICAL_DATA"  = "Datos Históricos";
 "TAB_BAR_ITEM_CONSERVATION"     = "Conservación";
 
-"CURRENT_RESTRICTIONS_TITLE"    = "Restricciónes Actuales";
+"CURRENT_RESTRICTIONS_TITLE"    = "Restricciones Actuales";
 
 "CURRENT_WATER_LEVEL_CELL"      = "Nivel Actual";
 "CURRENT_AVERAGE_WATER_LEVEL"   = "Promedio de 10 días";
@@ -34,6 +34,9 @@
 
 "LOCAL_NOTIFICATION_ALERT"      = "";
 "LOCAL_NOTIFICATION_MESSAGE"    = "";
+
+"EDUCATION_EXPLANATION_TEXT"        = "Hay situaciones cuando la etapa de restricciones actual (%@) no corresponde con las restricciones del promedio de 10 días (%@) porque SAWS reduce el agua que ello saca del acuífero Edwards y complementa el agua desde otros fuentes.";
+"EDUCATION_DISMISS_BUTTON_TITLE"    = "OK";
 
 // Reminders
 

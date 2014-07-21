@@ -201,6 +201,7 @@
                         <outlet property="currentStageButton" destination="y5g-oE-c2B" id="pqu-Ox-IBh"/>
                         <outlet property="dataSource" destination="4bX-WN-lBt" id="4XF-Ne-gvO"/>
                         <outlet property="refreshButton" destination="Fkc-Pp-N8w" id="f7c-pC-4Mu"/>
+                        <outlet property="stageLevelInfoButton" destination="y5g-oE-c2B" id="OPe-TB-UyB"/>
                         <segue destination="v5p-fd-0MD" kind="modal" identifier="SEGUE_STAGE_DETAILS" id="0fI-jg-VGb"/>
                     </connections>
                 </tableViewController>

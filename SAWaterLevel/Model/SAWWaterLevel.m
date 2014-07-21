@@ -15,9 +15,10 @@
 
 - (NSString *)debugDescription {
     NSDictionary *values = @{
-                             @"timestamp" : self.timestamp ?: [NSNull null],
+                             @"timestamp" : self.lastUpdated ?: [NSNull null],
                              @"level" : self.level ?: [NSNull null],
-                             @"average" : self.average ?: [NSNull null]
+                             @"average" : self.average ?: [NSNull null],
+                             @"irrigationAllowed" : @(self.irrigationAllowed)
                              };
     NSString *description = [NSString stringWithFormat:@"%@ %@", [super debugDescription], [values debugDescription]];
 
@@ -27,20 +28,20 @@
 #pragma mark - NSCoding
 
 - (void)encodeWithCoder:(NSCoder *)encoder {
-    [encoder encodeObject:self.timestamp forKey:@"timestamp"];
+    [encoder encodeObject:self.lastUpdated forKey:@"lastUpdated"];
     [encoder encodeObject:self.level forKey:@"level"];
     [encoder encodeObject:self.average forKey:@"average"];
     [encoder encodeObject:self.stageLevel forKey:@"stageLevel"];
-    [encoder encodeBool:self.isIrrigationAllowedThisWeek forKey:@"irrigationAllowedThisWeek"];
+    [encoder encodeBool:self.isIrrigationAllowed forKey:@"irrigationAllowed"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
     if (self = [super init]) {
-        self.timestamp = [decoder decodeObjectForKey:@"timestamp"];
+        self.lastUpdated = [decoder decodeObjectForKey:@"lastUpdated"];
         self.level = [decoder decodeObjectForKey:@"level"];
         self.average = [decoder decodeObjectForKey:@"average"];
         self.stageLevel = [decoder decodeObjectForKey:@"stageLevel"];
-        self.irrigationAllowedThisWeek = [decoder decodeBoolForKey:@"irrigationAllowedThisWeek"];
+        self.irrigationAllowed = [decoder decodeBoolForKey:@"irrigationAllowed"];
     }
 
     return self;

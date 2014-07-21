@@ -28,15 +28,15 @@
 
     float levelValue = [waterLevel.average floatValue];
 
-    if (levelValue < [self footStartingLevelForStageLevel:SAWStageLevel4]) {
+    if (levelValue <= [self footStartingLevelForStageLevel:SAWStageLevel5]) {
         level = SAWStageLevel5;
-    } else if (levelValue < [self footStartingLevelForStageLevel:SAWStageLevel3]) {
+    } else if (levelValue <= [self footStartingLevelForStageLevel:SAWStageLevel4]) {
         level = SAWStageLevel4;
-    } else if (levelValue < [self footStartingLevelForStageLevel:SAWStageLevel2]) {
+    } else if (levelValue <= [self footStartingLevelForStageLevel:SAWStageLevel3]) {
         level = SAWStageLevel3;
-    } else if (levelValue < [self footStartingLevelForStageLevel:SAWStageLevel1]) {
+    } else if (levelValue <= [self footStartingLevelForStageLevel:SAWStageLevel2]) {
         level = SAWStageLevel2;
-    } else if (levelValue < [self footStartingLevelForStageLevel:SAWStageLevelNormal]) {
+    } else if (levelValue <= [self footStartingLevelForStageLevel:SAWStageLevel1]) {
         level = SAWStageLevel1;
     } else {
         level = SAWStageLevelNormal;
@@ -143,12 +143,14 @@
 
 - (void)encodeWithCoder:(NSCoder *)encoder {
     [encoder encodeInteger:self.level forKey:@"level"];
+    [encoder encodeBool:self.isIrrigationAllowed forKey:@"irrigationAllowed"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
     self = [super init];
     if (self) {
         [self setLevel:[decoder decodeIntegerForKey:@"level"]];
+        [self setIrrigationAllowed:[decoder decodeBoolForKey:@"irrigationAllowed"]];
     }
     return self;
 }

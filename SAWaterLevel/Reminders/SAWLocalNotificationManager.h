@@ -11,6 +11,9 @@
 
 typedef void(^SAWLocalNotificationScheduleCompletionHandler)(NSArray *notifications);
 
+/*!
+ *  Class that encapsulates the details of scheduling notifications
+ */
 @interface SAWLocalNotificationManager : NSObject
 
 + (instancetype)localNotificationManager;
