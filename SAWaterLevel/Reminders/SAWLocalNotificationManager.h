@@ -19,6 +19,5 @@ typedef void(^SAWLocalNotificationScheduleCompletionHandler)(NSArray *notificati
 + (instancetype)localNotificationManager;
 - (void)removeAllNotifications;
 - (void)scheduleNotificationsForStageLevel:(SAWStageLevel *)stageLevel streetNumber:(NSString *)streetNumber completion:(SAWLocalNotificationScheduleCompletionHandler)completionHandler;
-- (UILocalNotification *)nextNotification;
 
 @end

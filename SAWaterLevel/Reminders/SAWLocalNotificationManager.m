@@ -51,7 +51,8 @@
         for (NSValue *value in irrigationSchedule.timeOfDayRanges) {
             UILocalNotification *notification = [weakSelf createNotificationForSchedule:irrigationSchedule timeRange:value.rangeValue];
             notification.fireDate = [self determineNextFireDateForSchedule:irrigationSchedule timeRange:value.rangeValue];
-            
+            notification.alertBody = NSLocalizedString(@"LOCAL_NOTIFICATION_ALERT", nil);
+
             switch (irrigationSchedule.frequency) {
                 case SAWIrrigationScheduleFrequencyDaily: {
                     notification.repeatInterval = NSCalendarUnitDay;
@@ -97,15 +98,6 @@
         weakSelf.backgroundTaskID = UIBackgroundTaskInvalid;
         weakSelf.strongSelf = nil;
     });
-}
-
-- (UILocalNotification *)nextNotification {
-    NSArray *notifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
-    notifications = [notifications sortedArrayUsingComparator:^NSComparisonResult(UILocalNotification *obj1, UILocalNotification *obj2) {
-        return [obj1.fireDate compare:obj2.fireDate];
-    }];
-
-    return [notifications firstObject];
 }
 
 - (NSDate *)determineNextFireDateForSchedule:(SAWIrrigationSchedule *)schedule timeRange:(NSRange)range {

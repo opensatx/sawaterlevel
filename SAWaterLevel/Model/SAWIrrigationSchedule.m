@@ -131,6 +131,46 @@
     }
 }
 
++ (NSString *)localizedIrrigationDayForStageLevel:(SAWStageLevel *)stageLevel streetNumber:(NSString *)streetNumber {
+    switch (stageLevel.level) {
+        case SAWStageLevel1:
+        case SAWStageLevel2:
+        case SAWStageLevel3:
+        case SAWStageLevel4:
+        case SAWStageLevel5: {
+            SAWIrrigationDay day = [SAWIrrigationSchedule irrigationDayForStreetNumber:streetNumber];
+            switch (day) {
+                case SAWIrrigationDaySunday:
+                    return NSLocalizedString(@"IRRIGATION_DAY_SUN", nil);
+                    break;
+                case SAWIrrigationDayMonday:
+                    return NSLocalizedString(@"IRRIGATION_DAY_MON", nil);
+                    break;
+                case SAWIrrigationDayTuesday:
+                    return NSLocalizedString(@"IRRIGATION_DAY_TUE", nil);
+                    break;
+                case SAWIrrigationDayWednesday:
+                    return NSLocalizedString(@"IRRIGATION_DAY_WED", nil);
+                    break;
+                case SAWIrrigationDayThursday:
+                    return NSLocalizedString(@"IRRIGATION_DAY_THU", nil);
+                    break;
+                case SAWIrrigationDayFriday:
+                    return NSLocalizedString(@"IRRIGATION_DAY_FRI", nil);
+                    break;
+                case SAWIrrigationDaySaturday:
+                    return NSLocalizedString(@"IRRIGATION_DAY_SAT", nil);
+                    break;
+            }
+        }
+            break;
+        case SAWStageLevelNormal:
+            return NSLocalizedString(@"IRRIGATION_DAY_DAILY", nil);
+    }
+}
+
+#pragma mark - Debug
+
 - (NSString *)debugDescription {
     NSDictionary *values = @{
                              @"timeOfDayRanges" : self.timeOfDayRanges ?: [NSNull null],

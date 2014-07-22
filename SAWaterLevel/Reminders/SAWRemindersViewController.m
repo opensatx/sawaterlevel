@@ -11,19 +11,18 @@
 #import "SAWLocalNotificationManager.h"
 #import "SAWWaterLevel.h"
 #import "SAWConstants.h"
+#import "SAWIrrigationSchedule.h"
 
 @interface SAWRemindersViewController () <UIAlertViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UISwitch *wateringDaySwitch;
-@property (strong, nonatomic) NSDate *nextIrrigationDate;
+@property (strong, nonatomic) NSString *irrigationDay;
 @property (strong, nonatomic) IBOutlet UILabel *nextIrrigationDayDateLabel;
 @property (strong, nonatomic) IBOutlet UILabel *myWateringDayLabel;
 
 @end
 
 @implementation SAWRemindersViewController
-
-static NSDateFormatter *irrigationDateFormatter;
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
@@ -57,31 +56,20 @@ static NSDateFormatter *irrigationDateFormatter;
 
     NSString *houseNumber = [dataController fetchCachedHouseNumber];
 
+    if (houseNumber) {
+        self.irrigationDay = [SAWIrrigationSchedule localizedIrrigationDayForStageLevel:waterLevel.stageLevel streetNumber:houseNumber];
+    }
+
     self.wateringDaySwitch.on = houseNumber != nil;
-    
-    SAWLocalNotificationManager *notificationManager = [SAWLocalNotificationManager localNotificationManager];
-    UILocalNotification *nextNotification = [notificationManager nextNotification];
-    self.nextIrrigationDate = nextNotification.fireDate;
-    
+
     [self updateNextIrrigationDate];
-    
+
     self.myWateringDayLabel.text = NSLocalizedString(@"MY_WATERING_DAY", nil);
 }
 
-- (NSDateFormatter *)dateFormatter {
-    if (!irrigationDateFormatter) {
-        irrigationDateFormatter = [[NSDateFormatter alloc] init];
-        irrigationDateFormatter.dateStyle = NSDateFormatterLongStyle;
-        irrigationDateFormatter.timeStyle = NSDateFormatterShortStyle;
-    }
-    
-    return irrigationDateFormatter;
-}
-
 - (void)updateNextIrrigationDate {
-    if (self.nextIrrigationDate) {
-        NSString *formattedDate = [self.dateFormatter stringFromDate:self.nextIrrigationDate];
-        self.nextIrrigationDayDateLabel.text = formattedDate;
+    if (self.irrigationDay) {
+        self.nextIrrigationDayDateLabel.text = self.irrigationDay;
     } else {
         self.nextIrrigationDayDateLabel.text = @"-";
     }
@@ -116,7 +104,7 @@ static NSDateFormatter *irrigationDateFormatter;
         SAWLocalNotificationManager *notificationManager = [SAWLocalNotificationManager localNotificationManager];
         [notificationManager removeAllNotifications];
 
-        self.nextIrrigationDate = nil;
+        self.irrigationDay = nil;
         [self updateNextIrrigationDate];
     }
 }
@@ -141,23 +129,18 @@ static NSDateFormatter *irrigationDateFormatter;
     } else {
         houseNumber = [[alertView textFieldAtIndex:0] text];
     }
-    
+
     SAWDataController *dataController = [[SAWDataController alloc] init];
     [dataController cacheHouseNumber:houseNumber];
-    
+
     SAWWaterLevel *waterLevel = [dataController fetchCachedWaterLevel];
-    
-    __weak typeof(self) weakSelf = self;
 
     if (houseNumber && waterLevel && waterLevel.stageLevel) {
+        self.irrigationDay = [SAWIrrigationSchedule localizedIrrigationDayForStageLevel:waterLevel.stageLevel streetNumber:houseNumber];
+        [self updateNextIrrigationDate];
+
         SAWLocalNotificationManager *notificationManager = [SAWLocalNotificationManager localNotificationManager];
-        [notificationManager scheduleNotificationsForStageLevel:waterLevel.stageLevel streetNumber:houseNumber completion:^(NSArray *notifications) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                UILocalNotification *notification = [notifications firstObject];
-                weakSelf.nextIrrigationDate = notification.fireDate;
-                [weakSelf updateNextIrrigationDate];
-            });
-        }];
+        [notificationManager scheduleNotificationsForStageLevel:waterLevel.stageLevel streetNumber:houseNumber completion:NULL];
     }
 }
 

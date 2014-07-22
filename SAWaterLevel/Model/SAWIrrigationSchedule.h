@@ -53,4 +53,6 @@ typedef NS_OPTIONS(NSInteger, SAWIrrigationDay) {
  */
 + (instancetype)irrigationScheduleForStageLevel:(SAWStageLevel *)stageLevel streetNumber:(NSString *)streetNumber;
 
++ (NSString *)localizedIrrigationDayForStageLevel:(SAWStageLevel *)stageLevel streetNumber:(NSString *)streetNumber;
+
 @end

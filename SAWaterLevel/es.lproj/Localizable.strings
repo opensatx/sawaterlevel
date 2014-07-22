@@ -32,8 +32,7 @@
 
 "SERVICE_ERROR_MISSING_DATA" = "La información del nivel actual no está disponible.";
 
-"LOCAL_NOTIFICATION_ALERT"      = "";
-"LOCAL_NOTIFICATION_MESSAGE"    = "";
+"LOCAL_NOTIFICATION_ALERT"      = "Ya llega la hora de riego!";
 
 "EDUCATION_EXPLANATION_TEXT"        = "Hay situaciones cuando la etapa de restricciones actual (%@) no corresponde con las restricciones del promedio de 10 días (%@) porque SAWS reduce el agua que ello saca del acuífero Edwards y complementa el agua desde otros fuentes.";
 "EDUCATION_DISMISS_BUTTON_TITLE"    = "OK";
@@ -46,6 +45,15 @@
 "REMINDER_ALERT_CONFIRM_TITLE"  = "OK";
 
 "MY_WATERING_DAY" = "Mi día de riego";
+
+"IRRIGATION_DAY_DAILY"  = "Diariamente";
+"IRRIGATION_DAY_SUN"    = "Domingo";
+"IRRIGATION_DAY_MON"    = "Lunes";
+"IRRIGATION_DAY_TUE"    = "Martes";
+"IRRIGATION_DAY_WED"    = "Miércoles";
+"IRRIGATION_DAY_THU"    = "Jueves";
+"IRRIGATION_DAY_FRI"    = "Viernes";
+"IRRIGATION_DAY_SAT"    = "Sábado";
 
 //  Stage Level Update
 

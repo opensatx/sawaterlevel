@@ -32,8 +32,7 @@
 
 "SERVICE_ERROR_MISSING_DATA" = "The current level information is not current available";
 
-"LOCAL_NOTIFICATION_ALERT"      = "";
-"LOCAL_NOTIFICATION_MESSAGE"    = "";
+"LOCAL_NOTIFICATION_ALERT"      = "It's time to water your lawn!";
 
 "EDUCATION_EXPLANATION_TEXT"        = "Sometimes the current restriction level (%@) may not match the 10-day average level (%@) because SAWS reduces its water pumping from the Edwards aquifer and suppliments water from other sources.";
 "EDUCATION_DISMISS_BUTTON_TITLE"    = "Done";
@@ -46,6 +45,15 @@
 "REMINDER_ALERT_CONFIRM_TITLE"  = "Done";
 
 "MY_WATERING_DAY" = "My watering day";
+
+"IRRIGATION_DAY_DAILY"  = "Daily";
+"IRRIGATION_DAY_SUN"    = "Sunday";
+"IRRIGATION_DAY_MON"    = "Monday";
+"IRRIGATION_DAY_TUE"    = "Tuesday";
+"IRRIGATION_DAY_WED"    = "Wednesday";
+"IRRIGATION_DAY_THU"    = "Thursday";
+"IRRIGATION_DAY_FRI"    = "Friday";
+"IRRIGATION_DAY_SAT"    = "Saturday";
 
 //  Stage Level Update
 
