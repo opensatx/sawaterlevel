@@ -15,7 +15,14 @@ typedef void(^SAWHeaderViewInfoHandler)(NSIndexPath *indexPath);
  */
 @interface SAWHeaderView : UITableViewHeaderFooterView
 
+/*!
+ *  Index path of the section in which the header is being used.  Used for implementers of the infoHandler know which info button was pressed
+ */
 @property (nonatomic, strong) NSIndexPath *indexPath;
+
+/*!
+ *  Block handler for executing logic for when the information button of the header is pressed.
+ */
 @property (nonatomic, copy) SAWHeaderViewInfoHandler infoHandler;
 
 @end

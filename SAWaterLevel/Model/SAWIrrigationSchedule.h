@@ -53,6 +53,12 @@ typedef NS_OPTIONS(NSInteger, SAWIrrigationDay) {
  */
 + (instancetype)irrigationScheduleForStageLevel:(SAWStageLevel *)stageLevel streetNumber:(NSString *)streetNumber;
 
+/*!
+ *  Method for obtaining the localized string for a customer's irrigation day
+ *  @param stageLevel the stage level that should be used to determine the customer's irrigation day
+ *  @param streetNumber the street number of the customer
+ *  @return localized day(s) of the week that a customer is allowed to irrigate
+ */
 + (NSString *)localizedIrrigationDayForStageLevel:(SAWStageLevel *)stageLevel streetNumber:(NSString *)streetNumber;
 
 @end

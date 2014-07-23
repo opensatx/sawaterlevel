@@ -13,7 +13,14 @@
  */
 @interface SAWStageLevel (UI)
 
+/*!
+ *  Background color to be used when displaying information about a StageLevel
+ */
 - (UIColor *)backgroundColor;
+
+/*!
+ *  Foreground color to be used when displaying information about a StageLevel
+ */
 - (UIColor *)foregroundColor;
 
 @end

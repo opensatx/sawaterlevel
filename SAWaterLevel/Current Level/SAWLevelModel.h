@@ -13,7 +13,14 @@
  */
 @interface SAWLevelModel : NSObject
 
+/*!
+ *  String display level to present
+ */
 @property (nonatomic, strong) NSString *displayLevel;
+
+/*!
+ *  Actual numeric value of the level
+ */
 @property (nonatomic, assign) float level;
 
 @end

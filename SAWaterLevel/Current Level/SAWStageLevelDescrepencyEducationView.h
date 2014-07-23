@@ -16,11 +16,27 @@ typedef void(^SAWStageLevelDescrepencyEducationViewCompletionHandler)(void);
  */
 @interface SAWStageLevelDescrepencyEducationView : UIView
 
+/*!
+ *  Block handler called when the user indicates that they are finished with viewing the content of this view
+ */
 @property (nonatomic, copy) SAWStageLevelDescrepencyEducationViewCompletionHandler completionHandler;
 
+/*!
+ *  Designated initializer of this class
+ *  @param frame The size of the instance to create
+ *  @param stageRestrictionView The view used to display the current stage restrictions
+ *  @return Fully initialized instance of this class
+ */
 - (instancetype) initWithFrame:(CGRect)frame currentStageRestrictionView:(UIView *)stageRestrictionView;
 
+/*!
+ *  The stage level as calculated by the average water level
+ */
 @property (nonatomic, assign) SAWStageLevelType waterStageLevel;
+
+/*!
+ *  The stage level declared by SAWS
+ */
 @property (nonatomic, assign) SAWStageLevelType actualStageLevel;
 
 @end
