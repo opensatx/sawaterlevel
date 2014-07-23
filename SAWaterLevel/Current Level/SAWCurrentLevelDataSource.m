@@ -35,7 +35,19 @@
         self.averageIndexPath = [self indexPathForLevel:[waterLevel.average floatValue]];
 
         [self.tableView reloadData];
-        [self.tableView scrollToRowAtIndexPath:self.averageIndexPath
+
+        NSIndexPath *lowestIndexPath = nil;
+
+        if (self.currentIndexPath.section == self.averageIndexPath.section) {
+            lowestIndexPath = [NSIndexPath indexPathForRow:MIN(self.currentIndexPath.row, self.averageIndexPath.row)
+                                                 inSection:self.currentIndexPath.section];
+        } else if (self.currentIndexPath.section > self.averageIndexPath.section) {
+            lowestIndexPath = self.averageIndexPath;
+        } else {
+            lowestIndexPath = self.currentIndexPath;
+        }
+
+        [self.tableView scrollToRowAtIndexPath:lowestIndexPath
                               atScrollPosition:UITableViewScrollPositionMiddle
                                       animated:YES];
     }

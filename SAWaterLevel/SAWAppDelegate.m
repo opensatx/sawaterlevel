@@ -14,8 +14,22 @@
 
 @implementation SAWAppDelegate
 
+#pragma mark - Instance Methods
+
+- (void)setupAppearance {
+    UIColor *tabBarSelectedImageTint = [UIColor colorWithRed:63.0f/255.0f  //  Light Blue
+                                                       green:124.0f/255.0f
+                                                        blue:162.0f/255.0f
+                                                       alpha:1.0f];
+    [[UITabBar appearance] setSelectedImageTintColor:tabBarSelectedImageTint];
+}
+
+#pragma mark - UIApplicationDelegate
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [application setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
+    
+    [self setupAppearance];
 
     return YES;
 }

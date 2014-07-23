@@ -43,10 +43,12 @@
     [super awakeFromNib];
 
     self.title = NSLocalizedString(@"TAB_BAR_ITEM_REMINDERS", nil);
+    self.navigationController.tabBarItem.selectedImage = [UIImage imageNamed:@"remindersSelected"];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     SAWDataController *dataController = [[SAWDataController alloc] init];
     SAWWaterLevel *waterLevel = [dataController fetchCachedWaterLevel];
     
