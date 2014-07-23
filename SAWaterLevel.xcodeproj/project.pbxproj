@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0466FD2197F5C50009E1FBC /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0466FD1197F5C50009E1FBC /* Settings.bundle */; };
 		B09C39151970C180003F5BA8 /* SAWDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C39141970C180003F5BA8 /* SAWDataController.m */; };
 		B09C39171970C9B9003F5BA8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09C39161970C9B9003F5BA8 /* MapKit.framework */; };
 		B09C391A19717A54003F5BA8 /* SAWIrrigationSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C391919717A54003F5BA8 /* SAWIrrigationSchedule.m */; };
@@ -66,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B0466FD1197F5C50009E1FBC /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		B09C39131970C180003F5BA8 /* SAWDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWDataController.h; sourceTree = "<group>"; };
 		B09C39141970C180003F5BA8 /* SAWDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWDataController.m; sourceTree = "<group>"; };
 		B09C39161970C9B9003F5BA8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -267,6 +269,7 @@
 		B0C95A8F193A4B0600A6F1FA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B0466FD1197F5C50009E1FBC /* Settings.bundle */,
 				B0C95A90193A4B0600A6F1FA /* SAWaterLevel-Info.plist */,
 				B0C95A91193A4B0600A6F1FA /* InfoPlist.strings */,
 				B0C95A94193A4B0600A6F1FA /* main.m */,
@@ -408,6 +411,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0C95ABA193A4B0600A6F1FA /* Build configuration list for PBXNativeTarget "SAWaterLevel" */;
 			buildPhases = (
+				B0466FD8197F5D12009E1FBC /* ShellScript */,
 				B0C95A81193A4B0600A6F1FA /* Sources */,
 				B0C95A82193A4B0600A6F1FA /* Frameworks */,
 				B0C95A83193A4B0600A6F1FA /* Resources */,
@@ -493,6 +497,7 @@
 				B0C95AA4193A4B0600A6F1FA /* Images.xcassets in Resources */,
 				B09C39451971963D003F5BA8 /* WebContent in Resources */,
 				B0C95A9C193A4B0600A6F1FA /* Main_iPhone.storyboard in Resources */,
+				B0466FD2197F5C50009E1FBC /* Settings.bundle in Resources */,
 				B0C95A93193A4B0600A6F1FA /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +511,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B0466FD8197F5D12009E1FBC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "version=`/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"$SRCROOT/SAWaterLevel/SAWaterLevel-Info.plist\"`\n\n/usr/libexec/PlistBuddy \"$SRCROOT/SAWaterLevel/Settings.bundle/Root.plist\" -c \"set PreferenceSpecifiers:0:DefaultValue $version\"    ";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B0C95A81193A4B0600A6F1FA /* Sources */ = {

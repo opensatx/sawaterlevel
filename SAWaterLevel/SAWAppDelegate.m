@@ -32,7 +32,7 @@
 #pragma mark - Instance Methods
 
 - (void)setupAppearance {
-    UIColor *tabBarSelectedImageTint = [UIColor colorWithRed:63.0f/255.0f  //  Light Blue
+    UIColor *tabBarSelectedImageTint = [UIColor colorWithRed:63.0f/255.0f  //  Gray-Blue
                                                        green:124.0f/255.0f
                                                         blue:162.0f/255.0f
                                                        alpha:1.0f];
