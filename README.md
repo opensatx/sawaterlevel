@@ -9,3 +9,7 @@ This app was originally developed by [Wayne Hartman](http://waynehartman.com) an
 SAWaterLevel is dependent on a web service that can be found [here](https://github.com/opensatx/sawaterlevel-api).
 
 SAWaterLevel uses [AFNetworking](https://github.com/AFNetworking/AFNetworking) which comes bundled inside of the application.
+
+
+##License
+Standard BSD license.  Please see [LICENSE](LICENSE) for details.
