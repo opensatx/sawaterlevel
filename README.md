@@ -13,3 +13,5 @@ SAWaterLevel uses [AFNetworking](https://github.com/AFNetworking/AFNetworking) w
 
 ##License
 Standard BSD license.  Please see [LICENSE](LICENSE) for details.
+
+![SA Water Screenshot](screenshot.png)
