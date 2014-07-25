@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SAWHistoricalDataMenuViewController : UIViewController
+@interface SAWHistoricalDataMenuViewController : UICollectionViewController
 
 @end
