@@ -66,6 +66,12 @@
     return self;
 }
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    self.navigationController.tabBarItem.selectedImage = [UIImage imageNamed:@"levelsSelected"];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 

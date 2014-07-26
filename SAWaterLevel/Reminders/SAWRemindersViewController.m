@@ -31,9 +31,12 @@
 @interface SAWRemindersViewController () <UIAlertViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UISwitch *wateringDaySwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *stageLevelChangeSwitch;
+
 @property (strong, nonatomic) NSString *irrigationDay;
 @property (strong, nonatomic) IBOutlet UILabel *nextIrrigationDayDateLabel;
 @property (strong, nonatomic) IBOutlet UILabel *myWateringDayLabel;
+@property (strong, nonatomic) IBOutlet UILabel *stageLevelChangeLabel;
 
 @end
 
@@ -78,10 +81,12 @@
     }
 
     self.wateringDaySwitch.on = houseNumber != nil;
+    self.stageLevelChangeSwitch.on = [dataController fetchNotifyOnStageLevelChange];
 
     [self updateNextIrrigationDate];
 
     self.myWateringDayLabel.text = NSLocalizedString(@"MY_WATERING_DAY", nil);
+    self.stageLevelChangeLabel.text = NSLocalizedString(@"STAGE_LEVEL_CHANGE", nil);
 }
 
 - (void)updateNextIrrigationDate {
@@ -124,6 +129,11 @@
         self.irrigationDay = nil;
         [self updateNextIrrigationDate];
     }
+}
+
+- (IBAction)didToggleShouldNotifyOnStageLevelChange:(id)sender {
+    SAWDataController *dataController = [[SAWDataController alloc] init];
+    [dataController cacheNotifyOnStageLevelChange:self.stageLevelChangeSwitch.on];
 }
 
 #pragma mark - Notifications

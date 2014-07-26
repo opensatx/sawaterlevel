@@ -36,47 +36,101 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="75" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <sections>
                             <tableViewSection id="y3D-P0-oUc">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="173" id="98K-sL-foG">
-                                        <rect key="frame" x="0.0" y="64" width="320" height="173"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="90" id="98K-sL-foG">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="98K-sL-foG" id="BTY-2D-QXV">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="172"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My watering day" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="224" translatesAutoresizingMaskIntoConstraints="NO" id="7Uj-TH-cUS">
-                                                    <rect key="frame" x="15" y="20" width="224" height="77"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="My watering day" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="171" translatesAutoresizingMaskIntoConstraints="NO" id="7Uj-TH-cUS">
+                                                    <rect key="frame" x="75" y="20" width="171" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zEi-7M-i7A">
-                                                    <rect key="frame" x="256" y="71" width="51" height="31"/>
+                                                    <rect key="frame" x="256" y="29" width="51" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
                                                         <action selector="didToggleWateringDay:" destination="dUo-EK-8JW" eventType="valueChanged" id="pu9-6k-iHL"/>
                                                     </connections>
                                                 </switch>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrZ-jZ-XlM">
-                                                    <rect key="frame" x="15" y="123" width="290" height="21"/>
+                                                    <rect key="frame" x="75" y="49" width="171" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wateringDay" translatesAutoresizingMaskIntoConstraints="NO" id="pBK-qo-Huq">
+                                                    <rect key="frame" x="15" y="20" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Pe2-0I-xuT"/>
+                                                        <constraint firstAttribute="width" constant="50" id="cbB-iQ-kUc"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="UrZ-jZ-XlM" firstAttribute="top" secondItem="7Uj-TH-cUS" secondAttribute="bottom" id="6NU-0o-v5Y"/>
+                                                <constraint firstItem="zEi-7M-i7A" firstAttribute="leading" secondItem="7Uj-TH-cUS" secondAttribute="trailing" constant="10" id="Gp7-fC-vhY"/>
+                                                <constraint firstAttribute="trailing" secondItem="zEi-7M-i7A" secondAttribute="trailing" constant="15" id="HWk-CX-w6g"/>
+                                                <constraint firstAttribute="bottom" secondItem="UrZ-jZ-XlM" secondAttribute="bottom" constant="19" id="KCS-WE-U8A"/>
+                                                <constraint firstItem="UrZ-jZ-XlM" firstAttribute="leading" secondItem="pBK-qo-Huq" secondAttribute="trailing" constant="10" id="SIb-C9-a6a"/>
+                                                <constraint firstItem="7Uj-TH-cUS" firstAttribute="top" secondItem="BTY-2D-QXV" secondAttribute="top" constant="20" id="VVe-BJ-2nd"/>
+                                                <constraint firstItem="7Uj-TH-cUS" firstAttribute="leading" secondItem="pBK-qo-Huq" secondAttribute="trailing" constant="10" id="W5g-1o-Ltg"/>
+                                                <constraint firstAttribute="centerY" secondItem="zEi-7M-i7A" secondAttribute="centerY" id="eGv-a2-W5j"/>
+                                                <constraint firstAttribute="centerY" secondItem="pBK-qo-Huq" secondAttribute="centerY" constant="-0.5" id="qUN-2c-eH1"/>
+                                                <constraint firstItem="pBK-qo-Huq" firstAttribute="leading" secondItem="BTY-2D-QXV" secondAttribute="leading" constant="15" id="t8F-eP-exp"/>
+                                                <constraint firstItem="zEi-7M-i7A" firstAttribute="leading" secondItem="UrZ-jZ-XlM" secondAttribute="trailing" constant="10" id="vuy-LK-Cdr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="90" id="M8g-Wl-Ial">
+                                        <rect key="frame" x="0.0" y="154" width="320" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M8g-Wl-Ial" id="5qX-4Z-1oL">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stageLevelChange" translatesAutoresizingMaskIntoConstraints="NO" id="xC6-zY-dym">
+                                                    <rect key="frame" x="15" y="20" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="BCf-8D-zxZ"/>
+                                                        <constraint firstAttribute="height" constant="50" id="SWN-KH-5y6"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stage Level Changes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="171" translatesAutoresizingMaskIntoConstraints="NO" id="NMW-rl-UoL">
+                                                    <rect key="frame" x="75" y="18" width="171" height="53"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8zh-AX-MsC">
+                                                    <rect key="frame" x="256" y="29" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="didToggleShouldNotifyOnStageLevelChange:" destination="dUo-EK-8JW" eventType="valueChanged" id="yTB-Zv-fmd"/>
+                                                        <action selector="didToggleWateringDay:" destination="dUo-EK-8JW" eventType="valueChanged" id="qMV-rm-jFP"/>
+                                                    </connections>
+                                                </switch>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="UrZ-jZ-XlM" firstAttribute="top" secondItem="7Uj-TH-cUS" secondAttribute="bottom" constant="26" id="6NU-0o-v5Y"/>
-                                                <constraint firstItem="zEi-7M-i7A" firstAttribute="leading" secondItem="7Uj-TH-cUS" secondAttribute="trailing" constant="17" id="Gp7-fC-vhY"/>
-                                                <constraint firstItem="UrZ-jZ-XlM" firstAttribute="leading" secondItem="BTY-2D-QXV" secondAttribute="leading" constant="15" id="H40-U7-WOs"/>
-                                                <constraint firstAttribute="trailing" secondItem="zEi-7M-i7A" secondAttribute="trailing" constant="15" id="HWk-CX-w6g"/>
-                                                <constraint firstItem="7Uj-TH-cUS" firstAttribute="top" secondItem="BTY-2D-QXV" secondAttribute="top" constant="20" id="VVe-BJ-2nd"/>
-                                                <constraint firstAttribute="centerY" secondItem="zEi-7M-i7A" secondAttribute="centerY" id="eGv-a2-W5j"/>
-                                                <constraint firstItem="7Uj-TH-cUS" firstAttribute="leading" secondItem="BTY-2D-QXV" secondAttribute="leading" constant="15" id="gMx-6f-Ycx"/>
-                                                <constraint firstAttribute="trailing" secondItem="UrZ-jZ-XlM" secondAttribute="trailing" constant="15" id="z2v-sa-yRu"/>
+                                                <constraint firstItem="xC6-zY-dym" firstAttribute="leading" secondItem="5qX-4Z-1oL" secondAttribute="leading" constant="15" id="PhC-L6-IMe"/>
+                                                <constraint firstAttribute="centerY" secondItem="NMW-rl-UoL" secondAttribute="centerY" constant="0.5" id="QIo-Zq-fUi"/>
+                                                <constraint firstAttribute="centerY" secondItem="8zh-AX-MsC" secondAttribute="centerY" id="YIf-pR-3eq"/>
+                                                <constraint firstItem="NMW-rl-UoL" firstAttribute="leading" secondItem="xC6-zY-dym" secondAttribute="trailing" constant="10" id="aXO-z8-pbn"/>
+                                                <constraint firstAttribute="trailing" secondItem="8zh-AX-MsC" secondAttribute="trailing" constant="15" id="fKi-Kk-KZV"/>
+                                                <constraint firstAttribute="centerY" secondItem="xC6-zY-dym" secondAttribute="centerY" constant="-0.5" id="laz-c9-YbG"/>
+                                                <constraint firstItem="8zh-AX-MsC" firstAttribute="leading" secondItem="NMW-rl-UoL" secondAttribute="trailing" constant="10" id="pOE-Be-ZmU"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -92,6 +146,8 @@
                     <connections>
                         <outlet property="myWateringDayLabel" destination="7Uj-TH-cUS" id="rNp-UU-QBQ"/>
                         <outlet property="nextIrrigationDayDateLabel" destination="UrZ-jZ-XlM" id="F5t-UC-ZNV"/>
+                        <outlet property="stageLevelChangeLabel" destination="NMW-rl-UoL" id="oZO-rr-TJP"/>
+                        <outlet property="stageLevelChangeSwitch" destination="8zh-AX-MsC" id="Gom-bd-Kui"/>
                         <outlet property="wateringDaySwitch" destination="zEi-7M-i7A" id="nfh-YL-pIt"/>
                     </connections>
                 </tableViewController>
@@ -447,8 +503,11 @@
         <image name="24hour" width="100" height="100"/>
         <image name="7day" width="100" height="100"/>
         <image name="levels" width="28" height="16"/>
+        <image name="levels" width="28" height="28"/>
         <image name="reminders" width="28" height="28"/>
         <image name="year" width="100" height="100"/>
+        <image name="stageLevelChange" width="50" height="50"/>
+        <image name="wateringDay" width="50" height="50"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -53,4 +53,21 @@
  */
 - (NSString *)fetchCachedHouseNumber;
 
+/*!
+ *  Preference if the user should be notified when stage restriction levels should be shown
+ *  @param shouldNotifyOnChange whether the user should be notified when stage level changes should be shown
+ */
+- (void)cacheNotifyOnStageLevelChange:(BOOL)shouldNotifyOnChange;
+
+/*!
+ *  Preference if the user should be notified when stage restriction levels should be shown
+ *  @return whether the user should be notified when stage level changes should be shown
+ */
+- (BOOL)fetchNotifyOnStageLevelChange;
+
+/*!
+ *  Registers default values of cached data
+ */
++ (void)registerDefaults;
+
 @end

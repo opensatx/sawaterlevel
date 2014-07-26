@@ -68,8 +68,11 @@ static NSDateFormatter *waterLevelDateFormatter;
             if (currentLevel) {
                 SAWStageLevelType currentType = currentLevel.stageLevel.level;
                 SAWStageLevelType newType = currentLevel.stageLevel.level;
-                
-                if (currentType != newType) {   //  If they don't match, then alert the user to the change in stage level
+
+                SAWDataController *dataController = [[SAWDataController alloc] init];
+                BOOL shouldNotifyOfStageChange = [dataController fetchNotifyOnStageLevelChange];
+
+                if (currentType != newType && shouldNotifyOfStageChange) {   //  If they don't match, then alert the user to the change in stage level
                     dispatch_async(dispatch_get_main_queue(), ^{
                         NSString*(^stringFromStageLevel)(SAWStageLevelType) = ^(SAWStageLevelType stageLevelType) {
                             switch (stageLevelType) {
