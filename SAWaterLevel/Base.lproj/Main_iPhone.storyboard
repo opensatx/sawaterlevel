@@ -119,7 +119,6 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
                                                         <action selector="didToggleShouldNotifyOnStageLevelChange:" destination="dUo-EK-8JW" eventType="valueChanged" id="yTB-Zv-fmd"/>
-                                                        <action selector="didToggleWateringDay:" destination="dUo-EK-8JW" eventType="valueChanged" id="qMV-rm-jFP"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
