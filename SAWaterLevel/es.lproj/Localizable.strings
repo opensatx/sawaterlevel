@@ -44,7 +44,8 @@
 "REMINDER_ALERT_CANCEL_TITLE"   = "Cancelar";
 "REMINDER_ALERT_CONFIRM_TITLE"  = "OK";
 
-"MY_WATERING_DAY" = "Mi día de riego";
+"MY_WATERING_DAY"       = "Mi día de riego";
+"STAGE_LEVEL_CHANGE"    = "Cambio de Etapa";
 
 "IRRIGATION_DAY_DAILY"  = "Diariamente";
 "IRRIGATION_DAY_SUN"    = "Domingo";

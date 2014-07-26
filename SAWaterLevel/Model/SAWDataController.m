@@ -25,6 +25,7 @@
 
 #define USER_DEFAULT_KEY_CACHED_WATER @"SAWCachedWaterLevel"
 #define USER_DEFAULT_KEY_CACHED_HOUSE_NUMBER @"SAWCachedHouseNumber"
+#define USER_DEFAULT_KEY_CACHED_STAGE_LEVEL_NOTIFICATION @"SAWCachedNotifyOnStageLevelChange"
 
 @implementation SAWDataController
 
@@ -94,6 +95,24 @@
 - (NSString *)fetchCachedHouseNumber {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     return [defaults stringForKey:USER_DEFAULT_KEY_CACHED_HOUSE_NUMBER];
+}
+
+
+- (void)cacheNotifyOnStageLevelChange:(BOOL)shouldNotifyOnChange {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:shouldNotifyOnChange forKey:USER_DEFAULT_KEY_CACHED_STAGE_LEVEL_NOTIFICATION];
+    [defaults synchronize];
+}
+
+- (BOOL)fetchNotifyOnStageLevelChange {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    return [defaults boolForKey:USER_DEFAULT_KEY_CACHED_STAGE_LEVEL_NOTIFICATION];
+}
+
++ (void)registerDefaults {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults registerDefaults:@{ USER_DEFAULT_KEY_CACHED_STAGE_LEVEL_NOTIFICATION : @(YES) }];
+    [defaults synchronize];
 }
 
 #pragma mark - Internal Methods
