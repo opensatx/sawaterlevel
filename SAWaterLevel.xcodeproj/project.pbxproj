@@ -27,7 +27,6 @@
 		B03ED6F61B1BFBB70027F59B /* SAWWaterLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED6EC1B1BFBB70027F59B /* SAWWaterLevel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B03ED6F71B1BFBB70027F59B /* SAWWaterLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED6ED1B1BFBB70027F59B /* SAWWaterLevel.m */; };
 		B03ED6F91B1BFFCE0027F59B /* SAWaterLevelCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03ED6C11B1BF7D60027F59B /* SAWaterLevelCommon.framework */; };
-		B03ED70B1B1C03180027F59B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B03ED70D1B1C03180027F59B /* Localizable.strings */; };
 		B03ED7251B1C05900027F59B /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED7121B1C05900027F59B /* AFHTTPRequestOperation.h */; };
 		B03ED7261B1C05900027F59B /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED7131B1C05900027F59B /* AFHTTPRequestOperation.m */; };
 		B03ED7271B1C05900027F59B /* AFHTTPRequestOperationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED7141B1C05900027F59B /* AFHTTPRequestOperationManager.h */; };
@@ -51,6 +50,19 @@
 		B03ED7401B1C07300027F59B /* SAWNetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED73E1B1C07300027F59B /* SAWNetworkController.m */; };
 		B03ED74A1B1C11AA0027F59B /* SAWStageLevel+UI.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED7481B1C11AA0027F59B /* SAWStageLevel+UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B03ED74B1B1C11AA0027F59B /* SAWStageLevel+UI.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED7491B1C11AA0027F59B /* SAWStageLevel+UI.m */; };
+		B03ED75C1B1D31B40027F59B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03ED75B1B1D31B40027F59B /* Images.xcassets */; };
+		B03ED7601B1D31B50027F59B /* SAWaterLevel WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = B03ED75F1B1D31B40027F59B /* SAWaterLevel WatchKit App.app */; };
+		B03ED7681B1D31B50027F59B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03ED7661B1D31B50027F59B /* Interface.storyboard */; };
+		B03ED76A1B1D31B50027F59B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03ED7691B1D31B50027F59B /* Images.xcassets */; };
+		B03ED76D1B1D31B50027F59B /* SAWaterLevel WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B03ED7501B1D31B40027F59B /* SAWaterLevel WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B03ED7781B1D36510027F59B /* SAWGlanceInterfaceController.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED7761B1D36510027F59B /* SAWGlanceInterfaceController.h */; };
+		B03ED77A1B1D36570027F59B /* SAWGlanceInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED7771B1D36510027F59B /* SAWGlanceInterfaceController.m */; };
+		B03ED77B1B1D36640027F59B /* SAWaterLevelCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03ED6C11B1BF7D60027F59B /* SAWaterLevelCommon.framework */; };
+		B03ED77E1B1D572A0027F59B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0C95B21193B687800A6F1FA /* Localizable.strings */; };
+		B03ED77F1B1D572C0027F59B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0C95B21193B687800A6F1FA /* Localizable.strings */; };
+		B03ED7801B1D57300027F59B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0C95B21193B687800A6F1FA /* Localizable.strings */; };
+		B03ED7891B1D609B0027F59B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0C95A91193A4B0600A6F1FA /* InfoPlist.strings */; };
+		B03ED78A1B1D609F0027F59B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0C95A91193A4B0600A6F1FA /* InfoPlist.strings */; };
 		B0466FD2197F5C50009E1FBC /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0466FD1197F5C50009E1FBC /* Settings.bundle */; };
 		B09C39171970C9B9003F5BA8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09C39161970C9B9003F5BA8 /* MapKit.framework */; };
 		B09C391E19717D71003F5BA8 /* SAWRemindersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C391D19717D71003F5BA8 /* SAWRemindersViewController.m */; };
@@ -111,6 +123,20 @@
 			remoteGlobalIDString = B03ED6C01B1BF7D60027F59B;
 			remoteInfo = SAWaterLevelCommon;
 		};
+		B03ED7611B1D31B50027F59B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0C95A7D193A4B0600A6F1FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B03ED75E1B1D31B40027F59B;
+			remoteInfo = "SAWaterLevel WatchKit App";
+		};
+		B03ED76B1B1D31B50027F59B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0C95A7D193A4B0600A6F1FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B03ED74F1B1D31B40027F59B;
+			remoteInfo = "SAWaterLevel WatchKit Extension";
+		};
 		B0C95AAE193A4B0600A6F1FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B0C95A7D193A4B0600A6F1FA /* Project object */;
@@ -127,6 +153,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				B03ED76D1B1D31B50027F59B /* SAWaterLevel WatchKit Extension.appex in Embed App Extensions */,
 				B03ED6B71B1BF34B0027F59B /* SAWaterTodayWidget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -169,9 +196,6 @@
 		B03ED6EB1B1BFBB70027F59B /* SAWStageLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWStageLevel.m; sourceTree = "<group>"; };
 		B03ED6EC1B1BFBB70027F59B /* SAWWaterLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWWaterLevel.h; sourceTree = "<group>"; };
 		B03ED6ED1B1BFBB70027F59B /* SAWWaterLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWWaterLevel.m; sourceTree = "<group>"; };
-		B03ED70C1B1C03180027F59B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		B03ED70E1B1C031D0027F59B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		B03ED70F1B1C031E0027F59B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B03ED7121B1C05900027F59B /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		B03ED7131B1C05900027F59B /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		B03ED7141B1C05900027F59B /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -196,6 +220,17 @@
 		B03ED7461B1C0F190027F59B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B03ED7481B1C11AA0027F59B /* SAWStageLevel+UI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SAWStageLevel+UI.h"; sourceTree = "<group>"; };
 		B03ED7491B1C11AA0027F59B /* SAWStageLevel+UI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SAWStageLevel+UI.m"; sourceTree = "<group>"; };
+		B03ED7501B1D31B40027F59B /* SAWaterLevel WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SAWaterLevel WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B03ED7531B1D31B40027F59B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B03ED7541B1D31B40027F59B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		B03ED75B1B1D31B40027F59B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B03ED75F1B1D31B40027F59B /* SAWaterLevel WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SAWaterLevel WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B03ED7651B1D31B50027F59B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B03ED7671B1D31B50027F59B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		B03ED7691B1D31B50027F59B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B03ED7761B1D36510027F59B /* SAWGlanceInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWGlanceInterfaceController.h; sourceTree = "<group>"; };
+		B03ED7771B1D36510027F59B /* SAWGlanceInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWGlanceInterfaceController.m; sourceTree = "<group>"; };
+		B03ED7811B1D5A760027F59B /* SAWaterLevel WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "SAWaterLevel WatchKit Extension.entitlements"; path = "SAWaterLevel WatchKit Extension/SAWaterLevel WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		B0466FD1197F5C50009E1FBC /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		B09C39161970C9B9003F5BA8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B09C391C19717D71003F5BA8 /* SAWRemindersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWRemindersViewController.h; sourceTree = "<group>"; };
@@ -267,6 +302,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B03ED74D1B1D31B40027F59B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B03ED77B1B1D36640027F59B /* SAWaterLevelCommon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B0C95A82193A4B0600A6F1FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -308,7 +351,6 @@
 			isa = PBXGroup;
 			children = (
 				B03ED6AF1B1BF34B0027F59B /* Info.plist */,
-				B03ED70D1B1C03180027F59B /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -420,6 +462,61 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		B03ED7511B1D31B40027F59B /* SAWaterLevel WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B03ED75B1B1D31B40027F59B /* Images.xcassets */,
+				B03ED7521B1D31B40027F59B /* Supporting Files */,
+				B03ED7761B1D36510027F59B /* SAWGlanceInterfaceController.h */,
+				B03ED7771B1D36510027F59B /* SAWGlanceInterfaceController.m */,
+			);
+			path = "SAWaterLevel WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		B03ED7521B1D31B40027F59B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B03ED7531B1D31B40027F59B /* Info.plist */,
+				B03ED7541B1D31B40027F59B /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B03ED7631B1D31B50027F59B /* SAWaterLevel WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				B03ED7661B1D31B50027F59B /* Interface.storyboard */,
+				B03ED7691B1D31B50027F59B /* Images.xcassets */,
+				B03ED7641B1D31B50027F59B /* Supporting Files */,
+			);
+			path = "SAWaterLevel WatchKit App";
+			sourceTree = "<group>";
+		};
+		B03ED7641B1D31B50027F59B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B03ED7651B1D31B50027F59B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B03ED7741B1D31CA0027F59B /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				B03ED7511B1D31B40027F59B /* SAWaterLevel WatchKit Extension */,
+				B03ED7631B1D31B50027F59B /* SAWaterLevel WatchKit App */,
+			);
+			name = Watch;
+			sourceTree = "<group>";
+		};
+		B03ED7751B1D31D40027F59B /* Today Widget */ = {
+			isa = PBXGroup;
+			children = (
+				B03ED6AD1B1BF34B0027F59B /* SAWaterTodayWidget */,
+			);
+			name = "Today Widget";
+			sourceTree = "<group>";
+		};
 		B09C391B19717D71003F5BA8 /* Reminders */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,10 +565,11 @@
 		B0C95A7C193A4B0600A6F1FA = {
 			isa = PBXGroup;
 			children = (
+				B03ED7811B1D5A760027F59B /* SAWaterLevel WatchKit Extension.entitlements */,
 				B0C95A8E193A4B0600A6F1FA /* SAWaterLevel */,
-				B03ED6AD1B1BF34B0027F59B /* SAWaterTodayWidget */,
+				B03ED7751B1D31D40027F59B /* Today Widget */,
+				B03ED7741B1D31CA0027F59B /* Watch */,
 				B03ED6C21B1BF7D60027F59B /* SAWaterLevelCommon */,
-				B0C95AC0193A4B3200A6F1FA /* ThirdParty */,
 				B0C95AB0193A4B0600A6F1FA /* SAWaterLevelTests */,
 				B03ED6D11B1BF7D70027F59B /* SAWaterLevelCommonTests */,
 				B0C95A87193A4B0600A6F1FA /* Frameworks */,
@@ -487,6 +585,8 @@
 				B03ED6AA1B1BF34B0027F59B /* SAWaterTodayWidget.appex */,
 				B03ED6C11B1BF7D60027F59B /* SAWaterLevelCommon.framework */,
 				B03ED6CB1B1BF7D60027F59B /* SAWaterLevelCommonTests.xctest */,
+				B03ED7501B1D31B40027F59B /* SAWaterLevel WatchKit Extension.appex */,
+				B03ED75F1B1D31B40027F59B /* SAWaterLevel WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -552,13 +652,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B0C95AC0193A4B3200A6F1FA /* ThirdParty */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ThirdParty;
-			sourceTree = "<group>";
-		};
 		B0C95AEB193A530400A6F1FA /* Current Level */ = {
 			isa = PBXGroup;
 			children = (
@@ -612,6 +705,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B03ED6EE1B1BFBB70027F59B /* SAWConstants.h in Headers */,
+				B03ED7781B1D36510027F59B /* SAWGlanceInterfaceController.h in Headers */,
 				B03ED7301B1C05900027F59B /* AFURLConnectionOperation.h in Headers */,
 				B03ED7321B1C05900027F59B /* AFURLRequestSerialization.h in Headers */,
 				B03ED7271B1C05900027F59B /* AFHTTPRequestOperationManager.h in Headers */,
@@ -689,6 +783,39 @@
 			productReference = B03ED6CB1B1BF7D60027F59B /* SAWaterLevelCommonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		B03ED74F1B1D31B40027F59B /* SAWaterLevel WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B03ED7711B1D31B50027F59B /* Build configuration list for PBXNativeTarget "SAWaterLevel WatchKit Extension" */;
+			buildPhases = (
+				B03ED74C1B1D31B40027F59B /* Sources */,
+				B03ED74D1B1D31B40027F59B /* Frameworks */,
+				B03ED74E1B1D31B40027F59B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B03ED7621B1D31B50027F59B /* PBXTargetDependency */,
+			);
+			name = "SAWaterLevel WatchKit Extension";
+			productName = "SAWaterLevel WatchKit Extension";
+			productReference = B03ED7501B1D31B40027F59B /* SAWaterLevel WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		B03ED75E1B1D31B40027F59B /* SAWaterLevel WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B03ED76E1B1D31B50027F59B /* Build configuration list for PBXNativeTarget "SAWaterLevel WatchKit App" */;
+			buildPhases = (
+				B03ED75D1B1D31B40027F59B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SAWaterLevel WatchKit App";
+			productName = "SAWaterLevel WatchKit App";
+			productReference = B03ED75F1B1D31B40027F59B /* SAWaterLevel WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		B0C95A84193A4B0600A6F1FA /* SAWaterLevel */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0C95ABA193A4B0600A6F1FA /* Build configuration list for PBXNativeTarget "SAWaterLevel" */;
@@ -705,6 +832,7 @@
 			dependencies = (
 				B03ED6B61B1BF34B0027F59B /* PBXTargetDependency */,
 				B03ED6D71B1BF7D70027F59B /* PBXTargetDependency */,
+				B03ED76C1B1D31B50027F59B /* PBXTargetDependency */,
 			);
 			name = SAWaterLevel;
 			productName = SAWaterLevel;
@@ -755,6 +883,19 @@
 						CreatedOnToolsVersion = 6.3.1;
 						TestTargetID = B0C95A84193A4B0600A6F1FA;
 					};
+					B03ED74F1B1D31B40027F59B = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = R937YBPA22;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					B03ED75E1B1D31B40027F59B = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = R937YBPA22;
+					};
 					B0C95A84193A4B0600A6F1FA = {
 						DevelopmentTeam = R937YBPA22;
 						SystemCapabilities = {
@@ -793,6 +934,8 @@
 				B03ED6A91B1BF34B0027F59B /* SAWaterTodayWidget */,
 				B03ED6C01B1BF7D60027F59B /* SAWaterLevelCommon */,
 				B03ED6CA1B1BF7D60027F59B /* SAWaterLevelCommonTests */,
+				B03ED74F1B1D31B40027F59B /* SAWaterLevel WatchKit Extension */,
+				B03ED75E1B1D31B40027F59B /* SAWaterLevel WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -803,7 +946,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B03ED6B41B1BF34B0027F59B /* MainInterface.storyboard in Resources */,
-				B03ED70B1B1C03180027F59B /* Localizable.strings in Resources */,
+				B03ED7891B1D609B0027F59B /* InfoPlist.strings in Resources */,
+				B03ED77E1B1D572A0027F59B /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,6 +962,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B03ED74E1B1D31B40027F59B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B03ED75C1B1D31B40027F59B /* Images.xcassets in Resources */,
+				B03ED78A1B1D609F0027F59B /* InfoPlist.strings in Resources */,
+				B03ED77F1B1D572C0027F59B /* Localizable.strings in Resources */,
+				B03ED7601B1D31B50027F59B /* SAWaterLevel WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B03ED75D1B1D31B40027F59B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B03ED7681B1D31B50027F59B /* Interface.storyboard in Resources */,
+				B03ED7801B1D57300027F59B /* Localizable.strings in Resources */,
+				B03ED76A1B1D31B50027F59B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -901,6 +1066,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B03ED74C1B1D31B40027F59B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B03ED77A1B1D36570027F59B /* SAWGlanceInterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B0C95A81193A4B0600A6F1FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -953,6 +1126,16 @@
 			target = B03ED6C01B1BF7D60027F59B /* SAWaterLevelCommon */;
 			targetProxy = B03ED6D61B1BF7D70027F59B /* PBXContainerItemProxy */;
 		};
+		B03ED7621B1D31B50027F59B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B03ED75E1B1D31B40027F59B /* SAWaterLevel WatchKit App */;
+			targetProxy = B03ED7611B1D31B50027F59B /* PBXContainerItemProxy */;
+		};
+		B03ED76C1B1D31B50027F59B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B03ED74F1B1D31B40027F59B /* SAWaterLevel WatchKit Extension */;
+			targetProxy = B03ED76B1B1D31B50027F59B /* PBXContainerItemProxy */;
+		};
 		B0C95AAF193A4B0600A6F1FA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B0C95A84193A4B0600A6F1FA /* SAWaterLevel */;
@@ -961,14 +1144,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B03ED70D1B1C03180027F59B /* Localizable.strings */ = {
+		B03ED7661B1D31B50027F59B /* Interface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B03ED70C1B1C03180027F59B /* Base */,
-				B03ED70E1B1C031D0027F59B /* en */,
-				B03ED70F1B1C031E0027F59B /* es */,
+				B03ED7671B1D31B50027F59B /* Base */,
 			);
-			name = Localizable.strings;
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 		B0C95A91193A4B0600A6F1FA /* InfoPlist.strings */ = {
@@ -1154,6 +1335,96 @@
 			};
 			name = Release;
 		};
+		B03ED76F1B1D31B50027F59B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = SAWaterLevel_WatchKit_Extension;
+				INFOPLIST_FILE = "SAWaterLevel WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		B03ED7701B1D31B50027F59B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = SAWaterLevel_WatchKit_Extension;
+				INFOPLIST_FILE = "SAWaterLevel WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		B03ED7721B1D31B50027F59B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = "SAWaterLevel WatchKit Extension/SAWaterLevel WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SAWaterLevel WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B03ED7731B1D31B50027F59B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = "SAWaterLevel WatchKit Extension/SAWaterLevel WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "SAWaterLevel WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		B0C95AB8193A4B0600A6F1FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1237,7 +1508,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SAWaterLevel/SAWaterLevel-Prefix.pch";
 				INFOPLIST_FILE = "SAWaterLevel/SAWaterLevel-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1257,7 +1528,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SAWaterLevel/SAWaterLevel-Prefix.pch";
 				INFOPLIST_FILE = "SAWaterLevel/SAWaterLevel-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1330,6 +1601,22 @@
 			buildConfigurations = (
 				B03ED6DF1B1BF7D70027F59B /* Debug */,
 				B03ED6E01B1BF7D70027F59B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B03ED76E1B1D31B50027F59B /* Build configuration list for PBXNativeTarget "SAWaterLevel WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B03ED76F1B1D31B50027F59B /* Debug */,
+				B03ED7701B1D31B50027F59B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B03ED7711B1D31B50027F59B /* Build configuration list for PBXNativeTarget "SAWaterLevel WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B03ED7721B1D31B50027F59B /* Debug */,
+				B03ED7731B1D31B50027F59B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

@@ -76,4 +76,6 @@ typedef NS_ENUM(NSInteger, SAWStageLevelType) {
  */
 + (SAWStageLevel *)stageLevelForWaterLevel:(SAWWaterLevel *)waterLevel;
 
++ (SAWStageLevel *)stageLevelForLevelValue:(CGFloat)levelValue;
+
 @end

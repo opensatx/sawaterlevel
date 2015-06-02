@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Glance Interface Controller-->
+        <scene sceneID="pfb-W3-8vu">
+            <objects>
+                <glanceController topTemplateType="body1Group" id="fmZ-RC-O8b" customClass="SAWGlanceInterfaceController">
+                    <items>
+                        <label alignment="left" text="Current Restrictions" minimumScaleFactor="0.50000000000000011" id="ikb-jE-0QQ"/>
+                        <group alignment="left" spacing="0.0" id="EB6-QX-f1g">
+                            <items>
+                                <label width="1" alignment="left" verticalAlignment="center" text="Stage 2" textAlignment="center" id="nFU-sp-KX8">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                            </items>
+                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </group>
+                        <group alignment="left" layout="vertical" spacing="0.0" id="9eu-cb-qvR">
+                            <items>
+                                <group width="1" height="42" alignment="left" layout="vertical" spacing="0.0" id="Rf7-H9-545">
+                                    <items>
+                                        <group width="1" height="28" alignment="left" id="khb-qX-yDf">
+                                            <items>
+                                                <group width="9" height="28" alignment="left" layout="vertical" id="m22-KI-zXf" userLabel="Indicator Container">
+                                                    <items>
+                                                        <group width="8" height="8" alignment="left" verticalAlignment="center" radius="4" spacing="0.0" id="Hpm-r5-EaY" userLabel="Indicator">
+                                                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </group>
+                                                    </items>
+                                                </group>
+                                                <label alignment="left" text="661.32" id="iOe-Iz-zQt">
+                                                    <fontDescription key="font" type="boldSystem" pointSize="25"/>
+                                                </label>
+                                                <group width="19" height="26" alignment="left" id="EMe-hJ-I8i">
+                                                    <items>
+                                                        <label alignment="left" text="ft." id="GGs-wU-nyq"/>
+                                                    </items>
+                                                    <edgeInsets key="margins" left="0.0" right="0.0" top="9" bottom="0.0"/>
+                                                </group>
+                                            </items>
+                                        </group>
+                                        <group width="1" alignment="left" id="4EM-mD-Dwe">
+                                            <items>
+                                                <label alignment="left" text="Current Level" id="tVg-UW-4JW">
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                </label>
+                                            </items>
+                                            <edgeInsets key="margins" left="11" right="0.0" top="0.0" bottom="0.0"/>
+                                        </group>
+                                    </items>
+                                </group>
+                                <group width="1" height="42" alignment="left" layout="vertical" spacing="0.0" id="gzU-4C-nhs">
+                                    <items>
+                                        <group width="1" height="28" alignment="left" id="bos-iW-WUk">
+                                            <items>
+                                                <group width="9" height="28" alignment="left" layout="vertical" id="T3I-E7-33T" userLabel="Indicator Container">
+                                                    <items>
+                                                        <group width="8" height="8" alignment="left" verticalAlignment="center" radius="4" spacing="0.0" id="KxM-U2-aWe" userLabel="Indicator">
+                                                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </group>
+                                                    </items>
+                                                </group>
+                                                <label alignment="left" text="661.32" id="14u-rY-lq8">
+                                                    <fontDescription key="font" type="boldSystem" pointSize="25"/>
+                                                </label>
+                                                <group width="19" height="26" alignment="left" id="cAq-c0-hSe">
+                                                    <items>
+                                                        <label alignment="left" text="ft." id="UpB-FZ-esX"/>
+                                                    </items>
+                                                    <edgeInsets key="margins" left="0.0" right="0.0" top="9" bottom="0.0"/>
+                                                </group>
+                                            </items>
+                                        </group>
+                                        <group width="1" alignment="left" id="KRg-dX-eMu">
+                                            <items>
+                                                <label alignment="left" text="Current Level" id="nt9-zs-Dpg">
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                </label>
+                                            </items>
+                                            <edgeInsets key="margins" left="11" right="0.0" top="0.0" bottom="0.0"/>
+                                        </group>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" spacing="0.0" id="qsg-oW-QGF">
+                                    <items>
+                                        <label width="1" height="26" alignment="left" verticalAlignment="center" text="6/1/2015, 12:45PM" textAlignment="left" id="eso-Ia-fT3">
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                    </items>
+                                    <edgeInsets key="margins" left="11" right="0.0" top="4" bottom="0.0"/>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="averageLevelDescLabel" destination="nt9-zs-Dpg" id="iiI-hM-CvE"/>
+                        <outlet property="averageLevelIndicator" destination="KxM-U2-aWe" id="Rzp-ki-lqh"/>
+                        <outlet property="averageLevelLabel" destination="14u-rY-lq8" id="I7d-Sd-tJb"/>
+                        <outlet property="averageLevelUnitLabel" destination="UpB-FZ-esX" id="rSi-YO-2Tc"/>
+                        <outlet property="currentLevelDescLabel" destination="tVg-UW-4JW" id="2b8-Sy-pqh"/>
+                        <outlet property="currentLevelIndicator" destination="Hpm-r5-EaY" id="jI1-WI-6bR"/>
+                        <outlet property="currentLevelLabel" destination="iOe-Iz-zQt" id="bGA-WU-kXu"/>
+                        <outlet property="currentLevelUnitLabel" destination="GGs-wU-nyq" id="H16-zc-xIk"/>
+                        <outlet property="lastUpdatedLabel" destination="eso-Ia-fT3" id="wt8-PN-jhH"/>
+                        <outlet property="restrictionDescLabel" destination="ikb-jE-0QQ" id="Aof-yU-Ng8"/>
+                        <outlet property="restrictionGroup" destination="EB6-QX-f1g" id="iV8-BV-X4u"/>
+                        <outlet property="restrictionLabel" destination="nFU-sp-KX8" id="aIc-4L-llt"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="218" y="118"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>

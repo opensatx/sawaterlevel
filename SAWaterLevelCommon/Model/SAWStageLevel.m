@@ -39,9 +39,13 @@
         return nil;
     }
 
-    SAWStageLevelType level = SAWStageLevelNormal;
-
     float levelValue = [waterLevel.average floatValue];
+
+    return [self stageLevelForLevelValue:levelValue];
+}
+
++ (SAWStageLevel *)stageLevelForLevelValue:(CGFloat)levelValue {
+    SAWStageLevelType level = SAWStageLevelNormal;
 
     if (levelValue <= [self footStartingLevelForStageLevel:SAWStageLevel5]) {
         level = SAWStageLevel5;
