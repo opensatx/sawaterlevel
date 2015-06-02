@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Wayne Hartman. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+@import XCTest;
+@import SAWaterLevelCommon;
 
-#import "SAWIrrigationSchedule.h"
 #import "SAWLocalNotificationManager.h"
 #import "SAWWaterLevel.h"
 
@@ -82,7 +82,7 @@
     NSInteger hoursToAdd = 1;
     NSDate *fireDate = [notificationManager determineNextFireDateForSchedule:schedule timeRange:NSMakeRange(currentComps.hour + hoursToAdd, 4)];
 
-    
+    NSLog(@"fire date: %@", fireDate);
 }
 
 @end

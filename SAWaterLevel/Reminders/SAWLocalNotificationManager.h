@@ -21,7 +21,7 @@
  *
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "SAWStageLevel.h"
 
 typedef void(^SAWLocalNotificationScheduleCompletionHandler)(NSArray *notifications);

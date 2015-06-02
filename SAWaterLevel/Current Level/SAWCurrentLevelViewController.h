@@ -21,11 +21,11 @@
  *
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 /*!
  *  View controller that encapsulates all the details for displaying current water information, as well as information regarding restriction stage levels
  */
-@interface SAWCurrentLevelViewController : UITableViewController
+@interface SAWCurrentLevelViewController : UIViewController
 
 @end

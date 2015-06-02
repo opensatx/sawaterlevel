@@ -21,7 +21,7 @@
  *
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface UIStoryboardSegue(TargetDestination)
 

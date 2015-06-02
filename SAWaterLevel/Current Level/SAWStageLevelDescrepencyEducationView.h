@@ -21,7 +21,7 @@
  *
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 #import "SAWStageLevel.h"
 
 typedef void(^SAWStageLevelDescrepencyEducationViewCompletionHandler)(void);

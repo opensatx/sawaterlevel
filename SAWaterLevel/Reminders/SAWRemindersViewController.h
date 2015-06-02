@@ -21,7 +21,7 @@
  *
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 /*!
  *  View Controller for displaying the interaction UI for reminders

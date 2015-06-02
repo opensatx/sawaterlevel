@@ -7,23 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B03ED6AC1B1BF34B0027F59B /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03ED6AB1B1BF34B0027F59B /* NotificationCenter.framework */; };
+		B03ED6B21B1BF34B0027F59B /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED6B11B1BF34B0027F59B /* TodayViewController.m */; };
+		B03ED6B41B1BF34B0027F59B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03ED6B31B1BF34B0027F59B /* MainInterface.storyboard */; };
+		B03ED6B71B1BF34B0027F59B /* SAWaterTodayWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B03ED6AA1B1BF34B0027F59B /* SAWaterTodayWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B03ED6C61B1BF7D60027F59B /* SAWaterLevelCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED6C51B1BF7D60027F59B /* SAWaterLevelCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B03ED6CC1B1BF7D60027F59B /* SAWaterLevelCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03ED6C11B1BF7D60027F59B /* SAWaterLevelCommon.framework */; };
+		B03ED6D51B1BF7D70027F59B /* SAWaterLevelCommonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED6D41B1BF7D70027F59B /* SAWaterLevelCommonTests.m */; };
+		B03ED6D81B1BF7D70027F59B /* SAWaterLevelCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03ED6C11B1BF7D60027F59B /* SAWaterLevelCommon.framework */; };
+		B03ED6D91B1BF7D70027F59B /* SAWaterLevelCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B03ED6C11B1BF7D60027F59B /* SAWaterLevelCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B03ED6EE1B1BFBB70027F59B /* SAWConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED6E41B1BFBB70027F59B /* SAWConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B03ED6EF1B1BFBB70027F59B /* SAWConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED6E51B1BFBB70027F59B /* SAWConstants.m */; };
+		B03ED6F01B1BFBB70027F59B /* SAWDataController.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED6E61B1BFBB70027F59B /* SAWDataController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B03ED6F11B1BFBB70027F59B /* SAWDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED6E71B1BFBB70027F59B /* SAWDataController.m */; };
+		B03ED6F21B1BFBB70027F59B /* SAWIrrigationSchedule.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED6E81B1BFBB70027F59B /* SAWIrrigationSchedule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B03ED6F31B1BFBB70027F59B /* SAWIrrigationSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED6E91B1BFBB70027F59B /* SAWIrrigationSchedule.m */; };
+		B03ED6F41B1BFBB70027F59B /* SAWStageLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED6EA1B1BFBB70027F59B /* SAWStageLevel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B03ED6F51B1BFBB70027F59B /* SAWStageLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED6EB1B1BFBB70027F59B /* SAWStageLevel.m */; };
+		B03ED6F61B1BFBB70027F59B /* SAWWaterLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED6EC1B1BFBB70027F59B /* SAWWaterLevel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B03ED6F71B1BFBB70027F59B /* SAWWaterLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED6ED1B1BFBB70027F59B /* SAWWaterLevel.m */; };
+		B03ED6F91B1BFFCE0027F59B /* SAWaterLevelCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03ED6C11B1BF7D60027F59B /* SAWaterLevelCommon.framework */; };
+		B03ED70B1B1C03180027F59B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B03ED70D1B1C03180027F59B /* Localizable.strings */; };
+		B03ED7251B1C05900027F59B /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED7121B1C05900027F59B /* AFHTTPRequestOperation.h */; };
+		B03ED7261B1C05900027F59B /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED7131B1C05900027F59B /* AFHTTPRequestOperation.m */; };
+		B03ED7271B1C05900027F59B /* AFHTTPRequestOperationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED7141B1C05900027F59B /* AFHTTPRequestOperationManager.h */; };
+		B03ED7281B1C05900027F59B /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED7151B1C05900027F59B /* AFHTTPRequestOperationManager.m */; };
+		B03ED7291B1C05900027F59B /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED7161B1C05900027F59B /* AFHTTPSessionManager.h */; };
+		B03ED72A1B1C05900027F59B /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED7171B1C05900027F59B /* AFHTTPSessionManager.m */; };
+		B03ED72B1B1C05900027F59B /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED7181B1C05900027F59B /* AFNetworking.h */; };
+		B03ED72C1B1C05900027F59B /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED7191B1C05900027F59B /* AFNetworkReachabilityManager.h */; };
+		B03ED72D1B1C05900027F59B /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED71A1B1C05900027F59B /* AFNetworkReachabilityManager.m */; };
+		B03ED72E1B1C05900027F59B /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED71B1B1C05900027F59B /* AFSecurityPolicy.h */; };
+		B03ED72F1B1C05900027F59B /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED71C1B1C05900027F59B /* AFSecurityPolicy.m */; };
+		B03ED7301B1C05900027F59B /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED71D1B1C05900027F59B /* AFURLConnectionOperation.h */; };
+		B03ED7311B1C05900027F59B /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED71E1B1C05900027F59B /* AFURLConnectionOperation.m */; };
+		B03ED7321B1C05900027F59B /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED71F1B1C05900027F59B /* AFURLRequestSerialization.h */; };
+		B03ED7331B1C05900027F59B /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED7201B1C05900027F59B /* AFURLRequestSerialization.m */; };
+		B03ED7341B1C05900027F59B /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED7211B1C05900027F59B /* AFURLResponseSerialization.h */; };
+		B03ED7351B1C05900027F59B /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED7221B1C05900027F59B /* AFURLResponseSerialization.m */; };
+		B03ED7361B1C05900027F59B /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED7231B1C05900027F59B /* AFURLSessionManager.h */; };
+		B03ED7371B1C05900027F59B /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED7241B1C05900027F59B /* AFURLSessionManager.m */; };
+		B03ED73F1B1C07300027F59B /* SAWNetworkController.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED73D1B1C07300027F59B /* SAWNetworkController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B03ED7401B1C07300027F59B /* SAWNetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED73E1B1C07300027F59B /* SAWNetworkController.m */; };
+		B03ED74A1B1C11AA0027F59B /* SAWStageLevel+UI.h in Headers */ = {isa = PBXBuildFile; fileRef = B03ED7481B1C11AA0027F59B /* SAWStageLevel+UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B03ED74B1B1C11AA0027F59B /* SAWStageLevel+UI.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED7491B1C11AA0027F59B /* SAWStageLevel+UI.m */; };
 		B0466FD2197F5C50009E1FBC /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0466FD1197F5C50009E1FBC /* Settings.bundle */; };
-		B09C39151970C180003F5BA8 /* SAWDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C39141970C180003F5BA8 /* SAWDataController.m */; };
 		B09C39171970C9B9003F5BA8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09C39161970C9B9003F5BA8 /* MapKit.framework */; };
-		B09C391A19717A54003F5BA8 /* SAWIrrigationSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C391919717A54003F5BA8 /* SAWIrrigationSchedule.m */; };
 		B09C391E19717D71003F5BA8 /* SAWRemindersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C391D19717D71003F5BA8 /* SAWRemindersViewController.m */; };
 		B09C392419717F27003F5BA8 /* SAWCurrentLevelDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C392319717F27003F5BA8 /* SAWCurrentLevelDataSource.m */; };
 		B09C3928197181C9003F5BA8 /* UIStoryboardSegue+TargetDestination.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C3927197181C9003F5BA8 /* UIStoryboardSegue+TargetDestination.m */; };
-		B09C3931197183E7003F5BA8 /* SAWStageLevel+UI.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C3930197183E7003F5BA8 /* SAWStageLevel+UI.m */; };
-		B09C393419719287003F5BA8 /* SAWStageLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C393319719287003F5BA8 /* SAWStageLevel.m */; };
 		B09C39451971963D003F5BA8 /* WebContent in Resources */ = {isa = PBXBuildFile; fileRef = B09C39441971963D003F5BA8 /* WebContent */; };
 		B09C39481971C262003F5BA8 /* SAWLocalNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C39471971C262003F5BA8 /* SAWLocalNotificationManager.m */; };
-		B09C394B1971D1E8003F5BA8 /* SAWStageLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C393319719287003F5BA8 /* SAWStageLevel.m */; };
 		B09C394E197237EB003F5BA8 /* SAWLocalNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C39471971C262003F5BA8 /* SAWLocalNotificationManager.m */; };
 		B09C39561972384D003F5BA8 /* SAWStageLevelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C39531972384D003F5BA8 /* SAWStageLevelTest.m */; };
 		B09C39571972384D003F5BA8 /* SAWLocalNotificationManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C39551972384D003F5BA8 /* SAWLocalNotificationManagerTest.m */; };
-		B0B87076197C722800F367FB /* SAWIrrigationSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C391919717A54003F5BA8 /* SAWIrrigationSchedule.m */; };
-		B0B87079197C757B00F367FB /* SAWConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B87078197C757B00F367FB /* SAWConstants.m */; };
 		B0B8707C197CB97300F367FB /* SAWStageLevelDescrepencyEducationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B8707B197CB97300F367FB /* SAWStageLevelDescrepencyEducationView.m */; };
 		B0C95A89193A4B0600A6F1FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C95A88193A4B0600A6F1FA /* Foundation.framework */; };
 		B0C95A8B193A4B0600A6F1FA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C95A8A193A4B0600A6F1FA /* CoreGraphics.framework */; };
@@ -37,17 +74,6 @@
 		B0C95AAC193A4B0600A6F1FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C95A88193A4B0600A6F1FA /* Foundation.framework */; };
 		B0C95AAD193A4B0600A6F1FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C95A8C193A4B0600A6F1FA /* UIKit.framework */; };
 		B0C95AB5193A4B0600A6F1FA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0C95AB3193A4B0600A6F1FA /* InfoPlist.strings */; };
-		B0C95AD5193A4B3200A6F1FA /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AC3193A4B3200A6F1FA /* AFHTTPRequestOperation.m */; };
-		B0C95AD6193A4B3200A6F1FA /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AC5193A4B3200A6F1FA /* AFHTTPRequestOperationManager.m */; };
-		B0C95AD7193A4B3200A6F1FA /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AC7193A4B3200A6F1FA /* AFHTTPSessionManager.m */; };
-		B0C95AD8193A4B3200A6F1FA /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95ACA193A4B3200A6F1FA /* AFNetworkReachabilityManager.m */; };
-		B0C95AD9193A4B3200A6F1FA /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95ACC193A4B3200A6F1FA /* AFSecurityPolicy.m */; };
-		B0C95ADA193A4B3200A6F1FA /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95ACE193A4B3200A6F1FA /* AFURLConnectionOperation.m */; };
-		B0C95ADB193A4B3200A6F1FA /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AD0193A4B3200A6F1FA /* AFURLRequestSerialization.m */; };
-		B0C95ADC193A4B3200A6F1FA /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AD2193A4B3200A6F1FA /* AFURLResponseSerialization.m */; };
-		B0C95ADD193A4B3200A6F1FA /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AD4193A4B3200A6F1FA /* AFURLSessionManager.m */; };
-		B0C95AE1193A4B7B00A6F1FA /* SAWNetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AE0193A4B7B00A6F1FA /* SAWNetworkController.m */; };
-		B0C95AE5193A4BA100A6F1FA /* SAWWaterLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AE4193A4BA100A6F1FA /* SAWWaterLevel.m */; };
 		B0C95AEE193A531F00A6F1FA /* SAWCurrentLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AED193A531F00A6F1FA /* SAWCurrentLevelViewController.m */; };
 		B0C95AF1193A5DFA00A6F1FA /* SAWLevelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AF0193A5DFA00A6F1FA /* SAWLevelModel.m */; };
 		B0C95AF5193A6AFD00A6F1FA /* SAWHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C95AF4193A6AFD00A6F1FA /* SAWHeaderView.m */; };
@@ -57,6 +83,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B03ED6B51B1BF34B0027F59B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0C95A7D193A4B0600A6F1FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B03ED6A91B1BF34B0027F59B;
+			remoteInfo = SAWaterTodayWidget;
+		};
+		B03ED6CD1B1BF7D60027F59B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0C95A7D193A4B0600A6F1FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B03ED6C01B1BF7D60027F59B;
+			remoteInfo = SAWaterLevelCommon;
+		};
+		B03ED6CF1B1BF7D70027F59B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0C95A7D193A4B0600A6F1FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0C95A84193A4B0600A6F1FA;
+			remoteInfo = SAWaterLevel;
+		};
+		B03ED6D61B1BF7D70027F59B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0C95A7D193A4B0600A6F1FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B03ED6C01B1BF7D60027F59B;
+			remoteInfo = SAWaterLevelCommon;
+		};
 		B0C95AAE193A4B0600A6F1FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B0C95A7D193A4B0600A6F1FA /* Project object */;
@@ -66,31 +120,96 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B03ED6BB1B1BF34B0027F59B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B03ED6B71B1BF34B0027F59B /* SAWaterTodayWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B03ED6DD1B1BF7D70027F59B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B03ED6D91B1BF7D70027F59B /* SAWaterLevelCommon.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B03ED6AA1B1BF34B0027F59B /* SAWaterTodayWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SAWaterTodayWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B03ED6AB1B1BF34B0027F59B /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		B03ED6AF1B1BF34B0027F59B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B03ED6B01B1BF34B0027F59B /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		B03ED6B11B1BF34B0027F59B /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		B03ED6B31B1BF34B0027F59B /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		B03ED6C11B1BF7D60027F59B /* SAWaterLevelCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SAWaterLevelCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B03ED6C51B1BF7D60027F59B /* SAWaterLevelCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAWaterLevelCommon.h; sourceTree = "<group>"; };
+		B03ED6CB1B1BF7D60027F59B /* SAWaterLevelCommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAWaterLevelCommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B03ED6D31B1BF7D70027F59B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B03ED6D41B1BF7D70027F59B /* SAWaterLevelCommonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAWaterLevelCommonTests.m; sourceTree = "<group>"; };
+		B03ED6E11B1BFA980027F59B /* SAWaterLevel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SAWaterLevel.entitlements; sourceTree = "<group>"; };
+		B03ED6E21B1BFAD60027F59B /* SAWaterTodayWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SAWaterTodayWidget.entitlements; sourceTree = "<group>"; };
+		B03ED6E41B1BFBB70027F59B /* SAWConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWConstants.h; sourceTree = "<group>"; };
+		B03ED6E51B1BFBB70027F59B /* SAWConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWConstants.m; sourceTree = "<group>"; };
+		B03ED6E61B1BFBB70027F59B /* SAWDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWDataController.h; sourceTree = "<group>"; };
+		B03ED6E71B1BFBB70027F59B /* SAWDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWDataController.m; sourceTree = "<group>"; };
+		B03ED6E81B1BFBB70027F59B /* SAWIrrigationSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWIrrigationSchedule.h; sourceTree = "<group>"; };
+		B03ED6E91B1BFBB70027F59B /* SAWIrrigationSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWIrrigationSchedule.m; sourceTree = "<group>"; };
+		B03ED6EA1B1BFBB70027F59B /* SAWStageLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWStageLevel.h; sourceTree = "<group>"; };
+		B03ED6EB1B1BFBB70027F59B /* SAWStageLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWStageLevel.m; sourceTree = "<group>"; };
+		B03ED6EC1B1BFBB70027F59B /* SAWWaterLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWWaterLevel.h; sourceTree = "<group>"; };
+		B03ED6ED1B1BFBB70027F59B /* SAWWaterLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWWaterLevel.m; sourceTree = "<group>"; };
+		B03ED70C1B1C03180027F59B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B03ED70E1B1C031D0027F59B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B03ED70F1B1C031E0027F59B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B03ED7121B1C05900027F59B /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		B03ED7131B1C05900027F59B /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		B03ED7141B1C05900027F59B /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		B03ED7151B1C05900027F59B /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		B03ED7161B1C05900027F59B /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		B03ED7171B1C05900027F59B /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		B03ED7181B1C05900027F59B /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		B03ED7191B1C05900027F59B /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		B03ED71A1B1C05900027F59B /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		B03ED71B1B1C05900027F59B /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		B03ED71C1B1C05900027F59B /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		B03ED71D1B1C05900027F59B /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		B03ED71E1B1C05900027F59B /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		B03ED71F1B1C05900027F59B /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		B03ED7201B1C05900027F59B /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		B03ED7211B1C05900027F59B /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		B03ED7221B1C05900027F59B /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		B03ED7231B1C05900027F59B /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		B03ED7241B1C05900027F59B /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		B03ED73D1B1C07300027F59B /* SAWNetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWNetworkController.h; sourceTree = "<group>"; };
+		B03ED73E1B1C07300027F59B /* SAWNetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWNetworkController.m; sourceTree = "<group>"; };
+		B03ED7461B1C0F190027F59B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B03ED7481B1C11AA0027F59B /* SAWStageLevel+UI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SAWStageLevel+UI.h"; sourceTree = "<group>"; };
+		B03ED7491B1C11AA0027F59B /* SAWStageLevel+UI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SAWStageLevel+UI.m"; sourceTree = "<group>"; };
 		B0466FD1197F5C50009E1FBC /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		B09C39131970C180003F5BA8 /* SAWDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWDataController.h; sourceTree = "<group>"; };
-		B09C39141970C180003F5BA8 /* SAWDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWDataController.m; sourceTree = "<group>"; };
 		B09C39161970C9B9003F5BA8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		B09C391819717A54003F5BA8 /* SAWIrrigationSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWIrrigationSchedule.h; sourceTree = "<group>"; };
-		B09C391919717A54003F5BA8 /* SAWIrrigationSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWIrrigationSchedule.m; sourceTree = "<group>"; };
 		B09C391C19717D71003F5BA8 /* SAWRemindersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWRemindersViewController.h; sourceTree = "<group>"; };
 		B09C391D19717D71003F5BA8 /* SAWRemindersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWRemindersViewController.m; sourceTree = "<group>"; };
 		B09C392219717F27003F5BA8 /* SAWCurrentLevelDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWCurrentLevelDataSource.h; sourceTree = "<group>"; };
 		B09C392319717F27003F5BA8 /* SAWCurrentLevelDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWCurrentLevelDataSource.m; sourceTree = "<group>"; };
 		B09C3926197181C9003F5BA8 /* UIStoryboardSegue+TargetDestination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboardSegue+TargetDestination.h"; sourceTree = "<group>"; };
 		B09C3927197181C9003F5BA8 /* UIStoryboardSegue+TargetDestination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboardSegue+TargetDestination.m"; sourceTree = "<group>"; };
-		B09C392F197183E7003F5BA8 /* SAWStageLevel+UI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SAWStageLevel+UI.h"; sourceTree = "<group>"; };
-		B09C3930197183E7003F5BA8 /* SAWStageLevel+UI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SAWStageLevel+UI.m"; sourceTree = "<group>"; };
-		B09C393219719287003F5BA8 /* SAWStageLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWStageLevel.h; sourceTree = "<group>"; };
-		B09C393319719287003F5BA8 /* SAWStageLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWStageLevel.m; sourceTree = "<group>"; };
 		B09C39441971963D003F5BA8 /* WebContent */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WebContent; sourceTree = "<group>"; };
 		B09C39461971C262003F5BA8 /* SAWLocalNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWLocalNotificationManager.h; sourceTree = "<group>"; };
 		B09C39471971C262003F5BA8 /* SAWLocalNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWLocalNotificationManager.m; sourceTree = "<group>"; };
 		B09C39531972384D003F5BA8 /* SAWStageLevelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWStageLevelTest.m; sourceTree = "<group>"; };
 		B09C39551972384D003F5BA8 /* SAWLocalNotificationManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWLocalNotificationManagerTest.m; sourceTree = "<group>"; };
 		B09C395819735CF4003F5BA8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B0B87077197C757B00F367FB /* SAWConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWConstants.h; sourceTree = "<group>"; };
-		B0B87078197C757B00F367FB /* SAWConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWConstants.m; sourceTree = "<group>"; };
 		B0B8707A197CB97300F367FB /* SAWStageLevelDescrepencyEducationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWStageLevelDescrepencyEducationView.h; sourceTree = "<group>"; };
 		B0B8707B197CB97300F367FB /* SAWStageLevelDescrepencyEducationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWStageLevelDescrepencyEducationView.m; sourceTree = "<group>"; };
 		B0C95A85193A4B0600A6F1FA /* SAWaterLevel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAWaterLevel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,29 +228,6 @@
 		B0C95AAA193A4B0600A6F1FA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B0C95AB2193A4B0600A6F1FA /* SAWaterLevelTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SAWaterLevelTests-Info.plist"; sourceTree = "<group>"; };
 		B0C95AB4193A4B0600A6F1FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B0C95AC2193A4B3200A6F1FA /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
-		B0C95AC3193A4B3200A6F1FA /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
-		B0C95AC4193A4B3200A6F1FA /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
-		B0C95AC5193A4B3200A6F1FA /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
-		B0C95AC6193A4B3200A6F1FA /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
-		B0C95AC7193A4B3200A6F1FA /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
-		B0C95AC8193A4B3200A6F1FA /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
-		B0C95AC9193A4B3200A6F1FA /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
-		B0C95ACA193A4B3200A6F1FA /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
-		B0C95ACB193A4B3200A6F1FA /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
-		B0C95ACC193A4B3200A6F1FA /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
-		B0C95ACD193A4B3200A6F1FA /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
-		B0C95ACE193A4B3200A6F1FA /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
-		B0C95ACF193A4B3200A6F1FA /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
-		B0C95AD0193A4B3200A6F1FA /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
-		B0C95AD1193A4B3200A6F1FA /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
-		B0C95AD2193A4B3200A6F1FA /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
-		B0C95AD3193A4B3200A6F1FA /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
-		B0C95AD4193A4B3200A6F1FA /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		B0C95ADF193A4B7B00A6F1FA /* SAWNetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWNetworkController.h; sourceTree = "<group>"; };
-		B0C95AE0193A4B7B00A6F1FA /* SAWNetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWNetworkController.m; sourceTree = "<group>"; };
-		B0C95AE3193A4BA100A6F1FA /* SAWWaterLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWWaterLevel.h; sourceTree = "<group>"; };
-		B0C95AE4193A4BA100A6F1FA /* SAWWaterLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWWaterLevel.m; sourceTree = "<group>"; };
 		B0C95AEC193A531F00A6F1FA /* SAWCurrentLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWCurrentLevelViewController.h; sourceTree = "<group>"; };
 		B0C95AED193A531F00A6F1FA /* SAWCurrentLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWCurrentLevelViewController.m; sourceTree = "<group>"; };
 		B0C95AEF193A5DFA00A6F1FA /* SAWLevelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWLevelModel.h; sourceTree = "<group>"; };
@@ -147,11 +243,36 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B03ED6A71B1BF34B0027F59B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B03ED6F91B1BFFCE0027F59B /* SAWaterLevelCommon.framework in Frameworks */,
+				B03ED6AC1B1BF34B0027F59B /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B03ED6BD1B1BF7D60027F59B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B03ED6C81B1BF7D60027F59B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B03ED6CC1B1BF7D60027F59B /* SAWaterLevelCommon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B0C95A82193A4B0600A6F1FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B0C95A8B193A4B0600A6F1FA /* CoreGraphics.framework in Frameworks */,
+				B03ED6D81B1BF7D70027F59B /* SAWaterLevelCommon.framework in Frameworks */,
 				B0C95A8D193A4B0600A6F1FA /* UIKit.framework in Frameworks */,
 				B09C39171970C9B9003F5BA8 /* MapKit.framework in Frameworks */,
 				B0C95A89193A4B0600A6F1FA /* Foundation.framework in Frameworks */,
@@ -171,6 +292,134 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B03ED6AD1B1BF34B0027F59B /* SAWaterTodayWidget */ = {
+			isa = PBXGroup;
+			children = (
+				B03ED6E21B1BFAD60027F59B /* SAWaterTodayWidget.entitlements */,
+				B03ED6B01B1BF34B0027F59B /* TodayViewController.h */,
+				B03ED6B11B1BF34B0027F59B /* TodayViewController.m */,
+				B03ED6B31B1BF34B0027F59B /* MainInterface.storyboard */,
+				B03ED6AE1B1BF34B0027F59B /* Supporting Files */,
+			);
+			path = SAWaterTodayWidget;
+			sourceTree = "<group>";
+		};
+		B03ED6AE1B1BF34B0027F59B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B03ED6AF1B1BF34B0027F59B /* Info.plist */,
+				B03ED70D1B1C03180027F59B /* Localizable.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B03ED6C21B1BF7D60027F59B /* SAWaterLevelCommon */ = {
+			isa = PBXGroup;
+			children = (
+				B03ED6E31B1BFBB70027F59B /* Model */,
+				B03ED7381B1C05970027F59B /* Networking */,
+				B03ED7101B1C05900027F59B /* Third Party */,
+				B03ED7471B1C119F0027F59B /* UI */,
+				B03ED6C51B1BF7D60027F59B /* SAWaterLevelCommon.h */,
+				B03ED6C31B1BF7D60027F59B /* Supporting Files */,
+			);
+			path = SAWaterLevelCommon;
+			sourceTree = "<group>";
+		};
+		B03ED6C31B1BF7D60027F59B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B03ED7461B1C0F190027F59B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B03ED6D11B1BF7D70027F59B /* SAWaterLevelCommonTests */ = {
+			isa = PBXGroup;
+			children = (
+				B03ED6D41B1BF7D70027F59B /* SAWaterLevelCommonTests.m */,
+				B03ED6D21B1BF7D70027F59B /* Supporting Files */,
+			);
+			path = SAWaterLevelCommonTests;
+			sourceTree = "<group>";
+		};
+		B03ED6D21B1BF7D70027F59B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B03ED6D31B1BF7D70027F59B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B03ED6E31B1BFBB70027F59B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B03ED6E41B1BFBB70027F59B /* SAWConstants.h */,
+				B03ED6E51B1BFBB70027F59B /* SAWConstants.m */,
+				B03ED6E61B1BFBB70027F59B /* SAWDataController.h */,
+				B03ED6E71B1BFBB70027F59B /* SAWDataController.m */,
+				B03ED6E81B1BFBB70027F59B /* SAWIrrigationSchedule.h */,
+				B03ED6E91B1BFBB70027F59B /* SAWIrrigationSchedule.m */,
+				B03ED6EA1B1BFBB70027F59B /* SAWStageLevel.h */,
+				B03ED6EB1B1BFBB70027F59B /* SAWStageLevel.m */,
+				B03ED6EC1B1BFBB70027F59B /* SAWWaterLevel.h */,
+				B03ED6ED1B1BFBB70027F59B /* SAWWaterLevel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B03ED7101B1C05900027F59B /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				B03ED7111B1C05900027F59B /* AFNetworking */,
+			);
+			path = "Third Party";
+			sourceTree = "<group>";
+		};
+		B03ED7111B1C05900027F59B /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				B03ED7121B1C05900027F59B /* AFHTTPRequestOperation.h */,
+				B03ED7131B1C05900027F59B /* AFHTTPRequestOperation.m */,
+				B03ED7141B1C05900027F59B /* AFHTTPRequestOperationManager.h */,
+				B03ED7151B1C05900027F59B /* AFHTTPRequestOperationManager.m */,
+				B03ED7161B1C05900027F59B /* AFHTTPSessionManager.h */,
+				B03ED7171B1C05900027F59B /* AFHTTPSessionManager.m */,
+				B03ED7181B1C05900027F59B /* AFNetworking.h */,
+				B03ED7191B1C05900027F59B /* AFNetworkReachabilityManager.h */,
+				B03ED71A1B1C05900027F59B /* AFNetworkReachabilityManager.m */,
+				B03ED71B1B1C05900027F59B /* AFSecurityPolicy.h */,
+				B03ED71C1B1C05900027F59B /* AFSecurityPolicy.m */,
+				B03ED71D1B1C05900027F59B /* AFURLConnectionOperation.h */,
+				B03ED71E1B1C05900027F59B /* AFURLConnectionOperation.m */,
+				B03ED71F1B1C05900027F59B /* AFURLRequestSerialization.h */,
+				B03ED7201B1C05900027F59B /* AFURLRequestSerialization.m */,
+				B03ED7211B1C05900027F59B /* AFURLResponseSerialization.h */,
+				B03ED7221B1C05900027F59B /* AFURLResponseSerialization.m */,
+				B03ED7231B1C05900027F59B /* AFURLSessionManager.h */,
+				B03ED7241B1C05900027F59B /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		B03ED7381B1C05970027F59B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B03ED73D1B1C07300027F59B /* SAWNetworkController.h */,
+				B03ED73E1B1C07300027F59B /* SAWNetworkController.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B03ED7471B1C119F0027F59B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B03ED7481B1C11AA0027F59B /* SAWStageLevel+UI.h */,
+				B03ED7491B1C11AA0027F59B /* SAWStageLevel+UI.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		B09C391B19717D71003F5BA8 /* Reminders */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,8 +469,11 @@
 			isa = PBXGroup;
 			children = (
 				B0C95A8E193A4B0600A6F1FA /* SAWaterLevel */,
+				B03ED6AD1B1BF34B0027F59B /* SAWaterTodayWidget */,
+				B03ED6C21B1BF7D60027F59B /* SAWaterLevelCommon */,
 				B0C95AC0193A4B3200A6F1FA /* ThirdParty */,
 				B0C95AB0193A4B0600A6F1FA /* SAWaterLevelTests */,
+				B03ED6D11B1BF7D70027F59B /* SAWaterLevelCommonTests */,
 				B0C95A87193A4B0600A6F1FA /* Frameworks */,
 				B0C95A86193A4B0600A6F1FA /* Products */,
 			);
@@ -232,6 +484,9 @@
 			children = (
 				B0C95A85193A4B0600A6F1FA /* SAWaterLevel.app */,
 				B0C95AA9193A4B0600A6F1FA /* SAWaterLevelTests.xctest */,
+				B03ED6AA1B1BF34B0027F59B /* SAWaterTodayWidget.appex */,
+				B03ED6C11B1BF7D60027F59B /* SAWaterLevelCommon.framework */,
+				B03ED6CB1B1BF7D60027F59B /* SAWaterLevelCommonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -244,6 +499,7 @@
 				B0C95A8A193A4B0600A6F1FA /* CoreGraphics.framework */,
 				B0C95A8C193A4B0600A6F1FA /* UIKit.framework */,
 				B0C95AAA193A4B0600A6F1FA /* XCTest.framework */,
+				B03ED6AB1B1BF34B0027F59B /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -251,11 +507,10 @@
 		B0C95A8E193A4B0600A6F1FA /* SAWaterLevel */ = {
 			isa = PBXGroup;
 			children = (
+				B03ED6E11B1BFA980027F59B /* SAWaterLevel.entitlements */,
 				B09C3925197181B9003F5BA8 /* Categories */,
 				B0C95AEB193A530400A6F1FA /* Current Level */,
 				B09C391B19717D71003F5BA8 /* Reminders */,
-				B0C95AE2193A4B8D00A6F1FA /* Model */,
-				B0C95ADE193A4B6A00A6F1FA /* Network Controller */,
 				B0C95B13193A815700A6F1FA /* Transitions */,
 				B0C95A97193A4B0600A6F1FA /* SAWAppDelegate.h */,
 				B0C95A98193A4B0600A6F1FA /* SAWAppDelegate.m */,
@@ -300,61 +555,8 @@
 		B0C95AC0193A4B3200A6F1FA /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				B0C95AC1193A4B3200A6F1FA /* AFNetworking */,
 			);
 			path = ThirdParty;
-			sourceTree = "<group>";
-		};
-		B0C95AC1193A4B3200A6F1FA /* AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				B0C95AC2193A4B3200A6F1FA /* AFHTTPRequestOperation.h */,
-				B0C95AC3193A4B3200A6F1FA /* AFHTTPRequestOperation.m */,
-				B0C95AC4193A4B3200A6F1FA /* AFHTTPRequestOperationManager.h */,
-				B0C95AC5193A4B3200A6F1FA /* AFHTTPRequestOperationManager.m */,
-				B0C95AC6193A4B3200A6F1FA /* AFHTTPSessionManager.h */,
-				B0C95AC7193A4B3200A6F1FA /* AFHTTPSessionManager.m */,
-				B0C95AC8193A4B3200A6F1FA /* AFNetworking.h */,
-				B0C95AC9193A4B3200A6F1FA /* AFNetworkReachabilityManager.h */,
-				B0C95ACA193A4B3200A6F1FA /* AFNetworkReachabilityManager.m */,
-				B0C95ACB193A4B3200A6F1FA /* AFSecurityPolicy.h */,
-				B0C95ACC193A4B3200A6F1FA /* AFSecurityPolicy.m */,
-				B0C95ACD193A4B3200A6F1FA /* AFURLConnectionOperation.h */,
-				B0C95ACE193A4B3200A6F1FA /* AFURLConnectionOperation.m */,
-				B0C95ACF193A4B3200A6F1FA /* AFURLRequestSerialization.h */,
-				B0C95AD0193A4B3200A6F1FA /* AFURLRequestSerialization.m */,
-				B0C95AD1193A4B3200A6F1FA /* AFURLResponseSerialization.h */,
-				B0C95AD2193A4B3200A6F1FA /* AFURLResponseSerialization.m */,
-				B0C95AD3193A4B3200A6F1FA /* AFURLSessionManager.h */,
-				B0C95AD4193A4B3200A6F1FA /* AFURLSessionManager.m */,
-			);
-			path = AFNetworking;
-			sourceTree = "<group>";
-		};
-		B0C95ADE193A4B6A00A6F1FA /* Network Controller */ = {
-			isa = PBXGroup;
-			children = (
-				B0C95ADF193A4B7B00A6F1FA /* SAWNetworkController.h */,
-				B0C95AE0193A4B7B00A6F1FA /* SAWNetworkController.m */,
-			);
-			path = "Network Controller";
-			sourceTree = "<group>";
-		};
-		B0C95AE2193A4B8D00A6F1FA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B09C39131970C180003F5BA8 /* SAWDataController.h */,
-				B09C39141970C180003F5BA8 /* SAWDataController.m */,
-				B09C393219719287003F5BA8 /* SAWStageLevel.h */,
-				B09C393319719287003F5BA8 /* SAWStageLevel.m */,
-				B0C95AE3193A4BA100A6F1FA /* SAWWaterLevel.h */,
-				B0C95AE4193A4BA100A6F1FA /* SAWWaterLevel.m */,
-				B09C391819717A54003F5BA8 /* SAWIrrigationSchedule.h */,
-				B09C391919717A54003F5BA8 /* SAWIrrigationSchedule.m */,
-				B0B87077197C757B00F367FB /* SAWConstants.h */,
-				B0B87078197C757B00F367FB /* SAWConstants.m */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		B0C95AEB193A530400A6F1FA /* Current Level */ = {
@@ -369,8 +571,6 @@
 				B0C95AF4193A6AFD00A6F1FA /* SAWHeaderView.m */,
 				B0C95AEF193A5DFA00A6F1FA /* SAWLevelModel.h */,
 				B0C95AF0193A5DFA00A6F1FA /* SAWLevelModel.m */,
-				B09C392F197183E7003F5BA8 /* SAWStageLevel+UI.h */,
-				B09C3930197183E7003F5BA8 /* SAWStageLevel+UI.m */,
 				B0B8707A197CB97300F367FB /* SAWStageLevelDescrepencyEducationView.h */,
 				B0B8707B197CB97300F367FB /* SAWStageLevelDescrepencyEducationView.m */,
 			);
@@ -406,19 +606,105 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		B03ED6BE1B1BF7D60027F59B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B03ED6EE1B1BFBB70027F59B /* SAWConstants.h in Headers */,
+				B03ED7301B1C05900027F59B /* AFURLConnectionOperation.h in Headers */,
+				B03ED7321B1C05900027F59B /* AFURLRequestSerialization.h in Headers */,
+				B03ED7271B1C05900027F59B /* AFHTTPRequestOperationManager.h in Headers */,
+				B03ED7361B1C05900027F59B /* AFURLSessionManager.h in Headers */,
+				B03ED6F21B1BFBB70027F59B /* SAWIrrigationSchedule.h in Headers */,
+				B03ED72E1B1C05900027F59B /* AFSecurityPolicy.h in Headers */,
+				B03ED6F41B1BFBB70027F59B /* SAWStageLevel.h in Headers */,
+				B03ED7251B1C05900027F59B /* AFHTTPRequestOperation.h in Headers */,
+				B03ED6F01B1BFBB70027F59B /* SAWDataController.h in Headers */,
+				B03ED7341B1C05900027F59B /* AFURLResponseSerialization.h in Headers */,
+				B03ED6C61B1BF7D60027F59B /* SAWaterLevelCommon.h in Headers */,
+				B03ED74A1B1C11AA0027F59B /* SAWStageLevel+UI.h in Headers */,
+				B03ED73F1B1C07300027F59B /* SAWNetworkController.h in Headers */,
+				B03ED6F61B1BFBB70027F59B /* SAWWaterLevel.h in Headers */,
+				B03ED7291B1C05900027F59B /* AFHTTPSessionManager.h in Headers */,
+				B03ED72B1B1C05900027F59B /* AFNetworking.h in Headers */,
+				B03ED72C1B1C05900027F59B /* AFNetworkReachabilityManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		B0C95A84193A4B0600A6F1FA /* SAWaterLevel */ = {
+		B03ED6A91B1BF34B0027F59B /* SAWaterTodayWidget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B0C95ABA193A4B0600A6F1FA /* Build configuration list for PBXNativeTarget "SAWaterLevel" */;
+			buildConfigurationList = B03ED6B81B1BF34B0027F59B /* Build configuration list for PBXNativeTarget "SAWaterTodayWidget" */;
 			buildPhases = (
-				B0466FD8197F5D12009E1FBC /* ShellScript */,
-				B0C95A81193A4B0600A6F1FA /* Sources */,
-				B0C95A82193A4B0600A6F1FA /* Frameworks */,
-				B0C95A83193A4B0600A6F1FA /* Resources */,
+				B03ED6A61B1BF34B0027F59B /* Sources */,
+				B03ED6A71B1BF34B0027F59B /* Frameworks */,
+				B03ED6A81B1BF34B0027F59B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+			);
+			name = SAWaterTodayWidget;
+			productName = SAWaterTodayWidget;
+			productReference = B03ED6AA1B1BF34B0027F59B /* SAWaterTodayWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		B03ED6C01B1BF7D60027F59B /* SAWaterLevelCommon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B03ED6DA1B1BF7D70027F59B /* Build configuration list for PBXNativeTarget "SAWaterLevelCommon" */;
+			buildPhases = (
+				B03ED6BC1B1BF7D60027F59B /* Sources */,
+				B03ED6BD1B1BF7D60027F59B /* Frameworks */,
+				B03ED6BE1B1BF7D60027F59B /* Headers */,
+				B03ED6BF1B1BF7D60027F59B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SAWaterLevelCommon;
+			productName = SAWaterLevelCommon;
+			productReference = B03ED6C11B1BF7D60027F59B /* SAWaterLevelCommon.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B03ED6CA1B1BF7D60027F59B /* SAWaterLevelCommonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B03ED6DE1B1BF7D70027F59B /* Build configuration list for PBXNativeTarget "SAWaterLevelCommonTests" */;
+			buildPhases = (
+				B03ED6C71B1BF7D60027F59B /* Sources */,
+				B03ED6C81B1BF7D60027F59B /* Frameworks */,
+				B03ED6C91B1BF7D60027F59B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B03ED6CE1B1BF7D60027F59B /* PBXTargetDependency */,
+				B03ED6D01B1BF7D70027F59B /* PBXTargetDependency */,
+			);
+			name = SAWaterLevelCommonTests;
+			productName = SAWaterLevelCommonTests;
+			productReference = B03ED6CB1B1BF7D60027F59B /* SAWaterLevelCommonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B0C95A84193A4B0600A6F1FA /* SAWaterLevel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0C95ABA193A4B0600A6F1FA /* Build configuration list for PBXNativeTarget "SAWaterLevel" */;
+			buildPhases = (
+				B0466FD8197F5D12009E1FBC /* Synchronize Build Version */,
+				B0C95A81193A4B0600A6F1FA /* Sources */,
+				B0C95A82193A4B0600A6F1FA /* Frameworks */,
+				B0C95A83193A4B0600A6F1FA /* Resources */,
+				B03ED6BB1B1BF34B0027F59B /* Embed App Extensions */,
+				B03ED6DD1B1BF7D70027F59B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B03ED6B61B1BF34B0027F59B /* PBXTargetDependency */,
+				B03ED6D71B1BF7D70027F59B /* PBXTargetDependency */,
 			);
 			name = SAWaterLevel;
 			productName = SAWaterLevel;
@@ -453,8 +739,28 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Wayne Hartman";
 				TargetAttributes = {
-					B0C95A84193A4B0600A6F1FA = {
+					B03ED6A91B1BF34B0027F59B = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = R937YBPA22;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					B03ED6C01B1BF7D60027F59B = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					B03ED6CA1B1BF7D60027F59B = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = B0C95A84193A4B0600A6F1FA;
+					};
+					B0C95A84193A4B0600A6F1FA = {
+						DevelopmentTeam = R937YBPA22;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
@@ -484,11 +790,37 @@
 			targets = (
 				B0C95A84193A4B0600A6F1FA /* SAWaterLevel */,
 				B0C95AA8193A4B0600A6F1FA /* SAWaterLevelTests */,
+				B03ED6A91B1BF34B0027F59B /* SAWaterTodayWidget */,
+				B03ED6C01B1BF7D60027F59B /* SAWaterLevelCommon */,
+				B03ED6CA1B1BF7D60027F59B /* SAWaterLevelCommonTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B03ED6A81B1BF34B0027F59B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B03ED6B41B1BF34B0027F59B /* MainInterface.storyboard in Resources */,
+				B03ED70B1B1C03180027F59B /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B03ED6BF1B1BF7D60027F59B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B03ED6C91B1BF7D60027F59B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B0C95A83193A4B0600A6F1FA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -513,13 +845,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B0466FD8197F5D12009E1FBC /* ShellScript */ = {
+		B0466FD8197F5D12009E1FBC /* Synchronize Build Version */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Synchronize Build Version";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,33 +862,56 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B03ED6A61B1BF34B0027F59B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B03ED6B21B1BF34B0027F59B /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B03ED6BC1B1BF7D60027F59B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B03ED7311B1C05900027F59B /* AFURLConnectionOperation.m in Sources */,
+				B03ED7261B1C05900027F59B /* AFHTTPRequestOperation.m in Sources */,
+				B03ED72D1B1C05900027F59B /* AFNetworkReachabilityManager.m in Sources */,
+				B03ED7371B1C05900027F59B /* AFURLSessionManager.m in Sources */,
+				B03ED7331B1C05900027F59B /* AFURLRequestSerialization.m in Sources */,
+				B03ED6F71B1BFBB70027F59B /* SAWWaterLevel.m in Sources */,
+				B03ED7351B1C05900027F59B /* AFURLResponseSerialization.m in Sources */,
+				B03ED6F31B1BFBB70027F59B /* SAWIrrigationSchedule.m in Sources */,
+				B03ED6F51B1BFBB70027F59B /* SAWStageLevel.m in Sources */,
+				B03ED7401B1C07300027F59B /* SAWNetworkController.m in Sources */,
+				B03ED7281B1C05900027F59B /* AFHTTPRequestOperationManager.m in Sources */,
+				B03ED72F1B1C05900027F59B /* AFSecurityPolicy.m in Sources */,
+				B03ED6EF1B1BFBB70027F59B /* SAWConstants.m in Sources */,
+				B03ED74B1B1C11AA0027F59B /* SAWStageLevel+UI.m in Sources */,
+				B03ED6F11B1BFBB70027F59B /* SAWDataController.m in Sources */,
+				B03ED72A1B1C05900027F59B /* AFHTTPSessionManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B03ED6C71B1BF7D60027F59B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B03ED6D51B1BF7D70027F59B /* SAWaterLevelCommonTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B0C95A81193A4B0600A6F1FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B09C3928197181C9003F5BA8 /* UIStoryboardSegue+TargetDestination.m in Sources */,
-				B09C391A19717A54003F5BA8 /* SAWIrrigationSchedule.m in Sources */,
 				B09C392419717F27003F5BA8 /* SAWCurrentLevelDataSource.m in Sources */,
-				B0C95AD5193A4B3200A6F1FA /* AFHTTPRequestOperation.m in Sources */,
 				B0C95A99193A4B0600A6F1FA /* SAWAppDelegate.m in Sources */,
-				B09C393419719287003F5BA8 /* SAWStageLevel.m in Sources */,
-				B0C95AD6193A4B3200A6F1FA /* AFHTTPRequestOperationManager.m in Sources */,
-				B0C95AD8193A4B3200A6F1FA /* AFNetworkReachabilityManager.m in Sources */,
 				B09C39481971C262003F5BA8 /* SAWLocalNotificationManager.m in Sources */,
-				B0B87079197C757B00F367FB /* SAWConstants.m in Sources */,
 				B0C95B17193A815700A6F1FA /* TRModalTransition.m in Sources */,
 				B0B8707C197CB97300F367FB /* SAWStageLevelDescrepencyEducationView.m in Sources */,
-				B0C95ADC193A4B3200A6F1FA /* AFURLResponseSerialization.m in Sources */,
-				B0C95ADA193A4B3200A6F1FA /* AFURLConnectionOperation.m in Sources */,
-				B09C39151970C180003F5BA8 /* SAWDataController.m in Sources */,
-				B0C95AD9193A4B3200A6F1FA /* AFSecurityPolicy.m in Sources */,
-				B0C95AD7193A4B3200A6F1FA /* AFHTTPSessionManager.m in Sources */,
-				B0C95AE5193A4BA100A6F1FA /* SAWWaterLevel.m in Sources */,
 				B0C95AF9193A721200A6F1FA /* SAWStageDetailsViewController.m in Sources */,
-				B0C95AE1193A4B7B00A6F1FA /* SAWNetworkController.m in Sources */,
-				B0C95ADB193A4B3200A6F1FA /* AFURLRequestSerialization.m in Sources */,
-				B0C95ADD193A4B3200A6F1FA /* AFURLSessionManager.m in Sources */,
-				B09C3931197183E7003F5BA8 /* SAWStageLevel+UI.m in Sources */,
 				B0C95A95193A4B0600A6F1FA /* main.m in Sources */,
 				B09C391E19717D71003F5BA8 /* SAWRemindersViewController.m in Sources */,
 				B0C95AF1193A5DFA00A6F1FA /* SAWLevelModel.m in Sources */,
@@ -568,17 +924,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0B87076197C722800F367FB /* SAWIrrigationSchedule.m in Sources */,
 				B09C39571972384D003F5BA8 /* SAWLocalNotificationManagerTest.m in Sources */,
 				B09C394E197237EB003F5BA8 /* SAWLocalNotificationManager.m in Sources */,
 				B09C39561972384D003F5BA8 /* SAWStageLevelTest.m in Sources */,
-				B09C394B1971D1E8003F5BA8 /* SAWStageLevel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B03ED6B61B1BF34B0027F59B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B03ED6A91B1BF34B0027F59B /* SAWaterTodayWidget */;
+			targetProxy = B03ED6B51B1BF34B0027F59B /* PBXContainerItemProxy */;
+		};
+		B03ED6CE1B1BF7D60027F59B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B03ED6C01B1BF7D60027F59B /* SAWaterLevelCommon */;
+			targetProxy = B03ED6CD1B1BF7D60027F59B /* PBXContainerItemProxy */;
+		};
+		B03ED6D01B1BF7D70027F59B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0C95A84193A4B0600A6F1FA /* SAWaterLevel */;
+			targetProxy = B03ED6CF1B1BF7D70027F59B /* PBXContainerItemProxy */;
+		};
+		B03ED6D71B1BF7D70027F59B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B03ED6C01B1BF7D60027F59B /* SAWaterLevelCommon */;
+			targetProxy = B03ED6D61B1BF7D70027F59B /* PBXContainerItemProxy */;
+		};
 		B0C95AAF193A4B0600A6F1FA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B0C95A84193A4B0600A6F1FA /* SAWaterLevel */;
@@ -587,6 +961,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		B03ED70D1B1C03180027F59B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B03ED70C1B1C03180027F59B /* Base */,
+				B03ED70E1B1C031D0027F59B /* en */,
+				B03ED70F1B1C031E0027F59B /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		B0C95A91193A4B0600A6F1FA /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -624,6 +1008,152 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B03ED6B91B1BF34B0027F59B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = SAWaterTodayWidget/SAWaterTodayWidget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SAWaterTodayWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B03ED6BA1B1BF34B0027F59B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = SAWaterTodayWidget/SAWaterTodayWidget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SAWaterTodayWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B03ED6DB1B1BF7D70027F59B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"AF_APP_EXTENSIONS=1",
+				);
+				INFOPLIST_FILE = SAWaterLevelCommon/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B03ED6DC1B1BF7D70027F59B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "AF_APP_EXTENSIONS=1";
+				INFOPLIST_FILE = SAWaterLevelCommon/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B03ED6DF1B1BF7D70027F59B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SAWaterLevelCommonTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SAWaterLevel.app/SAWaterLevel";
+			};
+			name = Debug;
+		};
+		B03ED6E01B1BF7D70027F59B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SAWaterLevelCommonTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SAWaterLevel.app/SAWaterLevel";
+			};
+			name = Release;
+		};
 		B0C95AB8193A4B0600A6F1FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -701,13 +1231,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_ENTITLEMENTS = SAWaterLevel/SAWaterLevel.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SAWaterLevel/SAWaterLevel-Prefix.pch";
 				INFOPLIST_FILE = "SAWaterLevel/SAWaterLevel-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "37E307CB-32A1-4B81-9BD1-8831544D30E1";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -718,14 +1251,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_ENTITLEMENTS = SAWaterLevel/SAWaterLevel.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SAWaterLevel/SAWaterLevel-Prefix.pch";
 				INFOPLIST_FILE = "SAWaterLevel/SAWaterLevel-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "A59BE1B6-43DF-427E-88B0-F41864078CBB";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -774,6 +1309,30 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B03ED6B81B1BF34B0027F59B /* Build configuration list for PBXNativeTarget "SAWaterTodayWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B03ED6B91B1BF34B0027F59B /* Debug */,
+				B03ED6BA1B1BF34B0027F59B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B03ED6DA1B1BF7D70027F59B /* Build configuration list for PBXNativeTarget "SAWaterLevelCommon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B03ED6DB1B1BF7D70027F59B /* Debug */,
+				B03ED6DC1B1BF7D70027F59B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B03ED6DE1B1BF7D70027F59B /* Build configuration list for PBXNativeTarget "SAWaterLevelCommonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B03ED6DF1B1BF7D70027F59B /* Debug */,
+				B03ED6E01B1BF7D70027F59B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		B0C95A80193A4B0600A6F1FA /* Build configuration list for PBXProject "SAWaterLevel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

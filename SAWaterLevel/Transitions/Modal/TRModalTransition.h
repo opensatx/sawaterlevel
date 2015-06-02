@@ -21,7 +21,7 @@
  *
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 typedef NS_ENUM(NSInteger, TRModalTransitionType)  {
     TRModalTransitionTypePresenting = 0,

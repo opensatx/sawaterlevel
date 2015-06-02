@@ -43,9 +43,13 @@
 
 @property (nonatomic, strong) IBOutlet UIBarButtonItem *refreshButton;
 @property (strong, nonatomic) IBOutlet UIButton *stageLevelInfoButton;
+@property (strong, nonatomic) IBOutlet UILabel *lastUpdatedLabel;
+@property (strong, nonatomic) IBOutlet UIView *lastUpdatedBackgroundView;
+
 
 @property (nonatomic, strong, readonly) IBOutlet UIBarButtonItem *activityButton;
 @property (nonatomic, strong) IBOutlet SAWCurrentLevelDataSource *dataSource;
+
 
 @property (strong, nonatomic) IBOutlet UIButton *currentStageButton;
 
@@ -77,6 +81,7 @@
 
     self.title = NSLocalizedString(@"CURRENT_LEVEL_TITLE", nil);
     self.tabBarItem.title = NSLocalizedString(@"TAB_BAR_ITEM_CURRENT_LEVEL", nil);
+    self.lastUpdatedBackgroundView.layer.cornerRadius = self.lastUpdatedBackgroundView.frame.size.height * 0.5f;
 
     SAWDataController *dataController = [[SAWDataController alloc] init];
 
@@ -114,6 +119,19 @@
     self.currentStageButton.layer.cornerRadius = 10.0f;
     self.currentStageButton.layer.borderWidth = 0.5f;
     self.currentStageButton.layer.borderColor = [UIColor colorWithWhite:0.0f alpha:0.5f].CGColor;
+    
+    static NSDateFormatter *dateFormatter = nil;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.dateStyle = NSDateFormatterShortStyle;
+        dateFormatter.timeStyle = NSDateFormatterShortStyle;
+    });
+
+    NSString *date = [dateFormatter stringFromDate:self.dataSource.waterLevel.lastUpdated];
+    NSString *lastUpdated = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"CURRENT_LEVEL_LAST_UPDATED", nil), date];
+    self.lastUpdatedLabel.text = lastUpdated;
 }
 
 - (UIBarButtonItem *)activityButton {

@@ -21,7 +21,7 @@
  *
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 /*!
  *  Class for building the table view.

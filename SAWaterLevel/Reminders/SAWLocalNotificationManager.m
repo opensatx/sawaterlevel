@@ -118,7 +118,7 @@
 - (NSDate *)determineNextFireDateForSchedule:(SAWIrrigationSchedule *)schedule timeRange:(NSRange)range {
     NSDate* curDate = [NSDate date];
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *curComps = [calendar components:NSWeekdayCalendarUnit fromDate:curDate];
+    NSDateComponents *curComps = [calendar components:NSCalendarUnitWeekday fromDate:curDate];
     NSCalendarUnit units = NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitWeekday | NSCalendarUnitWeekOfYear;
 
     NSDateComponents *rangeComps = [calendar components:units fromDate:curDate];
