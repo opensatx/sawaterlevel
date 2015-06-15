@@ -10,14 +10,14 @@
             <objects>
                 <glanceController topTemplateType="body1Group" id="fmZ-RC-O8b" customClass="SAWGlanceInterfaceController">
                     <items>
-                        <label alignment="left" text="Current Restrictions" minimumScaleFactor="0.50000000000000011" id="ikb-jE-0QQ"/>
+                        <label alignment="left" text=" " minimumScaleFactor="0.50000000000000011" id="ikb-jE-0QQ"/>
                         <group alignment="left" spacing="0.0" id="EB6-QX-f1g">
                             <items>
-                                <label width="1" alignment="left" verticalAlignment="center" text="Stage 2" textAlignment="center" id="nFU-sp-KX8">
+                                <label width="1" alignment="left" verticalAlignment="center" text=" " textAlignment="center" id="nFU-sp-KX8">
                                     <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                 </label>
                             </items>
-                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </group>
                         <group alignment="left" layout="vertical" spacing="0.0" id="9eu-cb-qvR">
                             <items>
@@ -28,11 +28,11 @@
                                                 <group width="9" height="28" alignment="left" layout="vertical" id="m22-KI-zXf" userLabel="Indicator Container">
                                                     <items>
                                                         <group width="8" height="8" alignment="left" verticalAlignment="center" radius="4" spacing="0.0" id="Hpm-r5-EaY" userLabel="Indicator">
-                                                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </group>
                                                     </items>
                                                 </group>
-                                                <label alignment="left" text="661.32" id="iOe-Iz-zQt">
+                                                <label alignment="left" text="-" id="iOe-Iz-zQt">
                                                     <fontDescription key="font" type="boldSystem" pointSize="25"/>
                                                 </label>
                                                 <group width="19" height="26" alignment="left" id="EMe-hJ-I8i">
@@ -45,7 +45,7 @@
                                         </group>
                                         <group width="1" alignment="left" id="4EM-mD-Dwe">
                                             <items>
-                                                <label alignment="left" text="Current Level" id="tVg-UW-4JW">
+                                                <label alignment="left" text=" " id="tVg-UW-4JW">
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                                 </label>
@@ -61,11 +61,11 @@
                                                 <group width="9" height="28" alignment="left" layout="vertical" id="T3I-E7-33T" userLabel="Indicator Container">
                                                     <items>
                                                         <group width="8" height="8" alignment="left" verticalAlignment="center" radius="4" spacing="0.0" id="KxM-U2-aWe" userLabel="Indicator">
-                                                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </group>
                                                     </items>
                                                 </group>
-                                                <label alignment="left" text="661.32" id="14u-rY-lq8">
+                                                <label alignment="left" text="-" id="14u-rY-lq8">
                                                     <fontDescription key="font" type="boldSystem" pointSize="25"/>
                                                 </label>
                                                 <group width="19" height="26" alignment="left" id="cAq-c0-hSe">
@@ -78,7 +78,7 @@
                                         </group>
                                         <group width="1" alignment="left" id="KRg-dX-eMu">
                                             <items>
-                                                <label alignment="left" text="Current Level" id="nt9-zs-Dpg">
+                                                <label alignment="left" text=" " id="nt9-zs-Dpg">
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                                 </label>
@@ -89,7 +89,7 @@
                                 </group>
                                 <group width="1" alignment="left" spacing="0.0" id="qsg-oW-QGF">
                                     <items>
-                                        <label width="1" height="26" alignment="left" verticalAlignment="center" text="6/1/2015, 12:45PM" textAlignment="left" id="eso-Ia-fT3">
+                                        <label width="1" height="26" alignment="left" verticalAlignment="center" text=" " textAlignment="left" id="eso-Ia-fT3">
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                         </label>
@@ -117,10 +117,115 @@
             </objects>
             <point key="canvasLocation" x="218" y="118"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Glance Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController"/>
+                <controller id="AgC-eL-Hgc" customClass="SAWGlanceInterfaceController">
+                    <items>
+                        <label alignment="left" text=" " minimumScaleFactor="0.50000000000000011" id="vX0-Sw-Bsd" userLabel="Current Restrictions"/>
+                        <group alignment="left" spacing="0.0" id="IDy-1U-jvH">
+                            <items>
+                                <button width="1" height="30" alignment="left" title=" " id="NlL-jl-3of">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </button>
+                            </items>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </group>
+                        <group alignment="left" layout="vertical" spacing="0.0" id="tIP-Sl-e78">
+                            <items>
+                                <group width="1" height="42" alignment="left" layout="vertical" spacing="0.0" id="IUc-kf-54x">
+                                    <items>
+                                        <group width="1" height="28" alignment="left" id="rmR-c0-Wad">
+                                            <items>
+                                                <group width="9" height="28" alignment="left" layout="vertical" id="SyI-rj-Qjo" userLabel="Indicator Container">
+                                                    <items>
+                                                        <group width="8" height="8" alignment="left" verticalAlignment="center" radius="4" spacing="0.0" id="yML-2e-Px5" userLabel="Indicator">
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </group>
+                                                    </items>
+                                                </group>
+                                                <label alignment="left" text="-" id="N65-bl-GCH">
+                                                    <fontDescription key="font" type="boldSystem" pointSize="25"/>
+                                                </label>
+                                                <group width="19" height="26" alignment="left" id="7wU-hc-bl1">
+                                                    <items>
+                                                        <label alignment="left" text="ft." id="Ea5-zU-sE1"/>
+                                                    </items>
+                                                    <edgeInsets key="margins" left="0.0" right="0.0" top="9" bottom="0.0"/>
+                                                </group>
+                                            </items>
+                                        </group>
+                                        <group width="1" alignment="left" id="Lxc-o3-KMa">
+                                            <items>
+                                                <label alignment="left" text=" " id="lQW-rQ-PFg">
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                </label>
+                                            </items>
+                                            <edgeInsets key="margins" left="11" right="0.0" top="0.0" bottom="0.0"/>
+                                        </group>
+                                    </items>
+                                </group>
+                                <group width="1" height="42" alignment="left" layout="vertical" spacing="0.0" id="xW6-Ab-RrQ">
+                                    <items>
+                                        <group width="1" height="28" alignment="left" id="sN8-Uy-wof">
+                                            <items>
+                                                <group width="9" height="28" alignment="left" layout="vertical" id="3YX-BS-ICH" userLabel="Indicator Container">
+                                                    <items>
+                                                        <group width="8" height="8" alignment="left" verticalAlignment="center" radius="4" spacing="0.0" id="8Bb-KL-Wtu" userLabel="Indicator">
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </group>
+                                                    </items>
+                                                </group>
+                                                <label alignment="left" text="-" id="2F6-Oq-Rot">
+                                                    <fontDescription key="font" type="boldSystem" pointSize="25"/>
+                                                </label>
+                                                <group width="19" height="26" alignment="left" id="U4u-NM-IHj">
+                                                    <items>
+                                                        <label alignment="left" text="ft." id="ydC-QN-IP2"/>
+                                                    </items>
+                                                    <edgeInsets key="margins" left="0.0" right="0.0" top="9" bottom="0.0"/>
+                                                </group>
+                                            </items>
+                                        </group>
+                                        <group width="1" alignment="left" id="To4-A6-4zt">
+                                            <items>
+                                                <label alignment="left" text=" " id="CVO-Am-JtV">
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                </label>
+                                            </items>
+                                            <edgeInsets key="margins" left="11" right="0.0" top="0.0" bottom="0.0"/>
+                                        </group>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" spacing="0.0" id="tif-LQ-3eW">
+                                    <items>
+                                        <label width="1" height="26" alignment="left" verticalAlignment="center" text=" " textAlignment="left" id="TN7-Yv-aux">
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                    </items>
+                                    <edgeInsets key="margins" left="11" right="0.0" top="4" bottom="0.0"/>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="averageLevelDescLabel" destination="CVO-Am-JtV" id="qGd-hs-Uhe"/>
+                        <outlet property="averageLevelIndicator" destination="8Bb-KL-Wtu" id="QDm-lZ-VEZ"/>
+                        <outlet property="averageLevelLabel" destination="2F6-Oq-Rot" id="O5B-th-zlR"/>
+                        <outlet property="averageLevelUnitLabel" destination="ydC-QN-IP2" id="2sd-68-t6P"/>
+                        <outlet property="currentLevelDescLabel" destination="lQW-rQ-PFg" id="wTu-qh-Mv5"/>
+                        <outlet property="currentLevelIndicator" destination="yML-2e-Px5" id="o7Q-8Z-nxh"/>
+                        <outlet property="currentLevelLabel" destination="N65-bl-GCH" id="KU2-Pa-C8g"/>
+                        <outlet property="currentLevelUnitLabel" destination="Ea5-zU-sE1" id="byK-vp-P51"/>
+                        <outlet property="lastUpdatedLabel" destination="TN7-Yv-aux" id="lyM-KO-0ob"/>
+                        <outlet property="restrictionButton" destination="NlL-jl-3of" id="OGU-VM-Nb4"/>
+                        <outlet property="restrictionDescLabel" destination="vX0-Sw-Bsd" id="5wI-tq-tYD"/>
+                        <outlet property="restrictionGroup" destination="IDy-1U-jvH" id="cAg-lh-XpN"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
@@ -143,7 +248,13 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController">
+                    <items>
+                        <label width="1" alignment="left" text="Label" id="Dlt-bm-EGl">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                    </items>
+                </controller>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>

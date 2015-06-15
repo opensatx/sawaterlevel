@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) IBOutlet WKInterfaceGroup *restrictionGroup;
 @property (strong, nonatomic) IBOutlet WKInterfaceLabel *restrictionLabel;
+@property (strong, nonatomic) IBOutlet WKInterfaceButton *restrictionButton;
 @property (strong, nonatomic) IBOutlet WKInterfaceLabel *restrictionDescLabel;
 
 @property (strong, nonatomic) IBOutlet WKInterfaceGroup *currentLevelIndicator;
@@ -27,7 +28,7 @@
 
 @property (strong, nonatomic) IBOutlet WKInterfaceLabel *lastUpdatedLabel;
 
-@property (nonatomic, strong) SAWWaterLevel *waterLevel;
+@property (nonatomic, strong) SAWDataController *dataController;
 
 @end
 
@@ -36,65 +37,68 @@
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
 
-    [self updateUI];
+    self.dataController = [[SAWDataController alloc] init];
+
+    [self.restrictionDescLabel setText:NSLocalizedString(@"CURRENT_RESTRICTIONS_TITLE", nil)];
+    [self.currentLevelDescLabel setText:NSLocalizedString(@"CURRENT_LEVEL_TITLE", nil)];
+    [self.averageLevelDescLabel setText:NSLocalizedString(@"CURRENT_AVERAGE_WATER_LEVEL", nil)];
+
+    NSString *unitText = NSLocalizedString(@"CURRENT_LEVEL_FEET", nil);
+
+    [self.currentLevelUnitLabel setText:unitText];
+    [self.averageLevelUnitLabel setText:unitText];
 }
 
 - (void)willActivate {
-    // This method is called when watch view controller is about to be visible to user
     [super willActivate];
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self updateUI];
+    });
 }
 
 - (void)didDeactivate {
-    // This method is called when watch view controller is no longer visible
     [super didDeactivate];
 }
 
 - (void)updateUI {
-    if (self.waterLevel) {
-        [self.restrictionGroup setBackgroundColor:self.waterLevel.stageLevel.backgroundColor];
-        [self.restrictionLabel setTextColor:self.waterLevel.stageLevel.foregroundColor];
-        [self.restrictionLabel setText:self.waterLevel.stageLevel.localizedTitle];
-        [self.restrictionDescLabel setText:NSLocalizedString(@"CURRENT_RESTRICTIONS_TITLE", nil)];
+    SAWWaterLevel *waterLevel = [self.dataController fetchCachedWaterLevel];
 
-        SAWStageLevel *currentLevelStage = [SAWStageLevel stageLevelForLevelValue:[self.waterLevel.level floatValue]];
-        SAWStageLevel *averageLevelStage = [SAWStageLevel stageLevelForLevelValue:[self.waterLevel.level floatValue]];
+    if (waterLevel) {
+        if (self.restrictionLabel) {
+            [self.restrictionGroup setBackgroundColor:waterLevel.stageLevel.backgroundColor];
+            [self.restrictionLabel setTextColor:waterLevel.stageLevel.foregroundColor];
+            [self.restrictionLabel setText:waterLevel.stageLevel.localizedTitle];
+        } else {
+            NSString *titleStr = waterLevel.stageLevel.localizedTitle;
+            
+            NSDictionary *attributes = @{
+                                         NSForegroundColorAttributeName : waterLevel.stageLevel.foregroundColor,
+                                         NSFontAttributeName : [UIFont boldSystemFontOfSize:17.0f]
+                                         };
+            
+            NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:titleStr attributes:attributes];
+            //set color
+
+            [self.restrictionButton setBackgroundColor:waterLevel.stageLevel.backgroundColor];
+            [self.restrictionButton setAttributedTitle:attString];
+        }
+        
+        
+
+        SAWStageLevel *currentLevelStage = [SAWStageLevel stageLevelForLevelValue:[waterLevel.level floatValue]];
+        SAWStageLevel *averageLevelStage = [SAWStageLevel stageLevelForLevelValue:[waterLevel.level floatValue]];
 
         [self.currentLevelIndicator setBackgroundColor:currentLevelStage.backgroundColor];
         [self.averageLevelIndicator setBackgroundColor:averageLevelStage.backgroundColor];
 
         NSString *levelFormat = @"%0.2f";
 
-        [self.currentLevelLabel setText:[NSString stringWithFormat:levelFormat, [self.waterLevel.level floatValue]]];
-        [self.averageLevelLabel setText:[NSString stringWithFormat:levelFormat, [self.waterLevel.average floatValue]]];
+        [self.currentLevelLabel setText:[NSString stringWithFormat:levelFormat, [waterLevel.level floatValue]]];
+        [self.averageLevelLabel setText:[NSString stringWithFormat:levelFormat, [waterLevel.average floatValue]]];
 
-        NSString *unitText = NSLocalizedString(@"CURRENT_LEVEL_FEET", nil);
-
-        [self.currentLevelUnitLabel setText:unitText];
-        [self.averageLevelUnitLabel setText:unitText];
-
-        [self.currentLevelDescLabel setText:NSLocalizedString(@"CURRENT_LEVEL_TITLE", nil)];
-        [self.averageLevelDescLabel setText:NSLocalizedString(@"CURRENT_AVERAGE_WATER_LEVEL", nil)];
-
-        static NSDateFormatter *dateFormatter = nil;
-
-        static dispatch_once_t onceToken;
-        dispatch_once(&onceToken, ^{
-            dateFormatter = [[NSDateFormatter alloc] init];
-            dateFormatter.dateStyle = NSDateFormatterShortStyle;
-            dateFormatter.timeStyle = NSDateFormatterShortStyle;
-        });
-
-        [self.lastUpdatedLabel setText:[dateFormatter stringFromDate:self.waterLevel.lastUpdated]];
+        [self.lastUpdatedLabel setText:[waterLevel.lastUpdated timeAgo]];
     }
-}
-
-- (SAWWaterLevel *)waterLevel {
-    if (!_waterLevel) {
-        SAWDataController *dataController = [[SAWDataController alloc] init];
-        _waterLevel = [dataController fetchCachedWaterLevel];
-    }
-
-    return _waterLevel;
 }
 
 @end

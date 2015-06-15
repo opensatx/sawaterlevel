@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B01E28611B2E48FC009EE936 /* NSDate+TimeAgo.h in Headers */ = {isa = PBXBuildFile; fileRef = B01E285F1B2E48FC009EE936 /* NSDate+TimeAgo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B01E28621B2E48FC009EE936 /* NSDate+TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = B01E28601B2E48FC009EE936 /* NSDate+TimeAgo.m */; };
+		B01E28631B2E75F0009EE936 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0C95B21193B687800A6F1FA /* Localizable.strings */; };
 		B03ED6AC1B1BF34B0027F59B /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03ED6AB1B1BF34B0027F59B /* NotificationCenter.framework */; };
 		B03ED6B21B1BF34B0027F59B /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED6B11B1BF34B0027F59B /* TodayViewController.m */; };
 		B03ED6B41B1BF34B0027F59B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03ED6B31B1BF34B0027F59B /* MainInterface.storyboard */; };
@@ -173,6 +176,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B01E285F1B2E48FC009EE936 /* NSDate+TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeAgo.h"; sourceTree = "<group>"; };
+		B01E28601B2E48FC009EE936 /* NSDate+TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeAgo.m"; sourceTree = "<group>"; };
 		B03ED6AA1B1BF34B0027F59B /* SAWaterTodayWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SAWaterTodayWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03ED6AB1B1BF34B0027F59B /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		B03ED6AF1B1BF34B0027F59B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -335,6 +340,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B01E285E1B2E48FC009EE936 /* NSDate+TimeAgo */ = {
+			isa = PBXGroup;
+			children = (
+				B01E285F1B2E48FC009EE936 /* NSDate+TimeAgo.h */,
+				B01E28601B2E48FC009EE936 /* NSDate+TimeAgo.m */,
+			);
+			path = "NSDate+TimeAgo";
+			sourceTree = "<group>";
+		};
 		B03ED6AD1B1BF34B0027F59B /* SAWaterTodayWidget */ = {
 			isa = PBXGroup;
 			children = (
@@ -414,6 +428,7 @@
 			isa = PBXGroup;
 			children = (
 				B03ED7111B1C05900027F59B /* AFNetworking */,
+				B01E285E1B2E48FC009EE936 /* NSDate+TimeAgo */,
 			);
 			path = "Third Party";
 			sourceTree = "<group>";
@@ -714,6 +729,7 @@
 				B03ED72E1B1C05900027F59B /* AFSecurityPolicy.h in Headers */,
 				B03ED6F41B1BFBB70027F59B /* SAWStageLevel.h in Headers */,
 				B03ED7251B1C05900027F59B /* AFHTTPRequestOperation.h in Headers */,
+				B01E28611B2E48FC009EE936 /* NSDate+TimeAgo.h in Headers */,
 				B03ED6F01B1BFBB70027F59B /* SAWDataController.h in Headers */,
 				B03ED7341B1C05900027F59B /* AFURLResponseSerialization.h in Headers */,
 				B03ED6C61B1BF7D60027F59B /* SAWaterLevelCommon.h in Headers */,
@@ -955,6 +971,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B01E28631B2E75F0009EE936 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1048,6 +1065,7 @@
 				B03ED7351B1C05900027F59B /* AFURLResponseSerialization.m in Sources */,
 				B03ED6F31B1BFBB70027F59B /* SAWIrrigationSchedule.m in Sources */,
 				B03ED6F51B1BFBB70027F59B /* SAWStageLevel.m in Sources */,
+				B01E28621B2E48FC009EE936 /* NSDate+TimeAgo.m in Sources */,
 				B03ED7401B1C07300027F59B /* SAWNetworkController.m in Sources */,
 				B03ED7281B1C05900027F59B /* AFHTTPRequestOperationManager.m in Sources */,
 				B03ED72F1B1C05900027F59B /* AFSecurityPolicy.m in Sources */,
@@ -1587,6 +1605,7 @@
 				B03ED6BA1B1BF34B0027F59B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B03ED6DA1B1BF7D70027F59B /* Build configuration list for PBXNativeTarget "SAWaterLevelCommon" */ = {
 			isa = XCConfigurationList;
@@ -1595,6 +1614,7 @@
 				B03ED6DC1B1BF7D70027F59B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B03ED6DE1B1BF7D70027F59B /* Build configuration list for PBXNativeTarget "SAWaterLevelCommonTests" */ = {
 			isa = XCConfigurationList;
@@ -1603,6 +1623,7 @@
 				B03ED6E01B1BF7D70027F59B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B03ED76E1B1D31B50027F59B /* Build configuration list for PBXNativeTarget "SAWaterLevel WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -1611,6 +1632,7 @@
 				B03ED7701B1D31B50027F59B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B03ED7711B1D31B50027F59B /* Build configuration list for PBXNativeTarget "SAWaterLevel WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -1619,6 +1641,7 @@
 				B03ED7731B1D31B50027F59B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0C95A80193A4B0600A6F1FA /* Build configuration list for PBXProject "SAWaterLevel" */ = {
 			isa = XCConfigurationList;

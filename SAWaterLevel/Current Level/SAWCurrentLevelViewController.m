@@ -32,6 +32,8 @@
 #import "SAWConstants.h"
 #import "SAWStageLevelDescrepencyEducationView.h"
 
+@import SAWaterLevelCommon;
+
 #import "TRModalTransition.h"
 #import "UIStoryboardSegue+TargetDestination.h"
 
@@ -119,18 +121,8 @@
     self.currentStageButton.layer.cornerRadius = 10.0f;
     self.currentStageButton.layer.borderWidth = 0.5f;
     self.currentStageButton.layer.borderColor = [UIColor colorWithWhite:0.0f alpha:0.5f].CGColor;
-    
-    static NSDateFormatter *dateFormatter = nil;
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        dateFormatter = [[NSDateFormatter alloc] init];
-        dateFormatter.dateStyle = NSDateFormatterShortStyle;
-        dateFormatter.timeStyle = NSDateFormatterShortStyle;
-    });
 
-    NSString *date = [dateFormatter stringFromDate:self.dataSource.waterLevel.lastUpdated];
-    NSString *lastUpdated = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"CURRENT_LEVEL_LAST_UPDATED", nil), date];
+    NSString *lastUpdated = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"CURRENT_LEVEL_LAST_UPDATED", nil), [self.dataSource.waterLevel.lastUpdated timeAgo]];
     self.lastUpdatedLabel.text = lastUpdated;
 }
 

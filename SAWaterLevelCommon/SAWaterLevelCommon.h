@@ -25,6 +25,7 @@ FOUNDATION_EXPORT const unsigned char SAWaterLevelCommonVersionString[];
 
 /* Networking */
 #import <SAWaterLevelCommon/SAWNetworkController.h>
+#import <SAWaterLevelCommon/NSDate+TimeAgo.h>
 
 /* UI */
 #import <SAWaterLevelCommon/SAWStageLevel+UI.h>

@@ -61,3 +61,29 @@
 //  Stage Level Update
 
 "NOTIFICATION_STAGE_LEVEL_CHANGE_ALERT_BODY" = "Las restricciones de riego ha cambiado desde %@ a %@.";
+
+// Date+TimeAgo Strings
+"%d days ago"       = "Hace %d días";
+"%d hours ago"      = "Hace %d horas";
+"%d minutes ago"    = "Hace %d minutos";
+"%d months ago"     = "Hace %d meses";
+"%d seconds ago"    = "Hace %d segundos";
+"%d weeks ago"      = "Hace %d semanas";
+"%d years ago"      = "Hace %d años";
+"A minute ago"      = "Hace un minuto";
+"An hour ago"       = "Hace una hora";
+"Just now"          = "Ahora mismo";
+"Last month"        = "El mes pasado";
+"Last week"         = "La semana pasada";
+"Last year"         = "El año pasado";
+"Yesterday"         = "Ayer";
+"1 year ago"        = "Hace un año";
+"1 month ago"       = "Hace un mes";
+"1 week ago"        = "Hace una semana";
+"1 day ago"         = "Hace un día";
+"This morning"      = "Esta mañana";
+"This afternoon"    = "Esta tarde";
+"Today"             = "Hoy";
+"This week"         = "Esta semana";
+"This month"        = "Este mes";
+"This year"         = "Este año";

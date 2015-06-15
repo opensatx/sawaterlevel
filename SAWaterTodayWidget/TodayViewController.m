@@ -7,6 +7,7 @@
 //
 
 #import "TodayViewController.h"
+#import "NSDate+TimeAgo.h"
 
 @import NotificationCenter;
 @import SAWaterLevelCommon;
@@ -43,7 +44,7 @@
 }
 
 - (CGSize)preferredContentSize {
-    return CGSizeMake(320.0f, 100.0f);
+    return CGSizeMake(320.0f, 125.0f);
 }
 
 - (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)defaultMarginInsets {
@@ -67,22 +68,13 @@
             [self updateUI];
         } else {
             if (completionHandler) {
-                completionHandler(NCUpdateResultNoData);
+                completionHandler(NCUpdateResultFailed);
             }
         }
     }];
 }
 
 - (void)updateUI {
-    static NSDateFormatter *dateFormatter = nil;
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        dateFormatter = [[NSDateFormatter alloc] init];
-        dateFormatter.dateStyle = NSDateFormatterShortStyle;
-        dateFormatter.timeStyle = NSDateFormatterShortStyle;
-    });
-
     if (self.waterLevel) {
         SAWStageLevel *currentLevelStageLevel = [SAWStageLevel stageLevelForWaterLevel:self.waterLevel];
 
@@ -94,16 +86,33 @@
         self.averageAmount.text = [NSString stringWithFormat:@"%.2f %@", [self.waterLevel.average floatValue], NSLocalizedString(@"CURRENT_LEVEL_FEET", nil)];
         self.currentLevelDesc.text = NSLocalizedString(@"CURRENT_LEVEL_TITLE", nil);
         self.averageDesc.text = NSLocalizedString(@"CURRENT_AVERAGE_WATER_LEVEL", nil);
-        
+
         self.stageLevelContainer.layer.cornerRadius = self.stageLevelContainer.frame.size.height * 0.5f;
         self.stageLevelContainer.backgroundColor = self.waterLevel.stageLevel.backgroundColor;
-        
+
         self.stageLevelLabel.textColor = self.waterLevel.stageLevel.foregroundColor;
-        self.stageLevelLabel.text = [NSString stringWithFormat:@"%li", (long)self.waterLevel.stageLevel.level];
-        
-        self.lastUpdatedLabel.text = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"CURRENT_LEVEL_LAST_UPDATED", nil), [dateFormatter stringFromDate:self.waterLevel.lastUpdated]];
+        self.stageLevelLabel.text = [self localizedStageText];
+
+        self.lastUpdatedLabel.text = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"CURRENT_LEVEL_LAST_UPDATED", nil), [self.waterLevel.lastUpdated timeAgo]];
     } else {
         self.infoPanel.hidden = YES;
+    }
+}
+
+- (NSString *)localizedStageText {
+    switch (self.waterLevel.stageLevel.level) {
+        case SAWStageLevelNormal:
+            return NSLocalizedString(@"STAGE_LEVEL_NO_RESTRICTION", nil);
+        case SAWStageLevel1:
+            return NSLocalizedString(@"STAGE_LEVEL_1", nil);
+        case SAWStageLevel2:
+            return NSLocalizedString(@"STAGE_LEVEL_2", nil);
+        case SAWStageLevel3:
+            return NSLocalizedString(@"STAGE_LEVEL_3", nil);
+        case SAWStageLevel4:
+            return NSLocalizedString(@"STAGE_LEVEL_4", nil);
+        case SAWStageLevel5:
+            return NSLocalizedString(@"STAGE_LEVEL_5", nil);
     }
 }
 
