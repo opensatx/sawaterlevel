@@ -26,6 +26,7 @@
 #define USER_DEFAULT_KEY_CACHED_WATER @"SAWCachedWaterLevel"
 #define USER_DEFAULT_KEY_CACHED_HOUSE_NUMBER @"SAWCachedHouseNumber"
 #define USER_DEFAULT_KEY_CACHED_STAGE_LEVEL_NOTIFICATION @"SAWCachedNotifyOnStageLevelChange"
+#define USER_DEFAULT_MIGRATED_NOTIFICATION_SETTINGS @"SAWMigratedNotificationSettings"
 
 @implementation SAWDataController
 
@@ -132,7 +133,8 @@
 
 + (void)registerDefaults {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults registerDefaults:@{ USER_DEFAULT_KEY_CACHED_STAGE_LEVEL_NOTIFICATION : @(YES) }];
+    [defaults registerDefaults:@{ USER_DEFAULT_KEY_CACHED_STAGE_LEVEL_NOTIFICATION : @(NO) }];
+    [defaults registerDefaults:@{ USER_DEFAULT_MIGRATED_NOTIFICATION_SETTINGS : @(NO)}];
     [defaults synchronize];
 }
 

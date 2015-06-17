@@ -50,11 +50,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhP-Zm-f3W">
-                                        <rect key="frame" x="75" y="10" width="160" height="30"/>
+                                        <rect key="frame" x="80" y="10" width="160" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yio-xo-bL7">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -76,7 +76,7 @@
                                     <constraint firstItem="THj-Wu-LBW" firstAttribute="top" secondItem="qMg-n4-uy4" secondAttribute="bottom" id="3Ms-ik-uQ1"/>
                                     <constraint firstItem="yEX-Z6-ebh" firstAttribute="centerX" secondItem="HgF-wZ-id7" secondAttribute="centerX" constant="-0.5" id="HI6-oG-7bW"/>
                                     <constraint firstItem="qMg-n4-uy4" firstAttribute="centerY" secondItem="yEX-Z6-ebh" secondAttribute="centerY" id="P6U-sD-7eH"/>
-                                    <constraint firstAttribute="centerX" secondItem="jhP-Zm-f3W" secondAttribute="centerX" constant="5" id="XuL-Xi-YFR"/>
+                                    <constraint firstAttribute="centerX" secondItem="jhP-Zm-f3W" secondAttribute="centerX" id="XuL-Xi-YFR"/>
                                     <constraint firstAttribute="centerX" secondItem="6sO-HH-Csm" secondAttribute="centerX" id="aMs-r2-aG1"/>
                                     <constraint firstItem="6sO-HH-Csm" firstAttribute="top" secondItem="THj-Wu-LBW" secondAttribute="bottom" constant="8" id="c2V-b9-3Wq"/>
                                     <constraint firstItem="qMg-n4-uy4" firstAttribute="top" secondItem="jhP-Zm-f3W" secondAttribute="bottom" constant="10" id="dYD-hX-eFx"/>

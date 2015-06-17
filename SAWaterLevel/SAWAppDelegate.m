@@ -36,7 +36,7 @@
                                                        green:124.0f/255.0f
                                                         blue:162.0f/255.0f
                                                        alpha:1.0f];
-    [[UITabBar appearance] setSelectedImageTintColor:tabBarSelectedImageTint];
+    [[UITabBar appearance] setTintColor:tabBarSelectedImageTint];
 }
 
 #pragma mark - UIApplicationDelegate
@@ -51,6 +51,10 @@
 }
 
 - (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    __block UIBackgroundTaskIdentifier taskID = [application beginBackgroundTaskWithExpirationHandler:^{
+        [application endBackgroundTask:taskID];
+    }];
+
     SAWDataController *dataController = [[SAWDataController alloc] init];
 
     NSString *houseNumber = [dataController fetchCachedHouseNumber];
@@ -65,6 +69,7 @@
             //  need to update notifications
             void(^executeCompletion)(void) = ^{
                 completionHandler(UIBackgroundFetchResultNewData);
+                [application endBackgroundTask:taskID];
             };
             
             //  Update irrigation notifications if there is change in stage level
@@ -81,6 +86,33 @@
             }
         }
     }];
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    [self registerWateringNotifications];
+}
+
+#pragma mark - Other Instance Methods
+
+- (void)registerWateringNotifications {
+    UIApplication *application = [UIApplication sharedApplication];
+
+    SAWDataController *dataController = [[SAWDataController alloc] init];
+
+    NSString *houseNumber = [dataController fetchCachedHouseNumber];
+
+    if (houseNumber) {
+        __block UIBackgroundTaskIdentifier task = [application beginBackgroundTaskWithExpirationHandler:^{
+            [application endBackgroundTask:task];
+        }];
+
+        SAWWaterLevel *existingWaterLevel = [dataController fetchCachedWaterLevel];
+
+        SAWLocalNotificationManager *notifcationManager = [SAWLocalNotificationManager localNotificationManager];
+        [notifcationManager scheduleNotificationsForStageLevel:existingWaterLevel.stageLevel streetNumber:houseNumber completion:^(NSArray *notifications) {
+            [application endBackgroundTask:task];
+        }];
+    }
 }
 
 @end

@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="218" y="118"/>
         </scene>
-        <!--Glance Interface Controller-->
+        <!--SA Water-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="SAWGlanceInterfaceController">
+                <controller title="SA Water" id="AgC-eL-Hgc" customClass="SAWGlanceInterfaceController">
                     <items>
                         <label alignment="left" text=" " minimumScaleFactor="0.50000000000000011" id="vX0-Sw-Bsd" userLabel="Current Restrictions"/>
                         <group alignment="left" spacing="0.0" id="IDy-1U-jvH">
@@ -259,4 +259,5 @@
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.1764705882" green="0.54117647059999996" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
