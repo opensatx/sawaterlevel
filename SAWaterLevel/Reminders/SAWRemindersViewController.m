@@ -103,8 +103,11 @@
     SAWDataController *dataController = [[SAWDataController alloc] init];
 
     if (self.wateringDaySwitch.on) {
+        UIMutableUserNotificationCategory *category = [[UIMutableUserNotificationCategory alloc] init];
+        category.identifier = SAWLocalNotificationCategoryWaterLawn;
+
         UIUserNotificationType notificationType = UIUserNotificationTypeAlert | UIUserNotificationTypeSound;
-        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:notificationType categories:nil];
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:notificationType categories:[NSSet setWithObject:category]];
         [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
 
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"REMINDER_ALERT_TITLE", nil)

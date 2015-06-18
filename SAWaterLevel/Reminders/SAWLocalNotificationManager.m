@@ -24,6 +24,8 @@
 #import "SAWLocalNotificationManager.h"
 #import "SAWIrrigationSchedule.h"
 
+NSString * const SAWLocalNotificationCategoryWaterLawn = @"SAWLocalNotificationCategoryWaterLawn";
+
 @interface SAWLocalNotificationManager()
 
 @property (nonatomic, strong) SAWLocalNotificationManager *strongSelf;
@@ -67,6 +69,8 @@
             UILocalNotification *notification = [weakSelf createNotificationForSchedule:irrigationSchedule timeRange:value.rangeValue];
             notification.fireDate = [self determineNextFireDateForSchedule:irrigationSchedule timeRange:value.rangeValue];
             notification.alertBody = NSLocalizedString(@"LOCAL_NOTIFICATION_ALERT", nil);
+            notification.category = SAWLocalNotificationCategoryWaterLawn;
+            notification.soundName = UILocalNotificationDefaultSoundName;
 
             switch (irrigationSchedule.frequency) {
                 case SAWIrrigationScheduleFrequencyDaily: {

@@ -26,6 +26,8 @@
 
 typedef void(^SAWLocalNotificationScheduleCompletionHandler)(NSArray *notifications);
 
+extern NSString * const SAWLocalNotificationCategoryWaterLawn;
+
 /*!
  *  Class that encapsulates the details of scheduling notifications
  */

@@ -10,6 +10,7 @@
 		B01E28611B2E48FC009EE936 /* NSDate+TimeAgo.h in Headers */ = {isa = PBXBuildFile; fileRef = B01E285F1B2E48FC009EE936 /* NSDate+TimeAgo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B01E28621B2E48FC009EE936 /* NSDate+TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = B01E28601B2E48FC009EE936 /* NSDate+TimeAgo.m */; };
 		B01E28631B2E75F0009EE936 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0C95B21193B687800A6F1FA /* Localizable.strings */; };
+		B01E286B1B32513E009EE936 /* SAWNotificationInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01E286A1B32513E009EE936 /* SAWNotificationInterfaceController.m */; };
 		B03ED6AC1B1BF34B0027F59B /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03ED6AB1B1BF34B0027F59B /* NotificationCenter.framework */; };
 		B03ED6B21B1BF34B0027F59B /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B03ED6B11B1BF34B0027F59B /* TodayViewController.m */; };
 		B03ED6B41B1BF34B0027F59B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03ED6B31B1BF34B0027F59B /* MainInterface.storyboard */; };
@@ -178,6 +179,8 @@
 /* Begin PBXFileReference section */
 		B01E285F1B2E48FC009EE936 /* NSDate+TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeAgo.h"; sourceTree = "<group>"; };
 		B01E28601B2E48FC009EE936 /* NSDate+TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeAgo.m"; sourceTree = "<group>"; };
+		B01E28691B32513E009EE936 /* SAWNotificationInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWNotificationInterfaceController.h; sourceTree = "<group>"; };
+		B01E286A1B32513E009EE936 /* SAWNotificationInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWNotificationInterfaceController.m; sourceTree = "<group>"; };
 		B03ED6AA1B1BF34B0027F59B /* SAWaterTodayWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SAWaterTodayWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03ED6AB1B1BF34B0027F59B /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		B03ED6AF1B1BF34B0027F59B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -484,6 +487,8 @@
 				B03ED7521B1D31B40027F59B /* Supporting Files */,
 				B03ED7761B1D36510027F59B /* SAWGlanceInterfaceController.h */,
 				B03ED7771B1D36510027F59B /* SAWGlanceInterfaceController.m */,
+				B01E28691B32513E009EE936 /* SAWNotificationInterfaceController.h */,
+				B01E286A1B32513E009EE936 /* SAWNotificationInterfaceController.m */,
 			);
 			path = "SAWaterLevel WatchKit Extension";
 			sourceTree = "<group>";
@@ -1088,6 +1093,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B01E286B1B32513E009EE936 /* SAWNotificationInterfaceController.m in Sources */,
 				B03ED77A1B1D36570027F59B /* SAWGlanceInterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1271,7 +1277,7 @@
 				);
 				INFOPLIST_FILE = SAWaterLevelCommon/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1298,7 +1304,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "AF_APP_EXTENSIONS=1";
 				INFOPLIST_FILE = SAWaterLevelCommon/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
