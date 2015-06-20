@@ -54,7 +54,7 @@
 + (NSArray *)timeRangesForStageLevel:(SAWStageLevelType)level streetNumber:(NSString *)streetNumber {
     NSMutableArray *ranges = [[NSMutableArray alloc] init];
 
-    NSRange midnightToSeven = NSMakeRange(0, 7);
+    NSRange midnightToSeven = NSMakeRange(0, 11);
     NSRange nineteenToMidnight = NSMakeRange(19, 5);
     NSRange seventToEleven = NSMakeRange(7, 4);
     NSRange nineteenToTwentyThree = NSMakeRange(19, 4);
