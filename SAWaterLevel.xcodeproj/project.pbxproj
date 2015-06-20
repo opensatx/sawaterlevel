@@ -238,7 +238,7 @@
 		B03ED7691B1D31B50027F59B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B03ED7761B1D36510027F59B /* SAWGlanceInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWGlanceInterfaceController.h; sourceTree = "<group>"; };
 		B03ED7771B1D36510027F59B /* SAWGlanceInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAWGlanceInterfaceController.m; sourceTree = "<group>"; };
-		B03ED7811B1D5A760027F59B /* SAWaterLevel WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "SAWaterLevel WatchKit Extension.entitlements"; path = "SAWaterLevel WatchKit Extension/SAWaterLevel WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		B03ED7811B1D5A760027F59B /* SAWaterLevel WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "SAWaterLevel WatchKit Extension.entitlements"; path = "SAWaterLevel WatchKit Extension/SAWaterLevel WatchKit Extension.entitlements"; sourceTree = SOURCE_ROOT; };
 		B0466FD1197F5C50009E1FBC /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		B09C39161970C9B9003F5BA8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B09C391C19717D71003F5BA8 /* SAWRemindersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAWRemindersViewController.h; sourceTree = "<group>"; };
@@ -585,7 +585,6 @@
 		B0C95A7C193A4B0600A6F1FA = {
 			isa = PBXGroup;
 			children = (
-				B03ED7811B1D5A760027F59B /* SAWaterLevel WatchKit Extension.entitlements */,
 				B0C95A8E193A4B0600A6F1FA /* SAWaterLevel */,
 				B03ED7751B1D31D40027F59B /* Today Widget */,
 				B03ED7741B1D31CA0027F59B /* Watch */,
@@ -627,6 +626,7 @@
 		B0C95A8E193A4B0600A6F1FA /* SAWaterLevel */ = {
 			isa = PBXGroup;
 			children = (
+				B03ED7811B1D5A760027F59B /* SAWaterLevel WatchKit Extension.entitlements */,
 				B03ED6E11B1BFA980027F59B /* SAWaterLevel.entitlements */,
 				B09C3925197181B9003F5BA8 /* Categories */,
 				B0C95AEB193A530400A6F1FA /* Current Level */,
